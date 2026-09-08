@@ -1,0 +1,132 @@
+{
+  "companyName": "SolutionCloud",
+  "tagline": "Your business is unique. Your software should be too.",
+  "description": "SolutionCloud helps small and medium-sized businesses connect systems, automate processes and build practical software that works the way their business works.",
+  "seo": {
+    "home": {
+      "title": "SolutionCloud | Custom Software & Business Solutions",
+      "description": "SolutionCloud helps small and medium-sized businesses build custom software, connect systems, automate processes and improve business reporting."
+    },
+    "services": {
+      "title": "Services | SolutionCloud",
+      "description": "Custom software, system integration, automation, data reporting and technical consulting for small and medium-sized businesses."
+    },
+    "contact": {
+      "title": "Contact | SolutionCloud",
+      "description": "Talk to SolutionCloud about your business systems, automation needs and custom software requirements."
+    }
+  },
+  "navigation": [
+    { "label": "Home", "path": "/" },
+    { "label": "Services", "path": "/services" },
+    { "label": "Contact", "path": "/contact" }
+  ],
+  "cta": {
+    "primary": {
+      "label": "Discuss Your Project",
+      "path": "/contact"
+    },
+    "secondary": {
+      "label": "Explore Our Services",
+      "path": "/services"
+    },
+    "final": {
+      "heading": "Have a business problem that software could solve?",
+      "text": "Let's talk about what you're trying to achieve. No complicated sales process. Just a practical conversation about the problem and possible solutions.",
+      "buttonLabel": "Start a Conversation",
+      "path": "/contact"
+    }
+  },
+  "servicesOverview": {
+    "eyebrow": "What we do",
+    "heading": "Four ways we help growing businesses",
+    "intro": "Whether you need a bespoke application, better connected systems, clearer reporting or practical technical advice, the focus stays on the business outcome."
+  },
+  "servicesPage": {
+    "eyebrow": "Services",
+    "heading": "Practical software services for growing businesses",
+    "intro": "SolutionCloud helps small and medium-sized businesses build the software they need, connect the systems they already use and reduce the manual work that slows teams down."
+  },
+  "problems": {
+    "heading": "Does your business rely too much on manual work?",
+    "intro": "Many growing businesses reach a point where spreadsheets, disconnected systems and manual processes start slowing everything down. If any of these sound familiar, you're not alone.",
+    "items": [
+      "We're entering the same information into multiple systems.",
+      "Our ERP doesn't talk to our other systems.",
+      "Someone spends hours every week working in Excel.",
+      "Our reports require manual preparation.",
+      "We have an old system that nobody wants to touch.",
+      "We need software that our existing systems simply don't provide."
+    ]
+  },
+  "benefits": {
+    "heading": "Why businesses work with SolutionCloud",
+    "intro": "We focus on practical outcomes: less manual work, better connected systems and software that fits the way your business already operates.",
+    "items": [
+      {
+        "title": "Practical Solutions",
+        "description": "Build technology around the actual business problem rather than forcing the business to adapt to software."
+      },
+      {
+        "title": "Work With What You Already Have",
+        "description": "Improve and integrate existing systems instead of automatically replacing them."
+      },
+      {
+        "title": "Reduce Manual Work",
+        "description": "Automate repetitive tasks and reduce unnecessary data entry so your team can focus on higher-value work."
+      },
+      {
+        "title": "Experienced Engineering",
+        "description": "Get experienced software engineering without the cost of maintaining a large development team."
+      },
+      {
+        "title": "Scalable Solutions",
+        "description": "Start with a focused problem and expand the solution as the business grows."
+      }
+    ]
+  },
+  "process": {
+    "heading": "A clear, practical approach",
+    "intro": "We keep the process simple so you always understand what is being solved and why.",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Understand",
+        "description": "Understand the business, current systems and the problem that needs solving."
+      },
+      {
+        "number": 2,
+        "title": "Design",
+        "description": "Identify the simplest practical technical solution."
+      },
+      {
+        "number": 3,
+        "title": "Build",
+        "description": "Develop, integrate or automate the required solution."
+      },
+      {
+        "number": 4,
+        "title": "Improve",
+        "description": "Measure the result and improve the solution as the business evolves."
+      }
+    ]
+  },
+  "technologies": {
+    "heading": "Technology that supports the solution",
+    "intro": "Technology choices support the business outcome. We select tools that fit the problem, your existing systems and long-term maintainability.",
+    "items": [
+      "C#",
+      ".NET",
+      "ASP.NET",
+      "REST APIs",
+      "SQL Server",
+      "Azure",
+      "React",
+      "TypeScript"
+    ]
+  },
+  "footer": {
+    "tagline": "Practical software for growing businesses.",
+    "copyrightName": "SolutionCloud"
+  }
+}

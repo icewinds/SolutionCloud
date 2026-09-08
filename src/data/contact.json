@@ -1,0 +1,19 @@
+{
+  "heading": "Let's talk about your business problem.",
+  "supportingMessage": "Tell us what you're trying to achieve, what systems you're currently using and where you're experiencing problems. We'll start by understanding the problem before discussing a solution.",
+  "email": "hello@example.com",
+  "phone": "+00 000 000 0000",
+  "location": "Location to be confirmed",
+  "linkedin": "https://www.linkedin.com/company/YOUR-LINKEDIN",
+  "github": "https://github.com/icewinds/SolutionCloud",
+  "form": {
+    "mailtoSubject": "SolutionCloud enquiry",
+    "successMessage": "Your email client should open with your message ready to send. If it does not, please email us directly."
+  },
+  "placeholders": {
+    "email": true,
+    "phone": true,
+    "location": true,
+    "linkedin": true
+  }
+}

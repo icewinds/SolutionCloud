@@ -1,0 +1,74 @@
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-surface) 92%, white);
+  box-shadow: var(--shadow-soft);
+  color: inherit;
+  text-decoration: none;
+}
+
+.service-card-linkable {
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.service-card-linkable:hover,
+.service-card-linkable:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-teal) 45%, var(--color-border));
+  box-shadow: var(--shadow-elevated);
+}
+
+.service-card h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+.service-card-lead {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--color-ink-muted);
+}
+
+.service-card-list {
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.service-card-list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--color-ink-muted);
+  font-size: 0.98rem;
+}
+
+.service-card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--color-teal);
+}
+
+.service-card-link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  font-weight: 600;
+  color: var(--color-teal-deep);
+}

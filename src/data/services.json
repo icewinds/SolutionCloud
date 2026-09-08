@@ -1,0 +1,178 @@
+[
+  {
+    "id": "custom-software",
+    "title": "Custom Software",
+    "shortDescription": "Build software around the way your business actually works.",
+    "description": "When off-the-shelf software doesn't quite fit, SolutionCloud can build practical business applications designed around your processes and requirements.",
+    "businessBenefits": [
+      "Software that matches your real workflows",
+      "Less dependence on workarounds and spreadsheets",
+      "Better control over how information moves through the business",
+      "Systems that can evolve as your processes change"
+    ],
+    "capabilities": [
+      {
+        "title": "Custom Business Applications",
+        "description": "Applications designed specifically around business processes."
+      },
+      {
+        "title": "Internal Management Systems",
+        "description": "Tools for managing internal operations and workflows."
+      },
+      {
+        "title": "Workflow Applications",
+        "description": "Replace email, spreadsheets and manual approval processes."
+      },
+      {
+        "title": "Customer & Supplier Portals",
+        "description": "Provide controlled access to information and processes."
+      },
+      {
+        "title": "Bespoke Business Tools",
+        "description": "Build smaller applications where an existing product does not fit."
+      },
+      {
+        "title": "Quotation and Order Management",
+        "description": "Support sales and operations with tools built around your quoting and ordering process."
+      },
+      {
+        "title": "Approval Workflows",
+        "description": "Make approvals clearer, faster and easier to track."
+      }
+    ]
+  },
+  {
+    "id": "integration-automation",
+    "title": "Integration & Automation",
+    "shortDescription": "Make your systems work together.",
+    "description": "Connect your existing systems and automate repetitive processes so information moves where it needs to go without manual intervention.",
+    "businessBenefits": [
+      "Fewer duplicate entries across systems",
+      "More consistent and reliable information",
+      "Less time spent on repetitive admin work",
+      "Better use of the systems you already own"
+    ],
+    "capabilities": [
+      {
+        "title": "ERP Integration",
+        "description": "Connect ERP systems to websites, applications and other business systems."
+      },
+      {
+        "title": "API Integration",
+        "description": "Connect third-party services and applications through APIs."
+      },
+      {
+        "title": "Data Synchronisation",
+        "description": "Keep information consistent between systems."
+      },
+      {
+        "title": "Automated Processes",
+        "description": "Replace repetitive manual processes with scheduled or event-driven automation."
+      },
+      {
+        "title": "Import & Export Automation",
+        "description": "Automate recurring data transfers and transformations."
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "Move information through predefined business processes automatically."
+      },
+      {
+        "title": "Notifications",
+        "description": "Alert the right people when something needs attention."
+      }
+    ]
+  },
+  {
+    "id": "data-reporting",
+    "title": "Data & Reporting",
+    "shortDescription": "Turn your business data into useful information.",
+    "description": "Bring your business data together and make reporting easier, more reliable and less dependent on manual spreadsheets.",
+    "businessBenefits": [
+      "Reports that take less time to prepare",
+      "Clearer visibility for management decisions",
+      "More consistent numbers across the business",
+      "Less risk of spreadsheet errors and version confusion"
+    ],
+    "capabilities": [
+      {
+        "title": "Custom Reporting",
+        "description": "Reports designed around the questions your business actually needs answered."
+      },
+      {
+        "title": "Management Dashboards",
+        "description": "A clearer view of performance without rebuilding spreadsheets every week."
+      },
+      {
+        "title": "SQL Server Solutions",
+        "description": "Practical reporting and data solutions built on SQL Server."
+      },
+      {
+        "title": "Data Extraction",
+        "description": "Pull information out of existing systems in a usable form."
+      },
+      {
+        "title": "Data Consolidation",
+        "description": "Bring information from different sources into one reliable view."
+      },
+      {
+        "title": "Automated Reporting",
+        "description": "Produce recurring reports without the same manual effort each time."
+      },
+      {
+        "title": "Database Optimisation",
+        "description": "Improve the reliability and performance of business data processing."
+      },
+      {
+        "title": "Business Data Processing",
+        "description": "Transform and organise operational data so it supports day-to-day decisions."
+      }
+    ]
+  },
+  {
+    "id": "technical-consulting",
+    "title": "Technical Consulting",
+    "shortDescription": "Get experienced technical advice without hiring a full-time development team.",
+    "description": "Get practical guidance when you need to decide what to build, buy, integrate or improve. Sometimes you don't need another developer. You need someone experienced to help you decide what should be built.",
+    "businessBenefits": [
+      "Clearer decisions before money is spent",
+      "Better understanding of technical options and trade-offs",
+      "More realistic estimates and delivery planning",
+      "Advice focused on business outcomes, not unnecessary complexity"
+    ],
+    "capabilities": [
+      {
+        "title": "Architecture Reviews",
+        "description": "Review how a system is structured and where it can be strengthened."
+      },
+      {
+        "title": "Technical Assessments",
+        "description": "Assess current systems, risks and opportunities for improvement."
+      },
+      {
+        "title": "Existing-System Reviews",
+        "description": "Understand what you already have before deciding what to change."
+      },
+      {
+        "title": "Integration Planning",
+        "description": "Plan how systems should connect and where automation will add value."
+      },
+      {
+        "title": "Software Selection",
+        "description": "Help evaluate whether to build, buy or extend existing tools."
+      },
+      {
+        "title": "Technology Evaluation",
+        "description": "Compare technical options in plain business language."
+      },
+      {
+        "title": "Development Estimates",
+        "description": "Get practical estimates based on the real scope of the problem."
+      },
+      {
+        "title": "Solution Design",
+        "description": "Define a practical approach before development begins."
+      }
+    ]
+  }
+]
