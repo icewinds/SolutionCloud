@@ -4,7 +4,7 @@
   height: 100%;
   padding: 1.6rem;
   border: 1px solid var(--color-border);
-  border-radius: 1rem;
+  border-radius: 0;
   background: color-mix(in srgb, var(--color-surface) 92%, white);
   box-shadow: var(--shadow-soft);
 }
@@ -70,7 +70,7 @@
   top: 0.55em;
   width: 0.4rem;
   height: 0.4rem;
-  border-radius: 999px;
+  border-radius: 0;
   background: var(--color-teal);
 }
 
@@ -86,7 +86,7 @@
 .project-card-tech li {
   padding: 0.3rem 0.65rem;
   border: 1px solid var(--color-border);
-  border-radius: 999px;
+  border-radius: 0;
   background: var(--color-surface-muted);
   color: var(--color-ink-muted);
   font-size: 0.8rem;
@@ -103,4 +103,8 @@
 .project-card-link:hover,
 .project-card-link:focus-visible {
   text-decoration: underline;
+}
+
+.project-card-compact .project-card-lead {
+  margin-bottom: 1.25rem;
 }

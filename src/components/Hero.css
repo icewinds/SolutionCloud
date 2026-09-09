@@ -13,8 +13,8 @@
   z-index: -1;
   background:
     radial-gradient(ellipse 70% 55% at 85% 15%, color-mix(in srgb, var(--color-teal) 45%, transparent), transparent 70%),
-    radial-gradient(ellipse 50% 40% at 10% 85%, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 65%),
-    linear-gradient(160deg, #071522 0%, #0b1f33 45%, #14304a 100%);
+    radial-gradient(ellipse 50% 40% at 10% 85%, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent 65%),
+    linear-gradient(160deg, #011e29 0%, var(--color-ink) 45%, #0a4054 100%);
 }
 
 .hero-backdrop::after {

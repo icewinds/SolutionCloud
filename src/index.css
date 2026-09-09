@@ -1,14 +1,16 @@
 :root {
-  --color-ink: #0b1f33;
-  --color-ink-soft: #1a334d;
-  --color-ink-muted: #516579;
-  --color-on-ink: #eef3f8;
-  --color-surface: #f7f9fb;
-  --color-surface-muted: #eef2f6;
-  --color-border: #d5dee8;
-  --color-teal: #2f7f7f;
-  --color-teal-deep: #246666;
-  --color-accent: #c4a35a;
+  /* Gentle Sea Breeze: #022B3A · #1F7A8C · #BFDBF7 · #E1E5F2 · #FFFFFF */
+  --color-ink: #022b3a;
+  --color-ink-soft: #0a4054;
+  --color-ink-muted: #5a7a88;
+  --color-on-ink: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #e1e5f2;
+  --color-border: #c5d4e8;
+  --color-teal: #1f7a8c;
+  --color-teal-deep: #155f6e;
+  --color-accent: #bfdbf7;
+  --radius: 0;
   --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
   --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --shadow-soft: 0 10px 30px color-mix(in srgb, var(--color-ink) 6%, transparent);
@@ -28,6 +30,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border-radius: 0;
 }
 
 html {
@@ -98,9 +101,9 @@ select {
   min-height: 3rem;
   padding: 0.75rem 1.35rem;
   border: 1px solid transparent;
-  border-radius: 0.7rem;
-  background: var(--color-accent);
-  color: var(--color-ink);
+  border-radius: 0;
+  background: var(--color-teal);
+  color: var(--color-on-ink);
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
@@ -113,7 +116,7 @@ select {
 
 .button:hover,
 .button:focus-visible {
-  background: color-mix(in srgb, var(--color-accent) 88%, white);
+  background: var(--color-teal-deep);
   transform: translateY(-1px);
 }
 
@@ -175,8 +178,8 @@ textarea:focus-visible {
 .tech-chip,
 .capability-card {
   border: 1px solid var(--color-border);
-  border-radius: 1rem;
-  background: color-mix(in srgb, var(--color-surface) 94%, white);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--color-surface) 94%, var(--color-surface-muted));
 }
 
 .benefit-card,

@@ -3,7 +3,7 @@
   "supportingMessage": "Tell us what you're trying to achieve, what systems you're currently using and where you're experiencing problems. With over 15 years of software experience and an AI-first approach, we'll start by understanding the problem before discussing a solution.",
   "email": "jason.renaud@solutioncloud.tech",
   "phone": "+27 76 859 0740",
-  "location": "Location to be confirmed",
+  "location": "South Africa · Remote",
   "linkedin": "https://www.linkedin.com/in/jarenaud/",
   "github": "https://github.com/icewinds/SolutionCloud",
   "form": {
@@ -13,7 +13,7 @@
   "placeholders": {
     "email": false,
     "phone": false,
-    "location": true,
+    "location": false,
     "linkedin": false
   }
 }

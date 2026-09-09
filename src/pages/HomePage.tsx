@@ -62,7 +62,7 @@ export function HomePage() {
       >
         <div className="card-grid card-grid-3">
           {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard key={project.id} project={project} compact />
           ))}
         </div>
         <p className="projects-overview-action">
