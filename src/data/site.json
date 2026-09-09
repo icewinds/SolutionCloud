@@ -1,24 +1,29 @@
 {
   "companyName": "SolutionCloud",
   "tagline": "Your business is unique. Your software should be too.",
-  "description": "SolutionCloud helps small and medium-sized businesses connect systems, automate processes and build practical software that works the way their business works.",
+  "description": "With over 15 years of software development experience and an AI-first approach, SolutionCloud helps small and medium-sized businesses connect systems, automate processes and build practical software that works the way their business works.",
   "seo": {
     "home": {
       "title": "SolutionCloud | Custom Software & Business Solutions",
-      "description": "SolutionCloud helps small and medium-sized businesses build custom software, connect systems, automate processes and improve business reporting."
+      "description": "Over 15 years of software experience with an AI-first approach. SolutionCloud helps SMEs build custom software, connect systems, automate processes and improve reporting."
     },
     "services": {
       "title": "Services | SolutionCloud",
-      "description": "Custom software, system integration, automation, data reporting and technical consulting for small and medium-sized businesses."
+      "description": "Custom software, system integration, automation, data reporting and technical consulting — delivered with 15+ years of experience and an AI-first approach."
     },
     "contact": {
       "title": "Contact | SolutionCloud",
       "description": "Talk to SolutionCloud about your business systems, automation needs and custom software requirements."
+    },
+    "projects": {
+      "title": "Projects | SolutionCloud",
+      "description": "Explore software, integration, automation and data solutions delivered by SolutionCloud for business customers."
     }
   },
   "navigation": [
     { "label": "Home", "path": "/" },
     { "label": "Services", "path": "/services" },
+    { "label": "Projects", "path": "/projects" },
     { "label": "Contact", "path": "/contact" }
   ],
   "cta": {
@@ -32,7 +37,7 @@
     },
     "final": {
       "heading": "Have a business problem that software could solve?",
-      "text": "Let's talk about what you're trying to achieve. No complicated sales process. Just a practical conversation about the problem and possible solutions.",
+      "text": "Let's talk about what you're trying to achieve. You get 15+ years of software experience, an AI-first approach and a practical conversation — no complicated sales process.",
       "buttonLabel": "Start a Conversation",
       "path": "/contact"
     }
@@ -42,10 +47,22 @@
     "heading": "Four ways we help growing businesses",
     "intro": "Whether you need a bespoke application, better connected systems, clearer reporting or practical technical advice, the focus stays on the business outcome."
   },
+  "projectsOverview": {
+    "eyebrow": "Selected Projects",
+    "heading": "Selected Projects",
+    "intro": "A look at some of the software, integration and automation solutions we've delivered.",
+    "viewAllLabel": "View All Projects",
+    "viewAllPath": "/projects"
+  },
+  "projectsPage": {
+    "eyebrow": "Projects",
+    "heading": "Projects & Solutions",
+    "intro": "A selection of business software, integration and automation solutions we've delivered — real work completed for operational problems like the ones many growing businesses face."
+  },
   "servicesPage": {
     "eyebrow": "Services",
     "heading": "Practical software services for growing businesses",
-    "intro": "SolutionCloud helps small and medium-sized businesses build the software they need, connect the systems they already use and reduce the manual work that slows teams down."
+    "intro": "With over 15 years of hands-on software development and an AI-first way of working, SolutionCloud helps small and medium-sized businesses build the software they need, connect the systems they already use and reduce the manual work that slows teams down."
   },
   "problems": {
     "heading": "Does your business rely too much on manual work?",
@@ -61,7 +78,7 @@
   },
   "benefits": {
     "heading": "Why businesses work with SolutionCloud",
-    "intro": "We focus on practical outcomes: less manual work, better connected systems and software that fits the way your business already operates.",
+    "intro": "You get seasoned engineering judgment with modern AI-assisted delivery — practical outcomes, less manual work and software that fits the way your business already operates.",
     "items": [
       {
         "title": "Practical Solutions",
@@ -76,8 +93,12 @@
         "description": "Automate repetitive tasks and reduce unnecessary data entry so your team can focus on higher-value work."
       },
       {
-        "title": "Experienced Engineering",
-        "description": "Get experienced software engineering without the cost of maintaining a large development team."
+        "title": "15+ Years of Experience",
+        "description": "Draw on more than 15 years of software development without the cost of maintaining a large development team."
+      },
+      {
+        "title": "AI-First Approach",
+        "description": "Use AI throughout analysis, design and delivery to move faster — while keeping human judgment on what your business actually needs."
       },
       {
         "title": "Scalable Solutions",
@@ -87,7 +108,7 @@
   },
   "process": {
     "heading": "A clear, practical approach",
-    "intro": "We keep the process simple so you always understand what is being solved and why.",
+    "intro": "We keep the process simple so you always understand what is being solved and why — combining experience with AI where it speeds up good decisions.",
     "steps": [
       {
         "number": 1,
@@ -97,12 +118,12 @@
       {
         "number": 2,
         "title": "Design",
-        "description": "Identify the simplest practical technical solution."
+        "description": "Identify the simplest practical technical solution, using AI to explore options quickly."
       },
       {
         "number": 3,
         "title": "Build",
-        "description": "Develop, integrate or automate the required solution."
+        "description": "Develop, integrate or automate the required solution with an AI-accelerated delivery approach."
       },
       {
         "number": 4,
@@ -113,7 +134,7 @@
   },
   "technologies": {
     "heading": "Technology that supports the solution",
-    "intro": "Technology choices support the business outcome. We select tools that fit the problem, your existing systems and long-term maintainability.",
+    "intro": "Technology choices support the business outcome. We select tools that fit the problem, your existing systems and long-term maintainability — including AI where it adds real value.",
     "items": [
       "C#",
       ".NET",
@@ -122,11 +143,13 @@
       "SQL Server",
       "Azure",
       "React",
-      "TypeScript"
+      "TypeScript",
+      "AI / LLM integration",
+      "AI-assisted development"
     ]
   },
   "footer": {
-    "tagline": "Practical software for growing businesses.",
+    "tagline": "15+ years of experience. AI-first delivery. Practical software for growing businesses.",
     "copyrightName": "SolutionCloud"
   }
 }

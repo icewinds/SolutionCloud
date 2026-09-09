@@ -1,15 +1,21 @@
+import { Link } from 'react-router-dom'
 import site from '../data/site.json'
 import services from '../data/services.json'
-import type { Service, SiteContent } from '../types/content'
+import projects from '../data/projects.json'
+import type { Project, Service, SiteContent } from '../types/content'
 import { CTASection } from '../components/CTASection'
 import { Hero } from '../components/Hero'
 import { ProcessSection } from '../components/ProcessSection'
+import { ProjectCard } from '../components/ProjectCard'
 import { Section } from '../components/Section'
 import { ServiceList } from '../components/ServiceList'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 const siteContent = site as SiteContent
 const serviceItems = services as Service[]
+const featuredProjects = (projects as Project[])
+  .filter((project) => project.featured)
+  .slice(0, 3)
 
 export function HomePage() {
   usePageMeta(siteContent.seo.home.title, siteContent.seo.home.description)
@@ -49,9 +55,26 @@ export function HomePage() {
       </Section>
 
       <Section
+        eyebrow={siteContent.projectsOverview.eyebrow}
+        heading={siteContent.projectsOverview.heading}
+        intro={siteContent.projectsOverview.intro}
+        tone="muted"
+      >
+        <div className="card-grid card-grid-3">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+        <p className="projects-overview-action">
+          <Link to={siteContent.projectsOverview.viewAllPath} className="button">
+            {siteContent.projectsOverview.viewAllLabel}
+          </Link>
+        </p>
+      </Section>
+
+      <Section
         heading={siteContent.benefits.heading}
         intro={siteContent.benefits.intro}
-        tone="muted"
       >
         <div className="card-grid card-grid-3">
           {siteContent.benefits.items.map((benefit) => (
@@ -66,6 +89,7 @@ export function HomePage() {
       <Section
         heading={siteContent.process.heading}
         intro={siteContent.process.intro}
+        tone="muted"
       >
         <ProcessSection steps={siteContent.process.steps} />
       </Section>

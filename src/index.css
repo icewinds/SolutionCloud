@@ -232,6 +232,12 @@ textarea:focus-visible {
   color: var(--color-ink-soft);
 }
 
+.projects-overview-action {
+  display: flex;
+  justify-content: center;
+  margin: 1.75rem 0 0;
+}
+
 @media (max-width: 900px) {
   .card-grid-3 {
     grid-template-columns: 1fr;

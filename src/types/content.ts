@@ -39,6 +39,7 @@ export interface SiteContent {
     home: SeoMeta
     services: SeoMeta
     contact: SeoMeta
+    projects: SeoMeta
   }
   navigation: NavItem[]
   cta: {
@@ -47,6 +48,18 @@ export interface SiteContent {
     final: FinalCta
   }
   servicesOverview: {
+    eyebrow: string
+    heading: string
+    intro: string
+  }
+  projectsOverview: {
+    eyebrow: string
+    heading: string
+    intro: string
+    viewAllLabel: string
+    viewAllPath: string
+  }
+  projectsPage: {
     eyebrow: string
     heading: string
     intro: string
@@ -94,6 +107,19 @@ export interface Service {
   description: string
   businessBenefits: string[]
   capabilities: ServiceCapability[]
+}
+
+export interface Project {
+  id: string
+  title: string
+  category: string
+  featured: boolean
+  shortDescription: string
+  businessProblem: string
+  solution: string
+  outcome: string
+  capabilities: string[]
+  technologies: string[]
 }
 
 export interface ContactPlaceholders {

@@ -1,0 +1,106 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-surface) 92%, white);
+  box-shadow: var(--shadow-soft);
+}
+
+.project-card-category {
+  margin: 0 0 0.55rem;
+  color: var(--color-teal-deep);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.project-card-lead {
+  margin: 0 0 1rem;
+  color: var(--color-ink-soft);
+  font-weight: 600;
+}
+
+.project-card-block {
+  margin-bottom: 1rem;
+}
+
+.project-card-block h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-ink-soft);
+}
+
+.project-card-block p {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 0.98rem;
+}
+
+.project-card-capabilities {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.project-card-capabilities li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--color-ink-muted);
+  font-size: 0.95rem;
+}
+
+.project-card-capabilities li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--color-teal);
+}
+
+.project-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card-tech li {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface-muted);
+  color: var(--color-ink-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.project-card-link {
+  margin-top: auto;
+  font-weight: 600;
+  color: var(--color-teal-deep);
+  text-decoration: none;
+}
+
+.project-card-link:hover,
+.project-card-link:focus-visible {
+  text-decoration: underline;
+}

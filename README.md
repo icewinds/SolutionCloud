@@ -1,6 +1,6 @@
 # SolutionCloud
 
-SolutionCloud helps small and medium-sized businesses connect systems, automate processes and build practical software that solves real business problems.
+With over 15 years of software development experience and an AI-first approach, SolutionCloud helps small and medium-sized businesses connect systems, automate processes and build practical software that solves real business problems.
 
 **Your business is unique. Your software should be too.**
 
