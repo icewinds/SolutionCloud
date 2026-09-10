@@ -62,6 +62,7 @@ export interface SiteContent {
   projectsPage: {
     eyebrow: string
     heading: string
+    lead?: string
     intro: string
   }
   servicesPage: {
@@ -120,6 +121,7 @@ export interface Project {
   outcome: string
   capabilities: string[]
   technologies: string[]
+  relatedServiceIds: string[]
 }
 
 export interface ContactPlaceholders {

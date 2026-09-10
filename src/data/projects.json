@@ -4,16 +4,17 @@
     "title": "ERP Bank Reconciliation Suite",
     "category": "Custom Software",
     "featured": true,
-    "shortDescription": "A desktop and web bank reconciliation suite that matches bank statements to cashbook transactions and posts results into ERP.",
-    "businessProblem": "Finance teams were reconciling bank statements against ERP cashbook transactions through a slow, error-prone manual process, with limited support for statement import, matching rules and controlled posting back into the ERP.",
-    "solution": "Built a dual-platform bank reconciliation suite — a WinForms desktop application and a modern Blazor Server web application — that imports bank statements, supports manual and rule-based matching, creates related cashbook and AR transactions where needed, and posts reconciled results into Syspro ERP.",
-    "outcome": "Gave finance teams a structured way to import statements, reconcile transactions and post results into ERP with an auditable history of matching and posting activity.",
+    "shortDescription": "A finance application that helps teams import bank statements, match them to cashbook transactions and post reconciled results into ERP.",
+    "businessProblem": "Finance teams were reconciling bank statements against ERP cashbook transactions through a slow, error-prone manual process. Statement import, matching rules and controlled posting back into the ERP were limited or missing.",
+    "solution": "Built a substantial bank reconciliation suite available as both a desktop application and a web application. The solution imports bank statements with duplicate detection, supports manual and rule-based matching — including multi-transaction matching — can create related cashbook and AR transactions, and posts reconciled results into Syspro ERP with an auditable history.",
+    "outcome": "Gave finance teams a structured way to import statements, reconcile transactions and post results into ERP, with live balance visibility during reconciliation and an auditable record of matching and posting activity.",
     "capabilities": [
       "Bank statement import with duplicate detection",
       "Manual and suggested multi-transaction matching",
       "Posting of reconciled results into ERP",
       "Creation of cashbook and AR transactions from unmatched bank items",
-      "Live balance visibility during reconciliation"
+      "Live balance visibility during reconciliation",
+      "Auditable matching and posting history"
     ],
     "technologies": [
       "C#",
@@ -22,31 +23,11 @@
       "WinForms",
       "SQL Server",
       "Syspro WCF/SOAP"
-    ]
-  },
-  {
-    "id": "dispatch-stock-label-printing",
-    "title": "Dispatch Stock Label Printing",
-    "category": "ERP Integration",
-    "featured": true,
-    "shortDescription": "A workstation application that retrieves dispatch note stock lines from ERP and prints warehouse labels with preview and reprint support.",
-    "businessProblem": "After dispatch processing, warehouse staff needed accurate stock labels printed from ERP dispatch note data. Manual label preparation was slow and reprinting previously printed labels was difficult.",
-    "solution": "Developed a .NET WPF desktop application that integrates with Syspro via e.net WCF, retrieves dispatch note stock lines, allows per-line label quantities, provides print preview and supports both automatic launch after dispatch printing and manual reprinting.",
-    "outcome": "Enabled warehouse teams to print and reprint dispatch-related stock labels directly from ERP data on local workstations, reducing reliance on manual label preparation.",
-    "capabilities": [
-      "ERP dispatch note data retrieval",
-      "Searchable stock line selection",
-      "Per-line label quantity control",
-      "Print preview before printing",
-      "Automatic launch after dispatch processing",
-      "Manual reprint support"
     ],
-    "technologies": [
-      "C#",
-      ".NET 8",
-      "WPF",
-      "Syspro e.net WCF",
-      "Windows printing"
+    "relatedServiceIds": [
+      "custom-software",
+      "integration-automation",
+      "data-reporting"
     ]
   },
   {
@@ -54,10 +35,10 @@
     "title": "ERP API Gateway & Production Reporting",
     "category": "API Development",
     "featured": true,
-    "shortDescription": "A REST gateway and reporting dashboard that makes ERP business objects and production data accessible to modern applications and management users.",
-    "businessProblem": "Modern applications and reporting tools struggled to consume ERP business objects exposed only through WCF/SOAP, while production and contract reporting required clearer visibility without relying on slow manual extracts.",
-    "solution": "Built an ASP.NET Core gateway that translates REST/JSON requests into Syspro WCF business object calls and returns cleaned structured JSON. The same application includes a Blazor contracts and production reporting dashboard with Excel export, reading directly from ERP SQL databases where grid performance matters.",
-    "outcome": "Provided a practical integration layer for ERP-connected applications and a management-facing view of contract and production cost information that can be exported for further analysis.",
+    "shortDescription": "An integration layer and reporting dashboard that lets modern applications and managers work with an existing ERP — without replacing it.",
+    "businessProblem": "Modern applications and reporting tools struggled to use ERP business objects that were only available through older WCF/SOAP interfaces. Production and contract reporting also needed clearer visibility without slow manual extracts.",
+    "solution": "Built a REST/JSON gateway that translates modern application requests into Syspro WCF business object calls and returns cleaned, structured JSON. The same solution includes a Blazor reporting dashboard for contract and production cost reporting, with Excel export and multi-company support, reading from ERP SQL databases where grid performance matters.",
+    "outcome": "Extended the existing ERP environment so other applications could connect more easily, while giving management a clearer view of contract and production cost information that can be exported for further analysis.",
     "capabilities": [
       "REST to ERP business object bridge",
       "Structured JSON responses from ERP queries",
@@ -74,6 +55,40 @@
       "SQL Server",
       "Syspro WCF",
       "REST API"
+    ],
+    "relatedServiceIds": [
+      "integration-automation",
+      "data-reporting",
+      "custom-software"
+    ]
+  },
+  {
+    "id": "dispatch-stock-label-printing",
+    "title": "Dispatch Stock Label Printing",
+    "category": "ERP Integration",
+    "featured": true,
+    "shortDescription": "A warehouse workstation tool that prints stock labels from ERP dispatch notes, with preview and reprint support.",
+    "businessProblem": "After dispatch processing, warehouse staff needed accurate stock labels based on ERP dispatch note data. Preparing labels manually was slow, and reprinting previously printed labels was difficult.",
+    "solution": "Delivered a Windows workstation application that retrieves dispatch note stock lines from Syspro, lets staff select lines and set per-line label quantities, provides print preview, and supports both automatic launch after dispatch processing and manual reprinting.",
+    "outcome": "Enabled warehouse teams to print and reprint dispatch-related stock labels directly from ERP data on local workstations, reducing reliance on manual label preparation.",
+    "capabilities": [
+      "ERP dispatch note data retrieval",
+      "Searchable stock line selection",
+      "Per-line label quantity control",
+      "Print preview before printing",
+      "Automatic launch after dispatch processing",
+      "Manual reprint support"
+    ],
+    "technologies": [
+      "C#",
+      ".NET 8",
+      "WPF",
+      "Syspro e.net WCF",
+      "Windows printing"
+    ],
+    "relatedServiceIds": [
+      "integration-automation",
+      "custom-software"
     ]
   },
   {
@@ -81,22 +96,26 @@
     "title": "Supplier Banking Change Authorisation",
     "category": "Business Automation",
     "featured": false,
-    "shortDescription": "An ERP workflow that captures supplier banking detail changes, records an audit trail and routes them for approval before they take effect.",
-    "businessProblem": "Changes to supplier banking details needed stronger control. Without a formal authorisation path and audit trail, high-risk master data updates could be made without clear review or email notification.",
-    "solution": "Implemented a Syspro-based supplier banking change workflow using ERP scripting and SQL audit tables. When banking details change, the system logs the old and new values, sets the change to pending and supports approval with email notification.",
+    "shortDescription": "An ERP workflow that introduces approval and audit control when supplier banking details change.",
+    "businessProblem": "Changes to supplier banking details needed stronger control. Without a formal authorisation path and audit trail, high-risk master data updates could be made without clear review or notification.",
+    "solution": "Implemented an ERP-embedded supplier banking change workflow. When banking details change, the system captures the request, records the old and new values, sets the change to pending approval and supports email notification as part of the controlled process.",
     "outcome": "Introduced a controlled authorisation path for supplier banking updates, with a recorded audit history of requested changes and clearer operational oversight.",
     "capabilities": [
       "Supplier banking change capture",
       "Pending approval workflow",
-      "SQL-based audit trail of changed fields",
+      "Audit trail of old and new values",
       "Email notification support",
-      "ERP-embedded scripting"
+      "ERP-embedded workflow"
     ],
     "technologies": [
       "Syspro",
       "VBScript",
       "SQL Server",
       "Email automation"
+    ],
+    "relatedServiceIds": [
+      "integration-automation",
+      "custom-software"
     ]
   },
   {
@@ -104,9 +123,9 @@
     "title": "Controlled Warehouse Inventory Transfer",
     "category": "Custom Software",
     "featured": false,
-    "shortDescription": "An ERP-assisted inventory transfer process that validates allowed warehouse routes before stock is moved between locations.",
-    "businessProblem": "Inventory transfers between warehouses needed tighter control. Operators required clearer guidance on which destination warehouses were allowed for a given stock item and source warehouse, rather than relying on informal knowledge.",
-    "solution": "Delivered a custom inventory transfer process integrated with ERP, using SQL-backed warehouse route rules to determine allowed transfer destinations and guide operators through controlled stock movement between warehouses.",
+    "shortDescription": "An ERP-assisted inventory transfer process that enforces business-specific warehouse routing rules.",
+    "businessProblem": "Inventory transfers between warehouses needed tighter control. Operators needed clearer guidance on which destination warehouses were allowed for a given stock item and source warehouse, rather than relying on informal knowledge.",
+    "solution": "Added business-specific controls to the existing ERP inventory transfer process. SQL-backed warehouse route rules determine allowed destinations by stock code and source warehouse, guiding operators through controlled stock movement between locations.",
     "outcome": "Supported more controlled warehouse-to-warehouse transfers by enforcing configured routing rules instead of relying solely on manual knowledge of allowed movements.",
     "capabilities": [
       "Warehouse route validation",
@@ -118,6 +137,10 @@
       "Syspro",
       "VBScript",
       "SQL Server"
+    ],
+    "relatedServiceIds": [
+      "custom-software",
+      "integration-automation"
     ]
   }
 ]

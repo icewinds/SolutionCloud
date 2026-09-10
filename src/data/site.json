@@ -50,14 +50,15 @@
   "projectsOverview": {
     "eyebrow": "Selected Projects",
     "heading": "Selected Projects",
-    "intro": "A look at some of the software, integration and automation solutions we've delivered.",
+    "intro": "Real business problems we've helped solve through software, integration and automation.",
     "viewAllLabel": "View All Projects",
     "viewAllPath": "/projects"
   },
   "projectsPage": {
     "eyebrow": "Projects",
     "heading": "Projects & Solutions",
-    "intro": "A selection of business software, integration and automation solutions we've delivered — real work completed for operational problems like the ones many growing businesses face."
+    "lead": "Real business problems. Practical software solutions.",
+    "intro": "A selection of business software, integration and automation solutions we've delivered across finance, ERP, warehouse and operational environments."
   },
   "servicesPage": {
     "eyebrow": "Services",

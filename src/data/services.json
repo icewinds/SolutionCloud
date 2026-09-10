@@ -3,7 +3,7 @@
     "id": "custom-software",
     "title": "Custom Software",
     "shortDescription": "Build software around the way your business actually works.",
-    "description": "When off-the-shelf software doesn't quite fit, SolutionCloud can build practical business applications designed around your processes and requirements.",
+    "description": "When off-the-shelf products do not fit your processes, SolutionCloud builds practical business applications designed around the way your team already works. The focus stays on solving the business problem — not forcing the business to adapt to generic software.",
     "businessBenefits": [
       "Software that matches your real workflows",
       "Less dependence on workarounds and spreadsheets",
@@ -13,23 +13,23 @@
     "capabilities": [
       {
         "title": "Custom Business Applications",
-        "description": "Applications designed specifically around business processes."
+        "description": "Applications designed specifically around your business processes and day-to-day operations."
       },
       {
         "title": "Internal Management Systems",
-        "description": "Tools for managing internal operations and workflows."
+        "description": "Tools that help teams manage internal operations without relying on scattered spreadsheets and email."
       },
       {
         "title": "Workflow Applications",
-        "description": "Replace email, spreadsheets and manual approval processes."
+        "description": "Replace email chains, spreadsheets and informal approval processes with clearer, trackable workflows."
       },
       {
         "title": "Customer & Supplier Portals",
-        "description": "Provide controlled access to information and processes."
+        "description": "Give customers or suppliers controlled access to the information and processes they need."
       },
       {
         "title": "Bespoke Business Tools",
-        "description": "Build smaller applications where an existing product does not fit."
+        "description": "Smaller focused applications where an existing product does not fit the job."
       },
       {
         "title": "Quotation and Order Management",
@@ -37,45 +37,45 @@
       },
       {
         "title": "Approval Workflows",
-        "description": "Make approvals clearer, faster and easier to track."
+        "description": "Make approvals clearer, faster and easier to track across the business."
       }
     ]
   },
   {
     "id": "integration-automation",
     "title": "Integration & Automation",
-    "shortDescription": "Make your systems work together.",
-    "description": "Connect your existing systems and automate repetitive processes so information moves where it needs to go without manual intervention.",
+    "shortDescription": "Connect your systems and reduce manual work.",
+    "description": "Many growing businesses already own useful systems — they just do not talk to each other. SolutionCloud connects existing systems and automates repetitive processes so information moves where it needs to go without duplicate data entry.",
     "businessBenefits": [
-      "Fewer duplicate entries across systems",
+      "Less duplicate data entry across systems",
       "More consistent and reliable information",
-      "Less time spent on repetitive admin work",
+      "Less time spent on repetitive administration",
       "Better use of the systems you already own"
     ],
     "capabilities": [
       {
         "title": "ERP Integration",
-        "description": "Connect ERP systems to websites, applications and other business systems."
+        "description": "Connect ERP and accounting systems to websites, applications and other business tools."
       },
       {
         "title": "API Integration",
-        "description": "Connect third-party services and applications through APIs."
+        "description": "Connect third-party services and applications so information can move between them automatically."
       },
       {
         "title": "Data Synchronisation",
-        "description": "Keep information consistent between systems."
+        "description": "Keep key information consistent between the systems your business relies on."
       },
       {
         "title": "Automated Processes",
-        "description": "Replace repetitive manual processes with scheduled or event-driven automation."
+        "description": "Replace repetitive manual work with scheduled or event-driven automation."
       },
       {
         "title": "Import & Export Automation",
-        "description": "Automate recurring data transfers and transformations."
+        "description": "Automate recurring data transfers and transformations between systems and files."
       },
       {
         "title": "Workflow Automation",
-        "description": "Move information through predefined business processes automatically."
+        "description": "Move information through predefined business processes without manual chasing."
       },
       {
         "title": "Notifications",
@@ -86,8 +86,8 @@
   {
     "id": "data-reporting",
     "title": "Data & Reporting",
-    "shortDescription": "Turn your business data into useful information.",
-    "description": "Bring your business data together and make reporting easier, more reliable and less dependent on manual spreadsheets.",
+    "shortDescription": "Make business information easier to access and use.",
+    "description": "Bring business data together and make reporting easier, more reliable and less dependent on manual spreadsheet preparation. The goal is clearer management visibility from the systems you already use.",
     "businessBenefits": [
       "Reports that take less time to prepare",
       "Clearer visibility for management decisions",
@@ -109,7 +109,7 @@
       },
       {
         "title": "Data Extraction",
-        "description": "Pull information out of existing systems in a usable form."
+        "description": "Pull information out of existing systems in a form people can actually use."
       },
       {
         "title": "Data Consolidation",
@@ -117,7 +117,7 @@
       },
       {
         "title": "Automated Reporting",
-        "description": "Produce recurring reports without the same manual effort each time."
+        "description": "Produce recurring reports without repeating the same manual effort each time."
       },
       {
         "title": "Database Optimisation",
@@ -132,8 +132,8 @@
   {
     "id": "technical-consulting",
     "title": "Technical Consulting",
-    "shortDescription": "Get 15+ years of technical judgment — and an AI-first lens — without hiring a full-time development team.",
-    "description": "Get practical guidance when you need to decide what to build, buy, integrate or improve. With over 15 years of software development experience and an AI-first approach, you get clear advice on what should be built — not another full-time headcount.",
+    "shortDescription": "Get experienced technical guidance without hiring a full-time development team.",
+    "description": "Sometimes you do not need another full-time developer — you need clear advice on what to build, buy, integrate or improve. With over 15 years of software development experience and an AI-first approach, SolutionCloud helps you make practical technical decisions before money is spent.",
     "businessBenefits": [
       "Clearer decisions before money is spent",
       "Better understanding of technical options and trade-offs",

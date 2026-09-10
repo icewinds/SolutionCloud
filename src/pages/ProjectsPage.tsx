@@ -36,8 +36,12 @@ export function ProjectsPage() {
       <Section
         eyebrow={siteContent.projectsPage.eyebrow}
         heading={siteContent.projectsPage.heading}
-        intro={siteContent.projectsPage.intro}
       >
+        {siteContent.projectsPage.lead ? (
+          <p className="projects-page-lead">{siteContent.projectsPage.lead}</p>
+        ) : null}
+        <p className="projects-page-intro">{siteContent.projectsPage.intro}</p>
+
         <ProjectFilters
           categories={categories}
           activeCategory={activeCategory}
@@ -49,7 +53,7 @@ export function ProjectsPage() {
       <CTASection
         cta={{
           heading: 'Have a similar problem?',
-          text: "Let's talk about your requirements and whether a practical software, integration or automation solution is the right next step.",
+          text: "Let's talk about your requirements and whether a practical software, integration or automation solution could help.",
           buttonLabel: 'Contact SolutionCloud',
           path: '/contact',
         }}

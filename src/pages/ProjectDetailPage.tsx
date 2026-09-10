@@ -1,18 +1,31 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import projects from '../data/projects.json'
+import services from '../data/services.json'
 import site from '../data/site.json'
-import type { Project, SiteContent } from '../types/content'
+import type { Project, Service, SiteContent } from '../types/content'
+import { CapabilityGrid } from '../components/CapabilityGrid'
 import { CTASection } from '../components/CTASection'
+import { ProjectNavigation } from '../components/ProjectNavigation'
+import { ProjectSnapshot } from '../components/ProjectSnapshot'
+import { RelatedServices } from '../components/RelatedServices'
 import { Section } from '../components/Section'
+import { SolutionFlow } from '../components/SolutionFlow'
+import { TechnologyTags } from '../components/TechnologyTags'
+import {
+  getProjectSnapshot,
+  getSolutionFlow,
+} from '../lib/projectPresentation'
 import { usePageMeta } from '../hooks/usePageMeta'
 import './ProjectDetailPage.css'
 
 const siteContent = site as SiteContent
 const projectItems = projects as Project[]
+const serviceItems = services as Service[]
 
 export function ProjectDetailPage() {
   const { projectId } = useParams()
-  const project = projectItems.find((item) => item.id === projectId)
+  const projectIndex = projectItems.findIndex((item) => item.id === projectId)
+  const project = projectIndex >= 0 ? projectItems[projectIndex] : undefined
 
   usePageMeta(
     project
@@ -27,65 +40,93 @@ export function ProjectDetailPage() {
     return <Navigate to="/projects" replace />
   }
 
+  const previousProject =
+    projectIndex > 0 ? projectItems[projectIndex - 1] : undefined
+  const nextProject =
+    projectIndex < projectItems.length - 1
+      ? projectItems[projectIndex + 1]
+      : undefined
+
+  const relatedServices = serviceItems.filter((service) =>
+    project.relatedServiceIds.includes(service.id),
+  )
+  const snapshot = getProjectSnapshot(project)
+  const solutionFlow = getSolutionFlow(project)
+
   return (
-    <>
+    <div className="case-study-page">
       <Section
+        className="case-study-hero"
         eyebrow={project.category}
         heading={project.title}
         intro={project.shortDescription}
+        compact
       >
-        <p className="project-detail-back">
-          <Link to="/projects">Back to all projects</Link>
+        <p className="case-study-hero-actions">
+          <Link to="/contact" className="button">
+            Discuss Your Project
+          </Link>
         </p>
+        <ProjectSnapshot items={snapshot} />
+      </Section>
 
-        <div className="project-detail-grid">
-          <article className="project-detail-panel">
-            <h3>The Challenge</h3>
-            <p>{project.businessProblem}</p>
-          </article>
+      <Section heading="The Challenge" tone="muted" compact>
+        <p className="case-study-prose">{project.businessProblem}</p>
+      </Section>
 
-          <article className="project-detail-panel">
-            <h3>The Solution</h3>
-            <p>{project.solution}</p>
-          </article>
-
-          <article className="project-detail-panel">
-            <h3>Business Outcome</h3>
-            <p>{project.outcome}</p>
-          </article>
-        </div>
-
-        <div className="project-detail-lower">
-          <div>
-            <h3>Key Capabilities</h3>
-            <ul className="project-detail-list">
-              {project.capabilities.map((capability) => (
-                <li key={capability}>{capability}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3>Technology</h3>
-            <ul className="tech-list" aria-label="Project technologies">
-              {project.technologies.map((tech) => (
-                <li key={tech} className="tech-chip">
-                  {tech}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <Section heading="The Solution" compact className="case-study-solution">
+        <div className="case-study-solution-layout">
+          <p className="case-study-prose case-study-prose-emphasis">
+            {project.solution}
+          </p>
+          {solutionFlow ? (
+            <div className="case-study-flow-panel">
+              <p className="case-study-flow-label">Solution flow</p>
+              <SolutionFlow steps={solutionFlow} />
+            </div>
+          ) : null}
         </div>
       </Section>
+
+      <Section heading="What It Delivered" tone="muted" compact>
+        <div className="case-study-outcome">
+          <p>{project.outcome}</p>
+        </div>
+      </Section>
+
+      <Section heading="Key Capabilities" compact>
+        <CapabilityGrid capabilities={project.capabilities} />
+      </Section>
+
+      <Section heading="Technology" tone="muted" compact>
+        <TechnologyTags technologies={project.technologies} />
+      </Section>
+
+      <Section heading="What This Demonstrates" compact>
+        <p className="case-study-prose case-study-demonstrates-intro">
+          This work aligns with the following SolutionCloud service areas:
+        </p>
+        <ul className="case-study-demonstrates">
+          {relatedServices.map((service) => (
+            <li key={service.id}>{service.title}</li>
+          ))}
+        </ul>
+        <RelatedServices services={relatedServices} />
+      </Section>
+
+      <ProjectNavigation
+        previousProject={previousProject}
+        nextProject={nextProject}
+      />
 
       <CTASection
         cta={{
           heading: 'Have a similar problem?',
-          text: "Let's talk about your requirements.",
+          text: "Let's talk about your requirements and whether a practical software, integration or automation solution could help.",
           buttonLabel: 'Contact SolutionCloud',
           path: '/contact',
         }}
       />
-    </>
+    </div>
   )
 }

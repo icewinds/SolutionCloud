@@ -6,9 +6,10 @@ interface SectionProps {
   eyebrow?: string
   heading: string
   intro?: string
-  children: ReactNode
+  children?: ReactNode
   className?: string
   tone?: 'default' | 'muted' | 'ink'
+  compact?: boolean
 }
 
 export function Section({
@@ -19,9 +20,13 @@ export function Section({
   children,
   className = '',
   tone = 'default',
+  compact = false,
 }: SectionProps) {
   return (
-    <section id={id} className={`section section-${tone} ${className}`.trim()}>
+    <section
+      id={id}
+      className={`section section-${tone}${compact ? ' section-compact' : ''} ${className}`.trim()}
+    >
       <div className="container">
         <header className="section-header">
           {eyebrow ? <p className="section-eyebrow">{eyebrow}</p> : null}

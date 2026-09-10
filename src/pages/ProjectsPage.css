@@ -5,6 +5,23 @@
   margin-bottom: 1.75rem;
 }
 
+.projects-page-lead {
+  margin: -1rem 0 0.75rem;
+  max-width: 42rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink-soft);
+}
+
+.projects-page-intro {
+  margin: 0 0 1.75rem;
+  max-width: 42rem;
+  color: var(--color-ink-muted);
+  font-size: 1.05rem;
+}
+
 .project-filter {
   min-height: 2.4rem;
   padding: 0.45rem 0.95rem;
