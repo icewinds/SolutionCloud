@@ -11,10 +11,7 @@ import { RelatedServices } from '../components/RelatedServices'
 import { Section } from '../components/Section'
 import { SolutionFlow } from '../components/SolutionFlow'
 import { TechnologyTags } from '../components/TechnologyTags'
-import {
-  getProjectSnapshot,
-  getSolutionFlow,
-} from '../lib/projectPresentation'
+import { getProjectSnapshot } from '../lib/projectPresentation'
 import { usePageMeta } from '../hooks/usePageMeta'
 import './ProjectDetailPage.css'
 
@@ -51,7 +48,6 @@ export function ProjectDetailPage() {
     project.relatedServiceIds.includes(service.id),
   )
   const snapshot = getProjectSnapshot(project)
-  const solutionFlow = getSolutionFlow(project)
 
   return (
     <div className="case-study-page">
@@ -79,10 +75,10 @@ export function ProjectDetailPage() {
           <p className="case-study-prose case-study-prose-emphasis">
             {project.solution}
           </p>
-          {solutionFlow ? (
+          {project.solutionFlow.length > 0 ? (
             <div className="case-study-flow-panel">
               <p className="case-study-flow-label">Solution flow</p>
-              <SolutionFlow steps={solutionFlow} />
+              <SolutionFlow steps={project.solutionFlow} />
             </div>
           ) : null}
         </div>

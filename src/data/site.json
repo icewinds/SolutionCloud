@@ -1,15 +1,15 @@
 {
   "companyName": "SolutionCloud",
   "tagline": "Your business is unique. Your software should be too.",
-  "description": "With over 15 years of software development experience and an AI-first approach, SolutionCloud helps small and medium-sized businesses connect systems, automate processes and build practical software that works the way their business works.",
+  "description": "With nearly 20 years of software development experience and an AI-first approach, SolutionCloud helps growing businesses connect their ERP, banking and compliance systems, automate processes and build practical software that works the way their business works.",
   "seo": {
     "home": {
       "title": "SolutionCloud | Custom Software & Business Solutions",
-      "description": "Over 15 years of software experience with an AI-first approach. SolutionCloud helps SMEs build custom software, connect systems, automate processes and improve reporting."
+      "description": "Nearly 20 years of software experience with an AI-first approach. SolutionCloud helps growing businesses build custom software, connect SYSPRO ERP, banking and tax systems, automate processes and improve reporting."
     },
     "services": {
       "title": "Services | SolutionCloud",
-      "description": "Custom software, system integration, automation, data reporting and technical consulting — delivered with 15+ years of experience and an AI-first approach."
+      "description": "Custom software, system integration, automation, data reporting and technical consulting — delivered with nearly 20 years of experience and an AI-first approach."
     },
     "contact": {
       "title": "Contact | SolutionCloud",
@@ -17,7 +17,7 @@
     },
     "projects": {
       "title": "Projects | SolutionCloud",
-      "description": "Explore software, integration, automation and data solutions delivered by SolutionCloud for business customers."
+      "description": "Banking, tax compliance, SYSPRO ERP, integration and retail technology projects, including work with ABSA, RMB, ZRA, KRA and Sun & Sand Sports."
     }
   },
   "navigation": [
@@ -37,7 +37,7 @@
     },
     "final": {
       "heading": "Have a business problem that software could solve?",
-      "text": "Let's talk about what you're trying to achieve. You get 15+ years of software experience, an AI-first approach and a practical conversation — no complicated sales process.",
+      "text": "Let's talk about what you're trying to achieve. You get nearly 20 years of software experience, an AI-first approach and a practical conversation — no complicated sales process.",
       "buttonLabel": "Start a Conversation",
       "path": "/contact"
     }
@@ -58,12 +58,12 @@
     "eyebrow": "Projects",
     "heading": "Projects & Solutions",
     "lead": "Real business problems. Practical software solutions.",
-    "intro": "A selection of business software, integration and automation solutions we've delivered across finance, ERP, warehouse and operational environments."
+    "intro": "A selection of business software, integration and automation solutions we've delivered across banking, tax compliance, ERP, warehouse and retail environments."
   },
   "servicesPage": {
     "eyebrow": "Services",
     "heading": "Practical software services for growing businesses",
-    "intro": "With over 15 years of hands-on software development and an AI-first way of working, SolutionCloud helps small and medium-sized businesses build the software they need, connect the systems they already use and reduce the manual work that slows teams down."
+    "intro": "With nearly 20 years of hands-on software development and an AI-first way of working, SolutionCloud helps small and medium-sized businesses build the software they need, connect the systems they already use and reduce the manual work that slows teams down."
   },
   "problems": {
     "heading": "Does your business rely too much on manual work?",
@@ -94,8 +94,8 @@
         "description": "Automate repetitive tasks and reduce unnecessary data entry so your team can focus on higher-value work."
       },
       {
-        "title": "15+ Years of Experience",
-        "description": "Draw on more than 15 years of software development without the cost of maintaining a large development team."
+        "title": "Nearly 20 Years of Experience",
+        "description": "Draw on nearly 20 years of software development — including SYSPRO ERP, banking and tax-authority integrations — without the cost of maintaining a large development team."
       },
       {
         "title": "AI-First Approach",
@@ -140,9 +140,16 @@
       "C#",
       ".NET",
       "ASP.NET",
+      "Blazor",
+      "WPF",
       "REST APIs",
+      "SYSPRO ERP",
       "SQL Server",
+      "Entity Framework Core",
+      "MongoDB",
       "Azure",
+      "AWS",
+      "CI/CD (Azure DevOps, GitHub Actions)",
       "React",
       "TypeScript",
       "AI / LLM integration",
@@ -150,7 +157,7 @@
     ]
   },
   "footer": {
-    "tagline": "15+ years of experience. AI-first delivery. Practical software for growing businesses.",
+    "tagline": "Nearly 20 years of experience. AI-first delivery. Practical software for growing businesses.",
     "copyrightName": "SolutionCloud"
   }
 }

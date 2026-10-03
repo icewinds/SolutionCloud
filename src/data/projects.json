@@ -1,9 +1,91 @@
 [
   {
+    "id": "bank-payment-integrations",
+    "title": "Bank & Payment Integrations for SYSPRO",
+    "category": "Banking & Payments",
+    "featured": true,
+    "shortDescription": "Integrations connecting SYSPRO ERP to ABSA and RMB Fintegrate banking APIs and PayFast — covering payments, account verification and bank statement imports.",
+    "businessProblem": "Businesses running SYSPRO needed to make payments, verify bank accounts and bring bank statements into their ERP without moving files and re-keying data between their bank and their finance system.",
+    "solution": "Led and delivered integrations between SYSPRO and the ABSA and RMB Fintegrate banking APIs, and PayFast. The work covered payment integration, account verification and bank statement imports into SYSPRO, with secure API communication throughout. Technical and business stakeholders were guided through the architecture decisions, integration strategy, compliance requirements and rollout.",
+    "outcome": "Connected the ERP directly to the bank, so payments, account verification and statement imports run through secure, controlled integrations instead of manual file handling.",
+    "capabilities": [
+      "Payment integration with ABSA and RMB Fintegrate",
+      "Bank account verification",
+      "Bank statement import into SYSPRO",
+      "PayFast payment integration",
+      "Secure API communication"
+    ],
+    "technologies": [
+      "C#",
+      ".NET",
+      "REST APIs",
+      "SQL Server",
+      "SYSPRO",
+      "ABSA & RMB Fintegrate APIs",
+      "PayFast"
+    ],
+    "businessArea": "Finance & Banking",
+    "platforms": "API Integration",
+    "integration": "SYSPRO ERP · ABSA · RMB · PayFast",
+    "solutionFlow": [
+      "SYSPRO",
+      "Payment / Verification Request",
+      "Bank API",
+      "Statement Import",
+      "Update SYSPRO"
+    ],
+    "relatedServiceIds": [
+      "integration-automation",
+      "custom-software",
+      "technical-consulting"
+    ]
+  },
+  {
+    "id": "tax-authority-e-invoicing",
+    "title": "Tax Authority E-Invoicing (ZRA & KRA)",
+    "category": "Compliance Integration",
+    "featured": true,
+    "shortDescription": "REST API services that submit invoices to the Zambia Revenue Authority's Smart Invoice (VSDC) platform and integrate with the Kenya Revenue Authority's OSCU system.",
+    "businessProblem": "Businesses operating in Zambia and Kenya must submit their invoices to the revenue authority's electronic invoicing system, in the required format and reliably. Getting this wrong is a compliance risk, and their existing processes did not cover it.",
+    "solution": "Built and deployed REST API services that interface with the Zambia Revenue Authority's VSDC Smart Invoice platform for secure invoice submission, and delivered the compliance and reporting integration with the Kenya Revenue Authority's OSCU system. A CI/CD pipeline automatically tests every update, validates it against the authority's API specification and deploys it to staging and production with version control and rollback safety.",
+    "outcome": "Automated, compliant invoice submission to two national revenue authorities. Deployment time dropped from hours to minutes, with consistent reliability across every environment.",
+    "capabilities": [
+      "Secure invoice submission to ZRA Smart Invoice (VSDC)",
+      "KRA OSCU compliance and reporting integration",
+      "Validation against each authority's API specification",
+      "Automated build, test and deployment (CI/CD)",
+      "Staging and production releases with rollback"
+    ],
+    "technologies": [
+      "C#",
+      ".NET",
+      "REST APIs",
+      "SQL Server",
+      "CI/CD",
+      "Azure DevOps",
+      "GitHub Actions"
+    ],
+    "businessArea": "Tax & Compliance",
+    "platforms": "API Services",
+    "integration": "ZRA VSDC · KRA OSCU",
+    "solutionFlow": [
+      "Invoice",
+      "Validate Against Spec",
+      "Submit via API",
+      "Revenue Authority",
+      "Confirmation"
+    ],
+    "relatedServiceIds": [
+      "integration-automation",
+      "custom-software",
+      "technical-consulting"
+    ]
+  },
+  {
     "id": "erp-bank-reconciliation",
     "title": "ERP Bank Reconciliation Suite",
     "category": "Custom Software",
-    "featured": true,
+    "featured": false,
     "shortDescription": "A finance application that helps teams import bank statements, match them to cashbook transactions and post reconciled results into ERP.",
     "businessProblem": "Finance teams were reconciling bank statements against ERP cashbook transactions through a slow, error-prone manual process. Statement import, matching rules and controlled posting back into the ERP were limited or missing.",
     "solution": "Built a substantial bank reconciliation suite available as both a desktop application and a web application. The solution imports bank statements with duplicate detection, supports manual and rule-based matching — including multi-transaction matching — can create related cashbook and AR transactions, and posts reconciled results into Syspro ERP with an auditable history.",
@@ -24,6 +106,16 @@
       "SQL Server",
       "Syspro WCF/SOAP"
     ],
+    "businessArea": "Finance",
+    "platforms": "Desktop + Web",
+    "integration": "SYSPRO ERP",
+    "solutionFlow": [
+      "Bank Statement",
+      "Import",
+      "Match Transactions",
+      "Reconcile",
+      "Post to ERP"
+    ],
     "relatedServiceIds": [
       "custom-software",
       "integration-automation",
@@ -34,7 +126,7 @@
     "id": "erp-api-gateway",
     "title": "ERP API Gateway & Production Reporting",
     "category": "API Development",
-    "featured": true,
+    "featured": false,
     "shortDescription": "An integration layer and reporting dashboard that lets modern applications and managers work with an existing ERP — without replacing it.",
     "businessProblem": "Modern applications and reporting tools struggled to use ERP business objects that were only available through older WCF/SOAP interfaces. Production and contract reporting also needed clearer visibility without slow manual extracts.",
     "solution": "Built a REST/JSON gateway that translates modern application requests into Syspro WCF business object calls and returns cleaned, structured JSON. The same solution includes a Blazor reporting dashboard for contract and production cost reporting, with Excel export and multi-company support, reading from ERP SQL databases where grid performance matters.",
@@ -56,6 +148,15 @@
       "Syspro WCF",
       "REST API"
     ],
+    "businessArea": "Operations & Reporting",
+    "platforms": "Web",
+    "integration": "SYSPRO ERP",
+    "solutionFlow": [
+      "REST Request",
+      "ERP Business Object",
+      "Structured JSON",
+      "Reporting Dashboard"
+    ],
     "relatedServiceIds": [
       "integration-automation",
       "data-reporting",
@@ -66,7 +167,7 @@
     "id": "dispatch-stock-label-printing",
     "title": "Dispatch Stock Label Printing",
     "category": "ERP Integration",
-    "featured": true,
+    "featured": false,
     "shortDescription": "A warehouse workstation tool that prints stock labels from ERP dispatch notes, with preview and reprint support.",
     "businessProblem": "After dispatch processing, warehouse staff needed accurate stock labels based on ERP dispatch note data. Preparing labels manually was slow, and reprinting previously printed labels was difficult.",
     "solution": "Delivered a Windows workstation application that retrieves dispatch note stock lines from Syspro, lets staff select lines and set per-line label quantities, provides print preview, and supports both automatic launch after dispatch processing and manual reprinting.",
@@ -85,6 +186,16 @@
       "WPF",
       "Syspro e.net WCF",
       "Windows printing"
+    ],
+    "businessArea": "Warehouse & Operations",
+    "platforms": "Desktop",
+    "integration": "SYSPRO ERP",
+    "solutionFlow": [
+      "Dispatch Note",
+      "Retrieve Stock Lines",
+      "Set Quantities",
+      "Print Preview",
+      "Print Labels"
     ],
     "relatedServiceIds": [
       "integration-automation",
@@ -113,6 +224,16 @@
       "SQL Server",
       "Email automation"
     ],
+    "businessArea": "Finance",
+    "platforms": "ERP Embedded",
+    "integration": "SYSPRO ERP",
+    "solutionFlow": [
+      "Banking Change",
+      "Capture Request",
+      "Pending Approval",
+      "Audit Trail",
+      "Email Notification"
+    ],
     "relatedServiceIds": [
       "integration-automation",
       "custom-software"
@@ -138,9 +259,91 @@
       "VBScript",
       "SQL Server"
     ],
+    "businessArea": "Warehouse & Operations",
+    "platforms": "ERP Embedded",
+    "integration": "SYSPRO ERP",
+    "solutionFlow": [
+      "Transfer Request",
+      "Validate Route Rules",
+      "Guide Operator",
+      "Stock Movement"
+    ],
     "relatedServiceIds": [
       "custom-software",
       "integration-automation"
+    ]
+  },
+  {
+    "id": "cloud-digital-signage",
+    "title": "Cloud Digital Signage Platform",
+    "category": "Cloud Platform",
+    "featured": true,
+    "shortDescription": "An in-house, cloud-managed signage platform running 317 screens for brands like Nike, Jordan, Columbia and Vans across Qatar, Saudi Arabia and the UAE.",
+    "businessProblem": "Sun & Sand Sports (Gulf Marketing Group) was paying yearly licence fees for a third-party signage solution to manage in-store screens, and needed to deploy and schedule brand campaigns centrally across stores in several countries.",
+    "solution": "Designed and developed SSS Digital, a signage platform for Windows and Android players driving displays and video walls. It is built around four stages — Displays (the connected devices), Media (video, images, web and RSS content), Layouts (groups of media) and Schedules (time-based campaigns) — so content can be deployed and scheduled remotely on every screen. The platform is managed by the in-house team.",
+    "outcome": "Replaced the licensed solution, saving an estimated AED 634,000 a year. The platform runs 317 screens — digital displays, LED pelmets, large outdoor LEDs and video walls — for Nike, Jordan, Columbia, Vans, Converse, Sun & Sand Sports and Engine Health and Fitness.",
+    "capabilities": [
+      "Remote content deployment to every store",
+      "Time-based campaign scheduling",
+      "Layouts combining video, images, web and RSS",
+      "Windows and Android display players",
+      "Displays, LED pelmets, outdoor LEDs and video walls"
+    ],
+    "technologies": [
+      ".NET",
+      "SQL Server",
+      "Windows",
+      "Android",
+      "Cloud media distribution"
+    ],
+    "businessArea": "Retail",
+    "platforms": "Windows + Android",
+    "integration": "317 screens · 3 countries",
+    "solutionFlow": [
+      "Upload Media",
+      "Build Layout",
+      "Schedule",
+      "Deploy to Stores",
+      "On Screen"
+    ],
+    "relatedServiceIds": [
+      "custom-software",
+      "technical-consulting"
+    ]
+  },
+  {
+    "id": "fitness-hub-kiosks",
+    "title": "Fitness HUB Retail Kiosks",
+    "category": "Retail Technology",
+    "featured": false,
+    "shortDescription": "Touch-screen kiosks that let Sun & Sand Sports customers browse, compare and buy fitness and cycling equipment — with no equipment taking up the shop floor.",
+    "businessProblem": "Fitness and cycling equipment takes up a large share of retail floor space. The business needed to show its full range without dedicating store space to it, and free up the floor for a better commercial experience.",
+    "solution": "Designed, developed and installed the SSS Fitness HUB: kiosk software that showcases the full fitness and cycling range and lets customers compare and purchase quickly, with zero equipment on the floor. After a pilot at Deira City Centre, versions were set up for Sports Market, Factory Outlet, the Dubai Hotel and Leisure Show and Pedaliere Dubai, where customers can also print product comparisons to take home.",
+    "outcome": "35 active Fitness HUBs across Qatar, Saudi Arabia, the UAE and Bahrain, showcasing 454 products. Sales made through the Fitness HUB account for around 35% of total sales.",
+    "capabilities": [
+      "Full product range without floor stock",
+      "Product comparison",
+      "Purchase at the kiosk",
+      "Printed product comparisons",
+      "Versions for multiple store formats and events"
+    ],
+    "technologies": [
+      ".NET",
+      "SQL Server",
+      "Touch-screen kiosks"
+    ],
+    "businessArea": "Retail",
+    "platforms": "Kiosk",
+    "integration": "35 kiosks · 4 countries",
+    "solutionFlow": [
+      "Browse Range",
+      "Compare",
+      "Buy",
+      "Train"
+    ],
+    "relatedServiceIds": [
+      "custom-software",
+      "technical-consulting"
     ]
   }
 ]

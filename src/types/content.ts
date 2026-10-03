@@ -121,6 +121,10 @@ export interface Project {
   outcome: string
   capabilities: string[]
   technologies: string[]
+  businessArea: string
+  platforms: string
+  integration: string
+  solutionFlow: string[]
   relatedServiceIds: string[]
 }
 
