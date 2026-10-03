@@ -19,44 +19,16 @@ export function ContactPage() {
           <div>
             <h3>Email</h3>
             <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-            {contactInfo.placeholders.email ? (
-              <p className="placeholder-note">Placeholder — replace before publishing</p>
-            ) : null}
           </div>
 
           <div>
             <h3>Phone</h3>
             <a href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}>{contactInfo.phone}</a>
-            {contactInfo.placeholders.phone ? (
-              <p className="placeholder-note">Placeholder — replace before publishing</p>
-            ) : null}
           </div>
 
           <div>
             <h3>Location</h3>
             <p>{contactInfo.location}</p>
-            {contactInfo.placeholders.location ? (
-              <p className="placeholder-note">Placeholder — replace before publishing</p>
-            ) : null}
-          </div>
-
-          <div>
-            <h3>Online</h3>
-            <ul className="contact-online">
-              <li>
-                <a href={contactInfo.linkedin} target="_blank" rel="noreferrer">
-                  LinkedIn
-                </a>
-                {contactInfo.placeholders.linkedin ? (
-                  <span className="placeholder-note"> Placeholder</span>
-                ) : null}
-              </li>
-              <li>
-                <a href={contactInfo.github} target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-              </li>
-            </ul>
           </div>
         </aside>
 

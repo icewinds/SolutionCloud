@@ -1,22 +1,15 @@
 {
   "heading": "Let's talk about your business problem.",
-  "supportingMessage": "Tell us what you're trying to achieve, what systems you're currently using and where you're experiencing problems. With nearly 20 years of software experience and an AI-first approach, we'll start by understanding the problem before discussing a solution.",
+  "supportingMessage": "Tell us what you're trying to achieve, what systems you're currently using and where you're experiencing problems. We'll start by understanding the problem before discussing a solution.",
   "email": "jason.renaud@solutioncloud.tech",
   "phone": "+27 76 859 0740",
   "location": "South Africa · Remote",
   "linkedin": "https://www.linkedin.com/in/jarenaud/",
-  "github": "https://github.com/icewinds/SolutionCloud",
   "form": {
     "mailtoSubject": "SolutionCloud enquiry",
     "web3formsAccessKey": "5d1b2fc2-34c6-4b1d-ad99-6fecb59ac78c",
     "successMessage": "Thanks — your message has been sent. We'll be in touch shortly.",
     "mailtoMessage": "Your email client should open with your message ready to send. If it does not, please email us directly.",
     "errorMessage": "Sorry, your message could not be sent. Please try again or email us directly."
-  },
-  "placeholders": {
-    "email": false,
-    "phone": false,
-    "location": false,
-    "linkedin": false
   }
 }

@@ -36,20 +36,6 @@
   color: var(--color-ink);
 }
 
-.placeholder-note {
-  margin-top: 0.35rem !important;
-  font-size: 0.85rem;
-  color: color-mix(in srgb, var(--color-accent) 70%, var(--color-ink-muted));
-}
-
-.contact-online {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 0.45rem;
-}
-
 @media (max-width: 850px) {
   .contact-layout {
     grid-template-columns: 1fr;

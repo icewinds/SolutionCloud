@@ -128,13 +128,6 @@ export interface Project {
   relatedServiceIds: string[]
 }
 
-export interface ContactPlaceholders {
-  email: boolean
-  phone: boolean
-  location: boolean
-  linkedin: boolean
-}
-
 export interface ContactInfo {
   heading: string
   supportingMessage: string
@@ -142,7 +135,6 @@ export interface ContactInfo {
   phone: string
   location: string
   linkedin: string
-  github: string
   form: {
     mailtoSubject: string
     /** Public Web3Forms access key. Empty = open the visitor's email client instead. */
@@ -151,7 +143,6 @@ export interface ContactInfo {
     mailtoMessage: string
     errorMessage: string
   }
-  placeholders: ContactPlaceholders
 }
 
 export interface ContactFormValues {
