@@ -21,7 +21,7 @@ const initialValues: ContactFormValues = {
 export function ContactForm({ contact }: ContactFormProps) {
   const [values, setValues] = useState<ContactFormValues>(initialValues)
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormValues, string>>>({})
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'mailto' | 'error'>('idle')
 
   function updateField<K extends keyof ContactFormValues>(
     field: K,
@@ -39,19 +39,31 @@ export function ContactForm({ contact }: ContactFormProps) {
     })
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>): void {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault()
+    if (status === 'sending') {
+      return
+    }
 
     const nextErrors = validateContactForm(values)
     setErrors(nextErrors)
 
     if (Object.keys(nextErrors).length > 0) {
-      setSubmitted(false)
+      setStatus('idle')
       return
     }
 
-    submitContactEnquiry(contact.email, contact.form.mailtoSubject, values)
-    setSubmitted(true)
+    setStatus('sending')
+    try {
+      const outcome = await submitContactEnquiry(contact, values)
+      setStatus(outcome)
+      if (outcome === 'sent') {
+        setValues(initialValues)
+      }
+    } catch (error) {
+      console.error(error)
+      setStatus('error')
+    }
   }
 
   return (
@@ -156,15 +168,23 @@ export function ContactForm({ contact }: ContactFormProps) {
         ) : null}
       </div>
 
-      <button type="submit" className="button">
-        Send Message
+      <button type="submit" className="button" disabled={status === 'sending'}>
+        {status === 'sending' ? 'Sending…' : 'Send Message'}
       </button>
 
-      {submitted ? (
-        <p className="form-success" role="status">
-          {contact.form.successMessage}
-        </p>
-      ) : null}
+      <div role="status" aria-live="polite">
+        {status === 'sent' || status === 'mailto' ? (
+          <p className="form-success">
+            {status === 'sent' ? contact.form.successMessage : contact.form.mailtoMessage}
+          </p>
+        ) : null}
+        {status === 'error' ? (
+          <p className="form-error">
+            {contact.form.errorMessage}{' '}
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </p>
+        ) : null}
+      </div>
     </form>
   )
 }
