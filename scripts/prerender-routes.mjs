@@ -4,8 +4,8 @@
 // Also writes sitemap.xml and robots.txt from the same route list.
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 
-// Public URL of the site, without trailing slash. Change this when the custom domain goes live.
-const SITE_URL = 'https://icewinds.github.io/SolutionCloud'
+// Public URL of the site, without trailing slash. Must match the custom domain set in GitHub Pages.
+const SITE_URL = 'https://solutioncloud.tech'
 
 const readJson = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'))
 const site = readJson('../src/data/site.json')
