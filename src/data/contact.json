@@ -8,7 +8,10 @@
   "github": "https://github.com/icewinds/SolutionCloud",
   "form": {
     "mailtoSubject": "SolutionCloud enquiry",
-    "successMessage": "Your email client should open with your message ready to send. If it does not, please email us directly."
+    "web3formsAccessKey": "",
+    "successMessage": "Thanks — your message has been sent. We'll be in touch shortly.",
+    "mailtoMessage": "Your email client should open with your message ready to send. If it does not, please email us directly.",
+    "errorMessage": "Sorry, your message could not be sent. Please try again or email us directly."
   },
   "placeholders": {
     "email": false,

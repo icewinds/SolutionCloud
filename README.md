@@ -28,6 +28,10 @@ Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/deploy.
 
 In the repository settings, set **Pages → Source** to **GitHub Actions**.
 
-## Contact placeholders
+## Contact form
 
-Replace placeholder values in `src/data/contact.json` before publishing.
+Enquiries are sent through [Web3Forms](https://web3forms.com). Create a free access key for the inbox that should receive them and put it in `form.web3formsAccessKey` in `src/data/contact.json` (the key is public by design). If the key is empty, the form falls back to opening the visitor's email client.
+
+## Search indexing
+
+`npm run build` runs `scripts/prerender-routes.mjs`, which writes an `index.html` for every route (so GitHub Pages returns 200 instead of 404) plus `sitemap.xml` and `robots.txt`. Update `SITE_URL` in that script if the site address changes.

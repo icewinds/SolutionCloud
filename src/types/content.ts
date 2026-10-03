@@ -141,7 +141,11 @@ export interface ContactInfo {
   github: string
   form: {
     mailtoSubject: string
+    /** Public Web3Forms access key. Empty = open the visitor's email client instead. */
+    web3formsAccessKey: string
     successMessage: string
+    mailtoMessage: string
+    errorMessage: string
   }
   placeholders: ContactPlaceholders
 }

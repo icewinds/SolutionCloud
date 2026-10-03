@@ -1,9 +1,6 @@
-import type { ContactFormValues } from '../types/content'
+import type { ContactFormValues, ContactInfo } from '../types/content'
 
-/**
- * Builds a mailto URL from form values.
- * Replace this module later with a form service, serverless function or API client.
- */
+/** Builds a mailto URL from form values. */
 export function buildMailtoUrl(
   toEmail: string,
   subject: string,
@@ -59,11 +56,38 @@ export function validateContactForm(
   return errors
 }
 
-export function submitContactEnquiry(
-  toEmail: string,
-  subject: string,
+/**
+ * Sends the enquiry through Web3Forms (delivered to the inbox registered with the key).
+ * Without a key, falls back to opening the visitor's email client.
+ * Throws if Web3Forms rejects the submission or the network fails.
+ */
+export async function submitContactEnquiry(
+  contact: ContactInfo,
   values: ContactFormValues,
-): void {
-  const mailtoUrl = buildMailtoUrl(toEmail, subject, values)
-  window.location.href = mailtoUrl
+): Promise<'sent' | 'mailto'> {
+  const { web3formsAccessKey, mailtoSubject } = contact.form
+
+  if (!web3formsAccessKey) {
+    window.location.href = buildMailtoUrl(contact.email, mailtoSubject, values)
+    return 'mailto'
+  }
+
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({
+      access_key: web3formsAccessKey,
+      subject: `${mailtoSubject} from ${values.name} (${values.company})`,
+      from_name: 'SolutionCloud website',
+      replyto: values.email,
+      ...values,
+      phone: values.phone || 'Not provided',
+    }),
+  })
+  const result = (await response.json().catch(() => null)) as { success?: boolean } | null
+
+  if (!response.ok || !result?.success) {
+    throw new Error(`Web3Forms submission failed (HTTP ${response.status})`)
+  }
+  return 'sent'
 }
