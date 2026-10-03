@@ -1,15 +1,15 @@
 {
   "companyName": "SolutionCloud",
   "tagline": "Your business is unique. Your software should be too.",
-  "description": "With nearly 20 years of software development experience and an AI-first approach, SolutionCloud helps growing businesses connect their ERP, banking and compliance systems, automate processes and build practical software that works the way their business works.",
+  "description": "SolutionCloud connects ERP, banking and compliance systems, automates manual processes and builds practical software that works the way your business works, using an AI-first approach to deliver faster.",
   "seo": {
     "home": {
       "title": "SolutionCloud | Custom Software & Business Solutions",
-      "description": "Nearly 20 years of software experience with an AI-first approach. SolutionCloud helps growing businesses build custom software, connect SYSPRO ERP, banking and tax systems, automate processes and improve reporting."
+      "description": "SolutionCloud builds custom software, connects SYSPRO ERP, banking and tax systems, automates processes and improves reporting for growing businesses, with AI-first delivery."
     },
     "services": {
       "title": "Services | SolutionCloud",
-      "description": "Custom software, system integration, automation, data reporting and technical consulting — delivered with nearly 20 years of experience and an AI-first approach."
+      "description": "Custom software, system integration, automation, data reporting and technical consulting — delivered with an AI-first approach."
     },
     "contact": {
       "title": "Contact | SolutionCloud",
@@ -37,7 +37,7 @@
     },
     "final": {
       "heading": "Have a business problem that software could solve?",
-      "text": "Let's talk about what you're trying to achieve. You get nearly 20 years of software experience, an AI-first approach and a practical conversation — no complicated sales process.",
+      "text": "Let's talk about what you're trying to achieve. You'll get a practical conversation about what's possible, with no complicated sales process.",
       "buttonLabel": "Start a Conversation",
       "path": "/contact"
     }
@@ -63,7 +63,7 @@
   "servicesPage": {
     "eyebrow": "Services",
     "heading": "Practical software services for growing businesses",
-    "intro": "With nearly 20 years of hands-on software development and an AI-first way of working, SolutionCloud helps small and medium-sized businesses build the software they need, connect the systems they already use and reduce the manual work that slows teams down."
+    "intro": "SolutionCloud helps small and medium-sized businesses build the software they need, connect the systems they already use and reduce the manual work that slows teams down, using AI throughout delivery to get there faster."
   },
   "problems": {
     "heading": "Does your business rely too much on manual work?",
@@ -94,8 +94,8 @@
         "description": "Automate repetitive tasks and reduce unnecessary data entry so your team can focus on higher-value work."
       },
       {
-        "title": "Nearly 20 Years of Experience",
-        "description": "Draw on nearly 20 years of software development — including SYSPRO ERP, banking and tax-authority integrations — without the cost of maintaining a large development team."
+        "title": "Proven in Demanding Environments",
+        "description": "Nearly 20 years of delivery across banking and payment integrations, tax-authority e-invoicing, SYSPRO ERP and retail technology, without the cost of maintaining a large development team."
       },
       {
         "title": "AI-First Approach",
@@ -157,7 +157,7 @@
     ]
   },
   "footer": {
-    "tagline": "Nearly 20 years of experience. AI-first delivery. Practical software for growing businesses.",
+    "tagline": "Integration, automation and custom software for growing businesses. AI-first delivery.",
     "copyrightName": "SolutionCloud"
   }
 }

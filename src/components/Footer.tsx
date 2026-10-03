@@ -46,11 +46,6 @@ export function Footer({ companyName, tagline, navigation, contact }: FooterProp
                 LinkedIn
               </a>
             </li>
-            <li>
-              <a href={contact.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            </li>
           </ul>
         </div>
       </div>
