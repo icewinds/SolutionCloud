@@ -22,7 +22,7 @@ npm run dev
 
 ## Deployment
 
-The site is configured for GitHub Pages under the repository path `/SolutionCloud/`.
+The site is served by GitHub Pages at https://solutioncloud.tech (custom domain set under **Settings → Pages**; DNS: apex `A` records to GitHub Pages, `www` `CNAME` to `icewinds.github.io`).
 
 Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the site and deploys the `dist` folder to GitHub Pages.
 
