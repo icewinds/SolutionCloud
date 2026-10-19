@@ -21,6 +21,21 @@ Website for SolutionCloud: custom software, ERP (SYSPRO), banking and tax-system
 
 Unknown routes redirect to the home page.
 
+## Demo websites
+
+`public/demos/<name>/index.html` holds standalone demo sites built for prospective clients. Vite copies `public/` as-is, so each one is served at `https://solutioncloud.tech/demos/<name>/`, outside the React app.
+
+| Demo | URL |
+| --- | --- |
+| Secret Forest Café | `/demos/secret-forest-cafe/` |
+| Trueman's Fish & Chips | `/demos/truemans-fish-and-chips/` |
+| Marco's Mancave | `/demos/marcos-mancave/` |
+| Motospot Services | `/demos/motospot/` |
+| Ward Electrical & Refrigeration | `/demos/ward-electrical/` |
+| Clippers Grooming Parlour | `/demos/clippers-grooming/` |
+
+Each page has `<meta name="robots" content="noindex, nofollow">`, is not in the sitemap and is not linked from the site, so the only way to reach it is to be sent the link. To add one, create a folder with a self-contained `index.html` that includes the same noindex tag. To remove one, delete its folder.
+
 ## Editing content
 
 All text lives in JSON files under `src/data/`. Change those files rather than the components.
