@@ -7,14 +7,18 @@
 <title>Clippers Grooming Parlour | Dog Grooming in Heathfield</title>
 <meta name="description" content="Calm, individual dog grooming at Clippers Grooming Parlour, 53 Main Rd, Heathfield. Book on WhatsApp 083 264 6617.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 /* claude-design-styles: "scandinavian style" (spec/scandinavian.md) */
-:root{--bg:#f9f9f7;--surface:#f2f1ef;--border:#e5e3df;--text:#1c1c1a;--muted:#6f6d66;--accent:#c4854a}
+:root{--bg:#f9f9f7;--surface:#f2f1ef;--border:#e5e3df;--text:#1c1c1a;--muted:#6f6d66;--accent:#a8592b;--accent-soft:#f3e6dc}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:300 16px/1.8 Sora,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}a:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
 h1,h2,h3{font-weight:400;margin:0;line-height:1.2;letter-spacing:-.01em}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:300;font-variation-settings:"opsz" 120;letter-spacing:-.02em}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+.eyebrow,.sh .kicker{display:block;margin-bottom:10px;color:var(--accent);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+.sh h2:after{content:"";display:block;width:40px;height:2px;background:var(--accent);margin-top:18px}
 .wrap{max-width:56rem;margin:0 auto;padding:0 24px}
 .demo{background:var(--surface);border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;padding:6px 12px;text-align:center}.demo a{color:var(--text)}
 nav{border-bottom:1px solid var(--border)}
@@ -23,11 +27,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px
 .links{display:flex;gap:28px;font-size:14px}
 .links a{text-decoration:none;color:var(--muted);transition:color .2s}.links a:hover{color:var(--text)}
 .btn{display:inline-block;background:var(--text);color:var(--bg);text-decoration:none;font-size:14px;font-weight:400;letter-spacing:.05em;padding:12px 32px;border-radius:2px;transition:background .2s}
-.btn:hover{background:var(--accent)}
+.btn{background:var(--accent)}.btn:hover{background:var(--text)}
 .btn.sm{padding:8px 20px}
 .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border)}.btn.ghost:hover{border-color:var(--text);background:transparent}
 .hero{padding:140px 0 112px}
-.eyebrow{font-size:14px;color:var(--muted)}
+
 .hero h1{font-size:clamp(34px,5vw,52px);margin-top:28px;max-width:16ch}
 .hero p{margin:32px 0 40px;font-size:18px;color:var(--muted);max-width:44ch}
 .ctas{display:flex;gap:14px;flex-wrap:wrap}
@@ -39,7 +43,7 @@ section{padding:112px 0}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:32px;transition:border-color .2s}
 .card:hover{border-color:var(--accent)}
-.card svg{width:28px;height:28px;stroke:var(--text);fill:none;stroke-width:1.2;margin-bottom:20px}
+.card svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.2;margin-bottom:20px}
 .card h3{font-size:18px;margin-bottom:10px}
 .card p{margin:0;color:var(--muted);font-size:15px}
 .breeds{margin-top:40px;color:var(--muted);font-size:15px}
@@ -90,7 +94,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  <div class="wrap">
   <div>
   <div class="eyebrow">dog grooming · 53 main road, heathfield</div>
-  <h1>individual attention, the way a good salon treats you.</h1>
+  <h1>individual attention, the way a good <em>salon</em> treats you.</h1>
   <p>A calm, patient grooming parlour for dogs of every size and age, including the nervous ones and the old ones.</p>
   <div class="ctas"><a class="btn" href="https://wa.me/27832646617">book on whatsapp</a><a class="btn ghost" href="tel:+27832646617">083 264 6617</a></div>
   </div>
@@ -101,7 +105,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section id="grooming">
  <div class="wrap">
-  <div class="sh"><h2>grooming</h2><p>Each dog is groomed for its own breed, coat and temperament.</p></div>
+  <div class="sh"><div><span class="kicker">our stylings</span><h2>grooming, <em>gently</em></h2></div><p>Each dog is groomed for its own breed, coat and temperament.</p></div>
   <div class="grid">
    <article class="card"><svg viewBox="0 0 28 28"><circle cx="8" cy="20" r="4"/><circle cx="20" cy="20" r="4"/><path d="M10.5 17L22 4M17.5 17L6 4"/></svg><h3>full groom</h3><p>Wash, dry, brush and a trim styled to the breed.</p></article>
    <article class="card"><svg viewBox="0 0 28 28"><path d="M5 14h18v4a5 5 0 0 1-5 5h-8a5 5 0 0 1-5-5z"/><path d="M3 14h22"/></svg><h3>wash &amp; tidy</h3><p>A good wash and a neat tidy-up between full grooms.</p></article>
@@ -118,9 +122,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div>
 <hr>
 
-<section id="reviews">
+<section id="reviews" style="background:var(--accent-soft)">
  <div class="wrap">
-  <div class="sh"><h2>what owners say</h2><p>From Google reviews.</p></div>
+  <div class="sh"><div><span class="kicker">reviews</span><h2>what owners <em>say</em></h2></div><p>From Google reviews.</p></div>
   <div class="stats">
    <div class="stat"><b class="hi">4.7</b><span>google rating</span></div>
    <div class="stat"><b>71</b><span>reviews</span></div>
@@ -137,7 +141,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section id="visit">
  <div class="wrap">
-  <div class="sh"><h2>visit</h2><p>On Main Road in Heathfield.</p></div>
+  <div class="sh"><div><span class="kicker">find us</span><h2>come <em>visit</em></h2></div><p>On Main Road in Heathfield.</p></div>
   <div class="visit">
    <div>
     <dl>
