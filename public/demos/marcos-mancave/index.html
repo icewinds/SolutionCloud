@@ -2,159 +2,143 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Marco's Mancave | Barbershop in Bergvliet</title>
-<meta name="description" content="Haircuts, fades, beard trims and hot towel shaves at Marco's Mancave, Kenya Building, Bergvliet. Book on WhatsApp.">
+<meta name="description" content="Haircuts, fades, beard trims and shaves at Marco's Mancave, Kenya Building, Bergvliet. Book on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
-/* Design system (UI/UX Pro Max): Liquid Glass style, Scroll-Triggered Storytelling, Cormorant / Montserrat, premium black + gold */
-:root{--bg:#0C0A09;--panel:#1C1917;--line:#44403C;--gold:#D6A645;--gold-d:#A16207;--text:#FAFAF9;--soft:#D6D3D1;--muted:#A8A29E}
+/* claude-design-styles: "art deco style" (spec/art-deco.md), dark variant */
+:root{--bg:#0d0d0d;--gold:#c9a84c;--gold-l:#e8c97a;--gold-d:#8b6914;--cream:#f5f0e8}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:300 16px/1.8 Montserrat,system-ui,sans-serif;color:var(--soft);background:var(--bg)}
-h1,h2,h3{font-family:Cormorant,Georgia,serif;font-weight:600;color:var(--text);margin:0;line-height:1.05}
-a{color:inherit}a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-.i{width:20px;height:20px;flex:none}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-.demo{background:var(--gold);color:#0C0A09;font-size:12px;font-weight:500;text-align:center;padding:6px;letter-spacing:.04em}
-header{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(12,10,9,.7);border-bottom:1px solid rgba(214,166,69,.18)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
-.mark{font-family:Cormorant,serif;font-size:24px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:.06em}
-.mark small{display:block;font:500 10px/1 Montserrat,sans-serif;letter-spacing:.42em;color:var(--gold);margin-top:2px}
-nav a{margin-left:30px;text-decoration:none;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);transition:color .3s}
-nav a:hover{color:var(--gold)}
-.hero{min-height:min(88vh,820px);display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:80px 0}
-.hero::before{content:"";position:absolute;inset:-20%;background:radial-gradient(40% 40% at 50% 40%,rgba(214,166,69,.22),transparent 70%),radial-gradient(30% 30% at 80% 80%,rgba(161,98,7,.18),transparent 70%)}
-.pole{position:absolute;top:0;bottom:0;left:6%;width:14px;border-radius:7px;background:repeating-linear-gradient(135deg,var(--gold) 0 14px,#0C0A09 14px 28px);opacity:.25}
+body{margin:0;background:var(--bg);color:var(--cream);font:300 16px/1.8 "Josefin Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-align:center}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;text-transform:uppercase;letter-spacing:.2em;margin:0;line-height:1.15}
+em{font-family:"Cormorant Garamond",serif;font-style:italic;text-transform:none;letter-spacing:.02em;color:var(--gold-l)}
+a{color:inherit}a:focus-visible{outline:1px solid var(--gold-l);outline-offset:4px}
+.wrap{max-width:56rem;margin:0 auto;padding:0 24px}
+.label{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+.demo{background:var(--gold);color:var(--bg);font-size:12px;letter-spacing:.08em;padding:6px 12px}.demo a{color:inherit;font-weight:400}
+.frame{position:fixed;inset:12px;border:1px solid rgba(201,168,76,.25);pointer-events:none;z-index:20}
+nav{padding:26px 0;border-bottom:1px solid rgba(201,168,76,.3)}
+nav .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:11px;letter-spacing:.4em;text-transform:uppercase;transition:color .3s}nav a:hover{color:var(--gold-l)}
+.divider{display:flex;align-items:center;gap:14px;margin:30px auto;max-width:420px}
+.divider .line{flex:1;height:1px;background:var(--gold)}
+.diamond{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);flex:none}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.hero{padding:70px 0 80px;position:relative;overflow:hidden}
+.sunburst{position:absolute;left:50%;top:50%;width:900px;height:900px;margin:-450px 0 0 -450px;border-radius:50%;opacity:.18;background:repeating-conic-gradient(from 0deg,transparent 0deg 8deg,var(--gold) 8deg 9deg);-webkit-mask:radial-gradient(circle,#000 20%,transparent 70%);mask:radial-gradient(circle,#000 20%,transparent 70%)}
 .hero .inner{position:relative}
-.over{font-size:12px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold)}
-.hero h1{font-size:clamp(56px,11vw,140px);font-weight:500;margin:18px 0}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero p{max-width:540px;margin:0 auto 40px;font-size:18px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;font:500 13px Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .35s ease}
-.btn-gold{background:var(--gold);color:#0C0A09}.btn-gold:hover{background:#E8BF6A}
-.btn-ghost{border:1px solid rgba(250,250,249,.35);color:var(--text);margin-left:12px}.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.rating{margin-top:48px;display:inline-flex;gap:14px;align-items:center;padding:12px 22px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);font-size:14px}
-.rating .stars{display:flex;gap:2px;color:var(--gold)}.rating .i{width:15px;height:15px}
-section{padding:110px 0}
-.chapter{display:flex;align-items:center;gap:18px;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
-.chapter::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--gold-d),transparent)}
-h2{font-size:clamp(40px,6vw,68px);font-weight:500}
-.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.story p{font-size:17px}
-.glass{background:linear-gradient(140deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:28px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 30px 60px -30px #000}
-.figure{aspect-ratio:4/5;display:grid;place-items:center;position:relative}
-.figure .i{width:42%;height:42%;color:var(--gold);opacity:.9}
-.figure .tag{position:absolute;bottom:24px;left:24px;right:24px;padding:16px 20px;font-family:Cormorant,serif;font-size:22px;color:var(--text);font-style:italic}
-.menu{background:var(--panel)}
-.list{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:6px 60px}
-.item{padding:26px 0;border-bottom:1px solid var(--line)}
-.item .top{display:flex;align-items:baseline;gap:14px}
-.item h3{font-size:30px}
-.item .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-6px)}
-.item .t{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
-.item p{margin:6px 0 0;color:var(--muted)}
-.voices .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
-.voice{padding:36px 32px;transition:transform .4s ease,border-color .4s}
-.voice:hover{transform:translateY(-6px);border-color:rgba(214,166,69,.5)}
-.voice .q{font-family:Cormorant,serif;font-size:60px;line-height:.5;color:var(--gold)}
-.voice p{font-family:Cormorant,serif;font-size:22px;line-height:1.4;color:var(--text);font-style:italic;margin:16px 0}
-.voice cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.chair .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
-.box{padding:44px}
-.row{display:flex;gap:14px;margin:18px 0;align-items:flex-start}.row .i{color:var(--gold);margin-top:5px}
-.hours{width:100%;border-collapse:collapse;margin-top:6px}
-.hours td{padding:12px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right;color:var(--text)}
-iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:28px;filter:grayscale(1) invert(.9) contrast(.9)}
-footer{border-top:1px solid var(--line);padding:34px 0;font-size:13px;letter-spacing:.1em;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}.reveal.in{opacity:1;transform:none}
+.fan{width:120px;height:60px;margin:0 auto 10px;border-radius:120px 120px 0 0;background:repeating-conic-gradient(from 270deg at 50% 100%,var(--gold) 0deg 4deg,transparent 4deg 18deg);-webkit-mask:linear-gradient(#000,#000);opacity:.9}
+.hero h1{font-size:clamp(46px,9vw,104px);line-height:1;margin:6px 0 4px;letter-spacing:.14em}
+.hero .sub{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,2.6vw,28px);font-style:italic;color:var(--gold-l);letter-spacing:.04em}
+.hero p{max-width:34em;margin:0 auto 34px;color:#d8d2c4}
+.btn{display:inline-block;background:transparent;color:var(--gold);border:1px solid var(--gold);font-family:"Josefin Sans",sans-serif;font-weight:300;letter-spacing:.4em;text-transform:uppercase;font-size:11px;padding:16px 44px;text-decoration:none;transition:all .35s;cursor:pointer;margin:6px}
+.btn:hover{background:var(--gold);color:var(--bg)}
+.btn.filled{background:var(--gold);color:var(--bg)}.btn.filled:hover{background:var(--gold-l)}
+.rating{margin-top:34px;font-family:"Cormorant Garamond",serif;font-size:20px;letter-spacing:.1em}
+.rating span{color:var(--gold);letter-spacing:.3em;margin-right:8px}
+section{padding:80px 0;border-top:1px solid rgba(201,168,76,.2)}
+h2{font-size:clamp(28px,4.4vw,46px)}
+.intro{max-width:36em;margin:0 auto;font-size:17px;color:#d8d2c4}
+.card{border:1px solid var(--gold);background:rgba(201,168,76,.05);position:relative;padding:38px 26px}
+.card::before,.card::after{content:"";position:absolute;width:20px;height:20px}
+.card::before{top:-1px;left:-1px;border-top:2px solid var(--gold-l);border-left:2px solid var(--gold-l)}
+.card::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--gold-l);border-right:2px solid var(--gold-l)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+.card .n{font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:300;color:var(--gold);line-height:1}
+.card h3{font-size:20px;margin:12px 0 10px;letter-spacing:.24em}
+.card p{margin:0;color:#cfc8b8}
+.quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(22px,3vw,30px);line-height:1.45;max-width:30em;margin:0 auto}
+.who{margin-top:16px}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
+.quotes .card p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;line-height:1.5;color:var(--cream)}
+.hours{max-width:420px;margin:30px auto 0;text-align:left}
+.hours div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(201,168,76,.3);letter-spacing:.1em}
+.hours div span:last-child{font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--gold-l)}
+.addr{font-family:"Cormorant Garamond",serif;font-size:22px;letter-spacing:.06em;margin:18px 0 6px}
+iframe{width:100%;height:320px;border:1px solid var(--gold);margin-top:34px;filter:grayscale(1) invert(.92) sepia(.4)}
+footer{padding:40px 0 50px;border-top:1px solid rgba(201,168,76,.3)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}.reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
-@media(max-width:860px){nav{display:none}.story .wrap,.chair .wrap,.list{grid-template-columns:1fr}.voices .grid{grid-template-columns:1fr}.btn-ghost{margin:14px 0 0}.figure{max-width:380px;width:100%;margin:0 auto}section{padding:72px 0}.pole{display:none}.box{padding:30px}}
+@media(max-width:720px){.grid,.quotes{grid-template-columns:1fr}.frame{inset:6px}nav .wrap{gap:20px}nav a{letter-spacing:.25em}.btn{padding:15px 30px;display:block;max-width:300px;margin:10px auto}section{padding:60px 0}.hero h1{letter-spacing:.08em}}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="star" viewBox="0 0 24 24"><polygon fill="currentColor" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
-  <symbol id="scissors" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></g></symbol>
-  <symbol id="chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
-  <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
-  <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-</svg>
-<div class="demo">Demo website prepared for Marco's Mancave by <a href="https://solutioncloud.tech/contact/" style="color:inherit;font-weight:700">SolutionCloud</a> · not yet live</div>
-<header><div class="wrap">
-  <a class="mark" href="#">MARCO'S<small>MANCAVE</small></a>
-  <nav aria-label="Main"><a href="#story">The shop</a><a href="#services">Services</a><a href="#visit">Visit</a></nav>
-</div></header>
+<div class="frame" aria-hidden="true"></div>
+<div class="demo">Demo website prepared for Marco's Mancave by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a> · not yet live</div>
+<nav aria-label="Main"><div class="wrap"><a href="#salon">The Salon</a><a href="#services">Services</a><a href="#words">Patrons</a><a href="#visit">Visit</a></div></nav>
 <main>
-<section class="hero">
-  <div class="pole" aria-hidden="true"></div>
+<header class="hero">
+  <div class="sunburst" aria-hidden="true"></div>
   <div class="inner wrap">
-    <div class="over">Barbershop · Bergvliet</div>
-    <h1>Cut <em>exactly</em><br>how you want it.</h1>
-    <p>Sharp haircuts, clean fades, shaped beards and smooth shaves, from a team that reads you and looks after you.</p>
-    <a class="btn btn-gold" href="https://wa.me/27673702226"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>Book on WhatsApp</a>
-    <a class="btn btn-ghost" href="#services">See services</a>
-    <div><span class="rating"><span class="stars" role="img" aria-label="5 stars"><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg></span>4.7 from 150 Google reviews</span></div>
+    <div class="fan" aria-hidden="true"></div>
+    <div class="label">Barbershop · Bergvliet</div>
+    <h1>Marco's</h1>
+    <div class="sub">The Mancave</div>
+    <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="dot"></span><span class="diamond"></span><span class="line"></span></div>
+    <p>Sharp cuts, shaped beards and smooth shaves, from a team that reads you and makes you feel right at home.</p>
+    <a class="btn filled" href="https://wa.me/27673702226">Book on WhatsApp</a><a class="btn" href="#services">Our services</a>
+    <div class="rating"><span aria-hidden="true">★★★★★</span>4.7 from 150 Google reviews</div>
+  </div>
+</header>
+
+<section id="salon">
+  <div class="wrap reveal">
+    <div class="label">The Salon</div>
+    <h2 style="margin-top:12px">Modern vibe, <em>classic touch</em></h2>
+    <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+    <p class="intro">Walk into Marco's Mancave in the Kenya Building and you'll be greeted warmly. Marco and the team take the time to get your cut exactly how you want it. Love a chat in the chair? Wonderful. Prefer to sit back quietly? They'll respect that too.</p>
   </div>
 </section>
 
-<section class="story" id="story">
+<section id="services">
   <div class="wrap">
-    <div class="reveal">
-      <div class="chapter">I · The shop</div>
-      <h2>Modern vibe,<br>classic touch.</h2>
-      <p>Walk into Marco's Mancave in the Kenya Building and you'll be greeted warmly and made to feel at home. Marco and the team take the time to get your cut right.</p>
-      <p>Love a chat in the chair? Great. Prefer to sit back and get down to business? They'll respect that too.</p>
-    </div>
-    <div class="glass figure reveal"><svg class="i" aria-hidden="true"><use href="#scissors"/></svg><div class="glass tag">“One haircut is not enough.”</div></div>
-  </div>
-</section>
-
-<section class="menu" id="services">
-  <div class="wrap">
-    <div class="chapter">II · The chair</div>
-    <h2>Services</h2>
-    <div class="list">
-      <div class="item reveal"><div class="top"><h3>Haircuts &amp; fades</h3><span class="dots"></span><span class="t">Signature</span></div><p>Precision cuts tailored to you, from classic cuts to fades.</p></div>
-      <div class="item reveal"><div class="top"><h3>Beard trim</h3><span class="dots"></span><span class="t">Shape</span></div><p>Lined, shaped and tidied to suit your face.</p></div>
-      <div class="item reveal"><div class="top"><h3>Classic shave</h3><span class="dots"></span><span class="t">Ritual</span></div><p>A smooth, shaped shave to finish the look.</p></div>
-      <div class="item reveal"><div class="top"><h3>Cut &amp; beard combo</h3><span class="dots"></span><span class="t">Full service</span></div><p>The complete refresh, done quickly and properly.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="voices">
-  <div class="wrap">
-    <div class="chapter">III · The word</div>
-    <h2>From the chair</h2>
+    <div class="label">The Services</div>
+    <h2 style="margin-top:12px">At your service</h2>
     <div class="grid">
-      <div class="glass voice reveal"><div class="q">“</div><p>The haircut and beard trim is exactly how I want it to be. One haircut is not enough because you want to go again.</p><cite>Cameren · Google</cite></div>
-      <div class="glass voice reveal"><div class="q">“</div><p>From the moment I walked in, I was greeted warmly and felt right at home.</p><cite>Clint · Google</cite></div>
-      <div class="glass voice reveal"><div class="q">“</div><p>THE BEST barbers I have frequented. A fantastic team who read you and interact accordingly.</p><cite>Sasch · Google</cite></div>
+      <div class="card reveal"><div class="n">I</div><h3>Haircuts &amp; Fades</h3><p>Precision cuts tailored to you, from classic cuts to fades.</p></div>
+      <div class="card reveal"><div class="n">II</div><h3>Beard Trim</h3><p>Lined, shaped and tidied to suit your face.</p></div>
+      <div class="card reveal"><div class="n">III</div><h3>Classic Shave</h3><p>A smooth, shaped shave to finish the look.</p></div>
+      <div class="card reveal"><div class="n">IV</div><h3>Cut &amp; Beard</h3><p>The complete refresh, done quickly and properly.</p></div>
     </div>
   </div>
 </section>
 
-<section class="chair" id="visit">
+<section id="words">
   <div class="wrap">
-    <div class="glass box reveal">
-      <div class="chapter">IV · Take a seat</div>
-      <h2>Visit us</h2>
-      <div class="row"><svg class="i" aria-hidden="true"><use href="#pin"/></svg><span>Kenya Building, 59 Lawrence Street, Bergvliet, Cape Town<br><a href="https://maps.google.com/?cid=6622157986625473993">Get directions</a></span></div>
-      <div class="row"><svg class="i" aria-hidden="true"><use href="#phone"/></svg><a href="tel:+27673702226">067 370 2226</a></div>
-      <table class="hours" aria-label="Opening hours">
-        <tr><td>Monday to Friday</td><td>09:00 to 18:00</td></tr>
-        <tr><td>Saturday</td><td>09:00 to 15:00</td></tr>
-        <tr><td>Sunday</td><td>Closed</td></tr>
-      </table>
+    <div class="label">From our patrons</div>
+    <div class="divider" aria-hidden="true"><span class="line"></span><span class="diamond"></span><span class="dot"></span><span class="diamond"></span><span class="line"></span></div>
+    <p class="quote reveal">“THE BEST barbers I have frequented. A fantastic team who read you and interact accordingly.”</p>
+    <div class="label who">Sasch · Google review</div>
+    <div class="quotes">
+      <div class="card reveal"><p>“The haircut and beard trim is exactly how I want it to be. One haircut is not enough because you want to go again.”</p><div class="label" style="margin-top:14px">Cameren</div></div>
+      <div class="card reveal"><p>“From the moment I walked in, I was greeted warmly and felt right at home.”</p><div class="label" style="margin-top:14px">Clint</div></div>
     </div>
-    <iframe class="reveal" loading="lazy" title="Map showing Marco's Mancave" src="https://www.google.com/maps?q=Marco's%20Mancave%2C%2059%20Lawrence%20St%2C%20Bergvliet%2C%20Cape%20Town&output=embed"></iframe>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap reveal">
+    <div class="label">Pay us a visit</div>
+    <h2 style="margin-top:12px">The Kenya Building</h2>
+    <p class="addr">59 Lawrence Street, Bergvliet, Cape Town</p>
+    <p style="margin:0"><a href="https://maps.google.com/?cid=6622157986625473993">Directions</a> · <a href="tel:+27673702226">067 370 2226</a></p>
+    <div class="hours" aria-label="Opening hours">
+      <div><span>Monday to Friday</span><span>09:00 to 18:00</span></div>
+      <div><span>Saturday</span><span>09:00 to 15:00</span></div>
+      <div><span>Sunday</span><span>Closed</span></div>
+    </div>
+    <div style="margin-top:30px"><a class="btn filled" href="https://wa.me/27673702226">Reserve your chair</a></div>
+    <iframe loading="lazy" title="Map showing Marco's Mancave" src="https://www.google.com/maps?q=Marco's%20Mancave%2C%2059%20Lawrence%20St%2C%20Bergvliet%2C%20Cape%20Town&output=embed"></iframe>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><span>© Marco's Mancave · Bergvliet</span><span>Book on WhatsApp: 067 370 2226</span></div></footer>
+<footer>
+  <div class="divider" aria-hidden="true" style="margin-top:0"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+  <div class="label">© Marco's Mancave · Bergvliet</div>
+</footer>
 <script>
 (function(){var els=document.querySelectorAll('.reveal');if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
 </script>
