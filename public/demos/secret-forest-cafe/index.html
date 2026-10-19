@@ -2,177 +2,175 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Secret Forest Café | Coffee in Tokai Forest</title>
 <meta name="description" content="A little coffee hideaway in Tokai Forest. Speciality coffee, sourdough breakfast sandwiches and dog treats, open daily from 7am.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* Design system (UI/UX Pro Max): Organic Biophilic style, Funnel pattern, Lora / Raleway */
-:root{--primary:#15803D;--on-primary:#fff;--accent:#BE185D;--bg:#F0FDF4;--fg:#14532D;--muted:#475569;--border:#BBF7D0;--bark:#3F2D20}
+/* claude-design-styles: "organic style" (spec/organic.md) */
+:root{--bg:#faf7f2;--surface:#f2ede4;--deep:#e8dfd0;--text:#2c2416;--muted:#7a6550;--terra:#c4623a;--terra-d:#a94f2b;--sage:#6b8f6e;--sand:#d4b896;--bark:#7a5c44}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:17px/1.7 Raleway,system-ui,sans-serif;color:var(--fg);background:var(--bg)}
-h1,h2,h3{font-family:Lora,Georgia,serif;line-height:1.15;margin:0}
-a{color:inherit}a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
-.i{width:22px;height:22px;flex:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.demo{background:var(--bark);color:#f5efe6;font-size:13px;text-align:center;padding:7px 12px}
-nav.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
-.brand{display:flex;align-items:center;gap:10px;font-family:Lora,serif;font-weight:700;font-size:22px;text-decoration:none}
-.brand .i{width:32px;height:32px;color:var(--primary)}
-.navlinks a{margin-left:26px;text-decoration:none;font-weight:600;font-size:15px;transition:color .2s}
-.navlinks a:hover{color:var(--primary)}
-.hero{position:relative;overflow:hidden;padding:20px 0 120px}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.kicker{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);padding:6px 14px;border-radius:999px;font-size:14px;font-weight:600}
-.kicker .i{width:16px;height:16px;color:#CA8A04}
-.hero h1{font-size:clamp(40px,6.4vw,72px);margin:20px 0 18px}
-.hero h1 em{color:var(--primary)}
-.lead{font-size:20px;color:#2F4B37;max-width:520px;margin:0 0 32px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+body{margin:0;background:var(--bg);color:var(--text);font:300 17px/1.75 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.12;margin:0}
+a{color:inherit}a:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:12px}
+.i{width:24px;height:24px;flex:none}
+.wrap{max-width:64rem;margin:0 auto;padding:0 24px}
+.demo{background:var(--bark);color:var(--bg);text-align:center;font-size:13px;padding:7px 12px}.demo a{color:inherit;font-weight:600}
+nav{border-bottom:1px solid var(--deep);background:var(--bg)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:600;font-size:22px;text-decoration:none}
+.logo .i{color:var(--sage)}
+.links a{margin-left:26px;text-decoration:none;letter-spacing:.04em;font-weight:400}.links a:hover{color:var(--terra)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:var(--bg);border:0;border-radius:100px;padding:15px 28px;font-weight:600;letter-spacing:.02em;text-decoration:none;box-shadow:0 4px 14px rgba(196,98,58,.3);transition:all .25s;cursor:pointer}
+.btn:hover{background:var(--terra-d);transform:translateY(-2px);box-shadow:0 6px 20px rgba(196,98,58,.4)}
+.btn.out{background:transparent;color:var(--terra);border:2px solid var(--terra);box-shadow:none}.btn.out:hover{background:var(--terra);color:var(--bg)}
 .btn .i{width:18px;height:18px}
-.btn-p{background:var(--primary);color:var(--on-primary);box-shadow:0 8px 24px -10px var(--primary)}
-.btn-p:hover{background:#166534;transform:translateY(-2px)}
-.btn-g{background:#fff;border:2px solid var(--border);margin-left:10px}.btn-g:hover{border-color:var(--primary)}
-.blob{aspect-ratio:1;border-radius:58% 42% 47% 53%/45% 55% 45% 55%;background:radial-gradient(circle at 30% 30%,#4ADE80,#15803D 60%,#14532D);position:relative;display:grid;place-items:center;box-shadow:0 30px 60px -30px #14532D}
-.blob .cup{width:46%;height:46%;color:#F0FDF4}
-.badge{position:absolute;bottom:8%;left:-6%;background:#fff;border-radius:20px;padding:14px 18px;box-shadow:0 12px 30px -12px #14532D66;display:flex;gap:10px;align-items:center}
-.badge b{font-family:Lora,serif;font-size:28px;color:var(--primary)}
-.badge small{display:block;font-weight:600;color:var(--muted);font-size:13px;line-height:1.3}
-.wave{position:absolute;bottom:-1px;left:0;width:100%;height:90px;color:#fff}
-section{padding:90px 0}
-.eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--primary)}
-h2{font-size:clamp(32px,4.4vw,48px);margin:10px 0 18px}
-.steps{background:#fff}
-.steps .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
-.step{background:var(--bg);border-radius:28px 28px 28px 8px;padding:34px 30px;position:relative;transition:transform .25s}
-.step:nth-child(2){border-radius:28px 8px 28px 28px}.step:hover{transform:translateY(-4px)}
-.num{position:absolute;top:-18px;right:26px;width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-family:Lora,serif;font-weight:700;font-size:20px}
-.step .i{width:40px;height:40px;color:var(--primary);margin-bottom:16px}
-.step h3{font-size:24px;margin-bottom:8px}.step p{margin:0;color:#365140}
-.menu .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(107,143,110,.15);color:#4d6b50;font-weight:500;font-size:14px;padding:6px 14px;border-radius:100px}
+.tag .i{width:16px;height:16px}
+.hero{padding:70px 0 40px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(42px,6.5vw,74px);margin:20px 0 20px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--terra);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:4%;right:4%;bottom:-2px;height:10px;border-bottom:3px solid var(--terra);border-radius:0 0 50% 50%}
+.hero p{font-size:19px;color:var(--muted);max-width:30em;margin:0 0 32px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.blob{aspect-ratio:1;background:var(--sage);border-radius:42% 58% 63% 37%/41% 44% 56% 59%;position:relative;display:grid;place-items:center;box-shadow:4px 6px 30px rgba(44,36,22,.12)}
+.blob .cup{width:44%;height:44%;color:var(--bg)}
+.blob .leaf{position:absolute;color:var(--sand);width:22%;height:22%}
+.blob .l1{top:-6%;right:6%;transform:rotate(30deg)}.blob .l2{bottom:2%;left:-4%;transform:rotate(-140deg);color:var(--terra)}
+.chip{position:absolute;bottom:12%;right:-6%;background:var(--bg);border-radius:24px 8px 24px 8px;padding:12px 18px;box-shadow:4px 6px 20px rgba(44,36,22,.12);font-weight:500;line-height:1.3}
+.chip b{display:block;font-family:Fraunces,serif;font-size:26px;color:var(--terra)}
+.wave{display:block;width:100%;height:60px}
+.band{background:var(--surface)}
+section{padding:80px 0}
+.head{text-align:center;max-width:34em;margin:0 auto 48px}
+.head .tag{margin-bottom:14px}
+.head h2{font-size:clamp(32px,4.6vw,48px)}
+.head p{color:var(--muted);margin:12px 0 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--bg);border:1px solid rgba(44,36,22,.08);box-shadow:4px 6px 20px rgba(44,36,22,.08);padding:32px 28px;transition:transform .3s,box-shadow .3s}
+.card:nth-child(1){border-radius:24px 8px 24px 8px}.card:nth-child(2){border-radius:8px 28px 8px 28px}.card:nth-child(3){border-radius:28px 12px 32px 10px}
+.card:hover{transform:rotate(-.5deg) translateY(-4px);box-shadow:6px 10px 28px rgba(44,36,22,.12)}
+.ib{width:58px;height:58px;background:var(--deep);border-radius:40% 60% 60% 40%/40% 40% 60% 60%;display:grid;place-items:center;color:var(--terra);margin-bottom:18px}
+.card h3{font-size:23px;margin-bottom:8px}.card p{margin:0;color:var(--muted)}
+.step{font-family:Fraunces,serif;font-style:italic;color:var(--sage);font-size:15px;font-weight:500}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .menu ul{list-style:none;margin:0;padding:0}
-.menu li{display:flex;gap:18px;padding:22px 0;border-bottom:1px dashed #86EFAC}
-.menu li .i{width:28px;height:28px;color:var(--primary);margin-top:4px}
-.menu li h3{font-size:21px}.menu li p{margin:4px 0 0;color:#365140}
-.dog{margin-top:30px;background:var(--bark);color:#f5efe6;border-radius:24px;padding:24px 26px;display:flex;gap:16px;align-items:center}
-.dog .i{width:42px;height:42px;color:#FCD34D}
-.reviews{background:linear-gradient(180deg,#fff,var(--bg))}
-.reviews .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
-blockquote{margin:0;background:#fff;border:1px solid var(--border);border-radius:24px;padding:28px;font-family:Lora,serif;font-style:italic;font-size:18px;line-height:1.6}
-.stars{display:flex;gap:2px;margin-bottom:12px;color:#CA8A04}.stars .i{width:18px;height:18px}
-cite{display:block;margin-top:14px;font-family:Raleway,sans-serif;font-style:normal;font-weight:700;font-size:14px;color:var(--muted)}
-.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.card{background:#fff;border-radius:28px;padding:34px;border:1px solid var(--border)}
-.hours{list-style:none;padding:0;margin:16px 0 0}
-.hours li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #DCFCE7}
-.info{display:flex;gap:12px;align-items:flex-start;margin:14px 0}.info .i{color:var(--primary);margin-top:3px}
-iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:28px}
-footer{background:#14532D;color:#BBF7D0;padding:36px 0;font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+.menu li{display:flex;gap:18px;padding:20px 0;border-bottom:1px dashed var(--sand)}
+.menu li:last-child{border-bottom:0}
+.menu li h3{font-size:22px}.menu li p{margin:2px 0 0;color:var(--muted)}
+.dog{background:var(--bark);color:var(--bg);border-radius:60px 20px 60px 20px;padding:40px;position:relative}
+.dog .i{width:46px;height:46px;color:var(--sand)}
+.dog h3{font-size:30px;margin:14px 0 8px}
+.dog p{margin:0;opacity:.9}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+blockquote{margin:0;background:var(--surface);padding:30px;font-family:Fraunces,serif;font-style:italic;font-size:19px;line-height:1.55;border-radius:30px 8px 30px 8px}
+blockquote:nth-child(2){border-radius:8px 30px 8px 30px}
+blockquote .stars{color:var(--terra);font-style:normal;letter-spacing:.12em;text-transform:uppercase;font-size:12px;font-weight:600;margin-bottom:10px}
+blockquote cite{display:block;margin-top:14px;font-family:"DM Sans",sans-serif;font-style:normal;font-weight:500;font-size:14px;color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.info{background:var(--bg);border-radius:40px 12px 40px 12px;padding:38px;box-shadow:4px 6px 20px rgba(44,36,22,.08)}
+.row{display:flex;gap:14px;margin:16px 0}.row .i{color:var(--terra);margin-top:3px}
+.hours{list-style:none;margin:20px 0 0;padding:0}
+.hours li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--sand)}
+.hours li b{font-weight:500}
+iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:12px 40px 12px 40px;filter:sepia(.2)}
+footer{padding:36px 0;text-align:center;color:var(--muted);font-size:14px}
+footer .dots{display:flex;justify-content:center;gap:8px;margin-bottom:14px}footer .dots span{width:6px;height:6px;border-radius:50%;background:var(--sand)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}.reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
-@media(max-width:860px){.hero .wrap,.menu .wrap,.visit .wrap{grid-template-columns:1fr}.steps .grid,.reviews .grid{grid-template-columns:1fr;gap:34px}.navlinks{display:none}.blob{max-width:320px;width:100%;margin:10px auto 0}.badge{left:0}.btn-g{margin:12px 0 0}section{padding:64px 0}}
+@media(max-width:860px){.links{display:none}.hero .wrap,.menu,.visit{grid-template-columns:1fr}.cards,.quotes{grid-template-columns:1fr}.blob{max-width:300px;width:100%;margin:10px auto 0}.chip{right:0}section{padding:60px 0}.dog{padding:30px}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="star" viewBox="0 0 24 24"><polygon fill="currentColor" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
-  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-  <symbol id="tree" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 22v-7M17 8a5 5 0 0 0-10 0c0 1 .2 1.8.6 2.6A4 4 0 0 0 9 18h6a4 4 0 0 0 1.4-7.4c.4-.8.6-1.6.6-2.6z"/></symbol>
-  <symbol id="cup" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4ZM6 2v2M10 2v2M14 2v2"/></symbol>
-  <symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="10" r="3"/></symbol>
-  <symbol id="chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
-  <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-  <symbol id="walk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="13" cy="4" r="1.5"/><path d="m7 21 3-4 2 2 3-5M10 9l3-2 3 3 3 1M10 9l-2 4 4 2"/></g></symbol>
-  <symbol id="bread" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 11a9 9 0 0 1 18 0v2H3zM3 17h18M5 21h14"/></symbol>
-  <symbol id="sweet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></g></symbol>
-  <symbol id="paw" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></g></symbol>
-  </g>
+  <symbol id="leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></g></symbol>
+  <symbol id="cup" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4ZM6 2v2M10 2v2M14 2v2"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="walk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="13" cy="4" r="1.5"/><path d="m7 21 3-4 2 2 3-5M10 9l3-2 3 3 3 1M10 9l-2 4 4 2"/></g></symbol>
+  <symbol id="tree" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 22v-7M17 8a5 5 0 0 0-10 0c0 1 .2 1.8.6 2.6A4 4 0 0 0 9 18h6a4 4 0 0 0 1.4-7.4c.4-.8.6-1.6.6-2.6z"/></symbol>
+  <symbol id="bread" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 11a9 9 0 0 1 18 0v2H3zM3 17h18M5 21h14"/></symbol>
+  <symbol id="sweet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></g></symbol>
+  <symbol id="paw" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></g></symbol>
 </svg>
-<div class="demo">Demo website prepared for Secret Forest Café by <a href="https://solutioncloud.tech/contact/" style="color:inherit;font-weight:700">SolutionCloud</a> · not yet live</div>
-<header class="wrap">
-  <nav class="top" aria-label="Main">
-    <a class="brand" href="#"><svg class="i" aria-hidden="true"><use href="#tree"/></svg>Secret Forest Café</a>
-    <div class="navlinks"><a href="#how">Your visit</a><a href="#menu">Menu</a><a href="#find">Find us</a></div>
-  </nav>
-</header>
+<div class="demo">Demo website prepared for Secret Forest Café by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a> · not yet live</div>
+<nav><div class="wrap">
+  <a class="logo" href="#"><svg class="i" aria-hidden="true"><use href="#leaf"/></svg>Secret Forest Café</a>
+  <div class="links"><a href="#visit">Your visit</a><a href="#menu">Menu</a><a href="#find">Find us</a></div>
+</div></nav>
 <main>
-<section class="hero">
+<header class="hero">
   <div class="wrap">
     <div>
-      <span class="kicker"><svg class="i" aria-hidden="true"><use href="#star"/></svg>4.7 from 424 Google reviews</span>
-      <h1>Coffee under the <em>Tokai trees</em></h1>
-      <p class="lead">A little hideaway in Tokai Forest for perfectly brewed coffee, sourdough breakfast sandwiches and a treat for the dog, right where your walk begins.</p>
-      <a class="btn btn-p" href="#find"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Find us in the forest</a>
-      <a class="btn btn-g" href="https://wa.me/27661301671"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>WhatsApp us</a>
+      <span class="tag"><svg class="i" aria-hidden="true"><use href="#leaf"/></svg>4.7 stars from 424 Google reviews</span>
+      <h1>Coffee, among the <em>Tokai trees</em></h1>
+      <p>A little hideaway in Tokai Forest for perfectly brewed coffee, sourdough breakfast sandwiches and a treat for the dog, right where your walk begins.</p>
+      <div class="ctas"><a class="btn" href="#find"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Find us in the forest</a><a class="btn out" href="https://wa.me/27661301671"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>WhatsApp us</a></div>
     </div>
-    <div class="blob" role="img" aria-label="Illustration of a coffee cup">
+    <div class="blob" role="img" aria-label="Illustration of a coffee cup among leaves">
+      <svg class="leaf l1" aria-hidden="true"><use href="#leaf"/></svg><svg class="leaf l2" aria-hidden="true"><use href="#leaf"/></svg>
       <svg class="cup" aria-hidden="true"><use href="#cup"/></svg>
-      <div class="badge"><b>7am</b><small>Open every<br>day of the week</small></div>
+      <div class="chip"><b>7am</b>Open every day</div>
     </div>
   </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60C240 10 480 0 720 30s480 60 720 10V90H0Z"/></svg>
-</section>
-
-<section class="steps" id="how">
+</header>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f2ede4"/></svg>
+<section class="band" id="visit">
   <div class="wrap">
-    <span class="eyebrow">Your morning, sorted</span>
-    <h2>Three steps to a better start</h2>
-    <div class="grid">
-      <div class="step reveal"><span class="num">1</span><svg class="i" aria-hidden="true"><use href="#walk"/></svg><h3>Take the walk</h3><p>Park at Tokai Forest and set off on foot, by bike or with the dog in tow.</p></div>
-      <div class="step reveal"><span class="num">2</span><svg class="i" aria-hidden="true"><use href="#cup"/></svg><h3>Grab a coffee</h3><p>Order at the window: a proper flat white, something from the tea list, a pastry.</p></div>
-      <div class="step reveal"><span class="num">3</span><svg class="i" aria-hidden="true"><use href="#tree"/></svg><h3>Enjoy the trees</h3><p>Find a spot in the shade, or take it with you. Seating is limited at peak times.</p></div>
+    <div class="head"><span class="tag">Your morning</span><h2>Walk, sip, breathe</h2><p>The best mornings in Tokai start the same way.</p></div>
+    <div class="cards">
+      <div class="card reveal"><div class="ib"><svg class="i" aria-hidden="true"><use href="#walk"/></svg></div><span class="step">First</span><h3>Take the walk</h3><p>Park at Tokai Forest and set off on foot, by bike or with the dog in tow.</p></div>
+      <div class="card reveal"><div class="ib"><svg class="i" aria-hidden="true"><use href="#cup"/></svg></div><span class="step">Then</span><h3>Grab a coffee</h3><p>Order at the window: a proper flat white, something from the tea list, a pastry.</p></div>
+      <div class="card reveal"><div class="ib"><svg class="i" aria-hidden="true"><use href="#tree"/></svg></div><span class="step">Finally</span><h3>Enjoy the trees</h3><p>Find a spot in the shade, or take it with you. Seating is limited at peak times.</p></div>
     </div>
   </div>
 </section>
-
-<section class="menu" id="menu">
-  <div class="wrap">
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f2ede4"/></svg>
+<section id="menu">
+  <div class="wrap menu">
     <div class="reveal">
-      <span class="eyebrow">At the window</span>
-      <h2>Simple, fresh and made with care</h2>
-      <p>No fuss and no long menu, just the things that make a forest morning better.</p>
-      <div class="dog"><svg class="i" aria-hidden="true"><use href="#paw"/></svg><div><strong>Dogs welcome.</strong> We keep treats on hand for four-legged walkers, and biscuits for the kids too.</div></div>
-    </div>
-    <ul class="reveal">
-      <li><svg class="i" aria-hidden="true"><use href="#cup"/></svg><div><h3>Speciality coffee</h3><p>Perfectly brewed, every time. Ask about the tea selection too.</p></div></li>
-      <li><svg class="i" aria-hidden="true"><use href="#bread"/></svg><div><h3>Breakfast sandwiches</h3><p>Fresh sourdough with egg, bacon and cherry tomatoes. A regular favourite.</p></div></li>
-      <li><svg class="i" aria-hidden="true"><use href="#sweet"/></svg><div><h3>Pastries &amp; treats</h3><p>Something sweet for after your walk or ride.</p></div></li>
-    </ul>
-  </div>
-</section>
-
-<section class="reviews">
-  <div class="wrap">
-    <span class="eyebrow">Loved by walkers</span>
-    <h2>What our regulars say</h2>
-    <div class="grid">
-      <blockquote class="reveal"><div class="stars" role="img" aria-label="5 stars"><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg></div>“A lovely experience to be surrounded by nature while grabbing a breakfast bite and perfectly brewed coffee.”<cite>Gaynor, Google review</cite></blockquote>
-      <blockquote class="reveal"><div class="stars" role="img" aria-label="5 stars"><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg></div>“A lovely little hideaway. The coffee was excellent, but I was equally impressed by the tea selection.”<cite>Alexandra, Google review</cite></blockquote>
-      <blockquote class="reveal"><div class="stars" role="img" aria-label="5 stars"><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg><svg class="i"><use href="#star"/></svg></div>“A welcome surprise at the end of a beautiful walk. Fantastic, friendly service, delicious coffee and pastries.”<cite>Josh, Google review</cite></blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="visit" id="find">
-  <div class="wrap">
-    <div class="card reveal">
-      <span class="eyebrow">Plan your visit</span>
-      <h2>Find us in Tokai Forest</h2>
-      <div class="info"><svg class="i" aria-hidden="true"><use href="#pin"/></svg><span>Tokai Forest, Sweet Valley, Cape Town, 7945<br><a href="https://maps.google.com/?cid=3309374704577455457">Get directions</a></span></div>
-      <div class="info"><svg class="i" aria-hidden="true"><use href="#phone"/></svg><a href="tel:+27661301671">066 130 1671</a></div>
-      <ul class="hours" aria-label="Opening hours">
-        <li><span>Monday to Friday</span><strong>7:00 to 16:30</strong></li>
-        <li><span>Saturday and Sunday</span><strong>7:30 to 16:00</strong></li>
+      <span class="tag">At the window</span>
+      <h2 style="font-size:clamp(32px,4.6vw,48px);margin:14px 0 10px">Simple, fresh and made with care</h2>
+      <ul>
+        <li><div class="ib" style="margin:0"><svg class="i" aria-hidden="true"><use href="#cup"/></svg></div><div><h3>Speciality coffee</h3><p>Perfectly brewed, with a good tea selection too.</p></div></li>
+        <li><div class="ib" style="margin:0"><svg class="i" aria-hidden="true"><use href="#bread"/></svg></div><div><h3>Breakfast sandwiches</h3><p>Fresh sourdough, egg, bacon and cherry tomatoes.</p></div></li>
+        <li><div class="ib" style="margin:0"><svg class="i" aria-hidden="true"><use href="#sweet"/></svg></div><div><h3>Pastries &amp; treats</h3><p>Something sweet for after your walk or ride.</p></div></li>
       </ul>
+    </div>
+    <div class="dog reveal"><svg class="i" aria-hidden="true"><use href="#paw"/></svg><h3>Dogs are always welcome</h3><p>We keep treats on hand for four-legged walkers, and biscuits for the kids too. Chances are you'll make a new friend, human or dog.</p></div>
+  </div>
+</section>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f2ede4"/></svg>
+<section class="band">
+  <div class="wrap">
+    <div class="head"><span class="tag">Kind words</span><h2>From our forest regulars</h2></div>
+    <div class="quotes">
+      <blockquote class="reveal"><div class="stars">Google review</div>“A lovely experience to be surrounded by nature while grabbing a breakfast bite and perfectly brewed coffee.”<cite>Gaynor, Google review</cite></blockquote>
+      <blockquote class="reveal"><div class="stars">Google review</div>“A lovely little hideaway. The coffee was excellent, but I was equally impressed by the tea selection.”<cite>Alexandra, Google review</cite></blockquote>
+      <blockquote class="reveal"><div class="stars">Google review</div>“A welcome surprise at the end of a beautiful walk. Fantastic, friendly service, delicious coffee and pastries.”<cite>Josh, Google review</cite></blockquote>
+    </div>
+  </div>
+</section>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f2ede4"/></svg>
+<section id="find">
+  <div class="wrap visit">
+    <div class="info reveal">
+      <span class="tag">Come say hello</span>
+      <h2 style="font-size:36px;margin:14px 0 6px">Find us in Tokai Forest</h2>
+      <div class="row"><svg class="i" aria-hidden="true"><use href="#pin"/></svg><span>Tokai Forest, Sweet Valley, Cape Town, 7945<br><a href="https://maps.google.com/?cid=3309374704577455457">Get directions</a></span></div>
+      <div class="row"><svg class="i" aria-hidden="true"><use href="#phone"/></svg><a href="tel:+27661301671">066 130 1671</a></div>
+      <ul class="hours" aria-label="Opening hours"><li><span>Monday to Friday</span><b>7:00 to 16:30</b></li><li><span>Saturday and Sunday</span><b>7:30 to 16:00</b></li></ul>
     </div>
     <iframe class="reveal" loading="lazy" title="Map showing Secret Forest Café" src="https://www.google.com/maps?q=Secret%20Forest%20Caf%C3%A9%2C%20Tokai%2C%20Cape%20Town&output=embed"></iframe>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><span>© Secret Forest Café · Tokai Forest, Cape Town</span><span>Open daily from 7am</span></div></footer>
+<footer><div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>© Secret Forest Café · Tokai Forest, Cape Town</footer>
 <script>
 (function(){var els=document.querySelectorAll('.reveal');if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
 </script>
