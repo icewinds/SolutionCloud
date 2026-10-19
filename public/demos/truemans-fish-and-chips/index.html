@@ -88,6 +88,8 @@ footer .label{color:var(--muted)}
 .sticky{position:fixed;left:12px;right:12px;bottom:12px;display:none;text-align:center;z-index:5}
 @media (prefers-reduced-motion:reduce){.wire span{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
 @media(max-width:900px){.front{grid-template-columns:1fr}.lead{padding-right:0;border-right:0;border-bottom:1px solid var(--ink)}.side{padding-left:0}.cols{columns:1}.grid3,.grid4,.notices{grid-template-columns:1fr}.grid3>*,.grid4>*{padding:0 0 22px;border-right:0;margin-bottom:6px}.notices>div{border-right:0;border-bottom:1px solid var(--ink)}.notices>div:last-child{border-bottom:0}.masthead .topline .hide{display:none}.ear nav{display:none}.sticky{display:block}body{padding-bottom:76px}}
+/* polish pass: browser surfaces, contrast, targets */
+table{font-variant-numeric:tabular-nums}a{text-underline-offset:.2em;text-decoration-thickness:1px}::selection{background:var(--red);color:var(--paper)}html{accent-color:var(--red);scrollbar-color:var(--ink) var(--paper);caret-color:var(--red)}nav a{display:inline-block;padding:5px 0}
 </style>
 </head>
 <body>
