@@ -7,93 +7,90 @@
 <title>Motospot Services | Car Workshop in Bergvliet</title>
 <meta name="description" content="Services, diagnostics, repairs and call-out help at Motospot Services, 10 Main Service Rd, Bergvliet. Call 021 712 5021.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* claude-design-styles: "blueprint style" (spec/blueprint.md) */
-:root{--bg:#003366;--panel:#002b55;--ink:#F0F8FF;--dim:rgba(240,248,255,.6);--faint:rgba(240,248,255,.2)}
+/* claude-design-styles: "swiss style" (spec/swiss.md) */
+:root{--w:#fff;--k:#0a0a0a;--r:#e60000;--g:#f4f4f4;--mute:#555}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);font:400 16px/1.65 "Courier Prime",ui-monospace,monospace;cursor:crosshair;
-background-color:var(--bg);
-background-image:linear-gradient(rgba(240,248,255,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(240,248,255,.22) 1px,transparent 1px),linear-gradient(rgba(240,248,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(240,248,255,.08) 1px,transparent 1px);
-background-size:100px 100px,100px 100px,20px 20px,20px 20px}
-a{color:inherit;cursor:crosshair}a:focus-visible{outline:2px dashed var(--ink);outline-offset:4px}
-h1,h2,h3{font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:0;line-height:1.15}
-.wrap{max-width:72rem;margin:0 auto;padding:0 24px}
-.demo{background:var(--ink);color:var(--bg);font-size:12px;padding:6px 12px;text-align:center}.demo a{color:inherit;font-weight:700}
-.ruler{height:14px;border-bottom:1px solid var(--ink);background-image:repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 10px),repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 50px);background-size:100% 5px,100% 10px;background-repeat:no-repeat;background-position:bottom,bottom}
-nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:2px solid var(--ink)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
-.logo{position:relative;border:2px solid var(--ink);padding:6px 12px;font-weight:700;letter-spacing:.12em;text-decoration:none}
-.logo small{position:absolute;left:0;top:100%;margin-top:3px;font-size:10px;font-style:italic;color:var(--dim);letter-spacing:.04em;white-space:nowrap}
-.links{display:flex;gap:22px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
-.links a{text-decoration:none}.links a:hover{text-decoration:underline dashed;text-underline-offset:5px}
-.btn{display:inline-block;border:2px solid var(--ink);padding:10px 16px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;background:transparent;transition:background .2s,color .2s}
-.btn:hover{background:var(--ink);color:var(--bg)}
-.btn.solid{background:var(--ink);color:var(--bg)}.btn.solid:hover{background:transparent;color:var(--ink)}
+body{margin:0;background:var(--w);color:var(--k);font:400 15px/1.6 Inter,-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:focus-visible{outline:2px solid var(--r);outline-offset:3px}
+h1,h2,h3{font-weight:700;margin:0;letter-spacing:-.03em;line-height:1.02}
+.wrap{max-width:80rem;margin:0 auto;padding:0 32px}
+.label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em}
+.demo{background:var(--k);color:#ddd;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff;font-weight:700}
+nav{border-bottom:2px solid var(--k);background:var(--w);position:sticky;top:0;z-index:5}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{font-weight:700;text-transform:uppercase;letter-spacing:-.02em;font-size:20px;text-decoration:none}
+.logo span{color:var(--r)}
+.links{display:flex;gap:32px}
+.links a{text-decoration:none;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em}
+.links a:hover{color:var(--r)}
+.btn{display:inline-block;background:var(--k);color:var(--w);text-decoration:none;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:14px 32px;border:2px solid var(--k);transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--r);border-color:var(--r)}
+.btn.red{background:var(--r);border-color:var(--r)}.btn.red:hover{background:var(--k);border-color:var(--k)}
+.btn.out{background:transparent;color:var(--k)}.btn.out:hover{background:var(--k);color:var(--w)}
+.btn.sm{padding:10px 18px}
 /* hero */
-.hero{padding:70px 0 80px}
-.hero-box{position:relative;border:1px solid var(--dim);background:rgba(0,43,85,.75);padding:48px 40px}
-.br{position:absolute;width:26px;height:26px;border:0 solid var(--ink)}
-.br.tl{top:-8px;left:-8px;border-top-width:3px;border-left-width:3px}.br.tr{top:-8px;right:-8px;border-top-width:3px;border-right-width:3px}
-.br.bl{bottom:-8px;left:-8px;border-bottom-width:3px;border-left-width:3px}.br.bbr{bottom:-8px;right:-8px;border-bottom-width:3px;border-right-width:3px}
-.meta{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.14em;display:flex;gap:18px;flex-wrap:wrap;margin-bottom:22px}
-.hero h1{font-size:clamp(34px,6vw,68px);max-width:16ch}
-.u2{text-decoration:underline double;text-underline-offset:10px;text-decoration-thickness:2px}
-.hero p.lead{max-width:56ch;font-size:18px;margin:26px 0 30px;color:var(--ink)}
-.ctas{display:flex;gap:14px;flex-wrap:wrap}
-.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
-.dim-line{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--dim);margin-top:6px}
-.dim-line span.l{flex:1;height:1px;background:var(--dim);position:relative}
-.dim-line span.l:before,.dim-line span.l:after{content:"";position:absolute;top:-4px;width:1px;height:9px;background:var(--dim)}.dim-line span.l:before{left:0}.dim-line span.l:after{right:0}
-.drawing svg{width:100%;height:auto;display:block}
+.hero{border-bottom:2px solid var(--k)}
+.hero .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:0 32px;padding-top:72px;padding-bottom:72px;align-items:end}
+.hero .txt{grid-column:1/8}
+.hero h1{font-size:clamp(48px,7.4vw,104px);margin:24px 0 32px}
+.hero h1 em{font-style:normal;color:var(--r)}
+.hero p{font-size:18px;max-width:40ch;margin:0 0 36px;color:#222}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .side{grid-column:8/13}
+.photo{margin:0;background:var(--g);overflow:hidden}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08)}
+.hero .photo{aspect-ratio:4/5}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--k);border:1px solid var(--k);margin-top:24px}
+.spec div{background:var(--w);padding:14px 16px}
+.spec b{display:block;font-size:28px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
 /* sections */
-section{padding:70px 0}
-.sh{display:flex;align-items:center;gap:16px;margin-bottom:38px}
-.sh .box{border:2px solid var(--ink);padding:6px 12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--bg);white-space:nowrap}
-.sh .rule{flex:1;border-top:1px dashed var(--dim)}
-.sh .sheet{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.14em;white-space:nowrap}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.card{position:relative;border:1px solid var(--dim);background:var(--panel);padding:30px 22px 24px;transition:border-color .2s}
-.card:hover{border-color:var(--ink)}
-.card .tag{position:absolute;top:0;left:0;font-size:10px;padding:2px 6px;border-right:1px solid var(--dim);border-bottom:1px solid var(--dim);color:var(--dim);letter-spacing:.1em}
-.card .pt{position:absolute;top:8px;right:8px;width:7px;height:7px;border-radius:50%;background:var(--ink)}
-.card svg{width:46px;height:46px;margin:10px 0 14px;stroke:var(--ink);fill:none;stroke-width:1.5}
-.card h3{font-size:16px;margin-bottom:8px}
-.card p{margin:0;font-size:14px;color:var(--dim)}
-/* specs table */
-.specs{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-table{width:100%;border-collapse:collapse;background:var(--panel);border:2px solid var(--ink)}
-th,td{border:1px solid var(--faint);padding:11px 14px;text-align:left;font-size:15px}
-th{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.14em;font-weight:400}
-caption{caption-side:top;text-align:left;font-size:12px;color:var(--dim);padding-bottom:8px;text-transform:uppercase;letter-spacing:.14em}
-.stat{border:2px solid var(--ink);background:var(--panel);padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:0}
-.stat div{padding:16px;border:1px dashed var(--faint)}
-.stat b{display:block;font-size:40px;line-height:1}
-.stat span{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
-/* notes */
-.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.note{position:relative;border:1px solid var(--dim);background:var(--panel);padding:30px 24px 22px;margin:0}
-.note .tag{position:absolute;top:0;left:0;font-size:10px;padding:2px 6px;border-right:1px solid var(--dim);border-bottom:1px solid var(--dim);color:var(--dim)}
-.note blockquote{margin:12px 0 18px;font-style:italic}
-.note figcaption{font-size:13px;text-transform:uppercase;letter-spacing:.1em;border-top:1px dashed var(--faint);padding-top:10px;display:flex;justify-content:space-between}
-/* contact */
-.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:stretch}
-.panel{border:2px solid var(--ink);background:var(--panel);padding:30px}
-.panel dl{margin:0 0 24px;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
-.panel dt{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.14em;padding-top:3px}
-.panel dd{margin:0}
-.map{border:2px solid var(--ink);position:relative;min-height:320px;background:var(--panel)}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.9) hue-rotate(180deg) contrast(.9)}
-footer{border-top:2px solid var(--ink);background:var(--bg);padding:26px 0;font-size:12px;color:var(--dim)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;text-transform:uppercase;letter-spacing:.1em}
+section{padding:96px 0;position:relative;overflow:hidden}
+.num{position:absolute;right:24px;top:24px;font-size:160px;font-weight:700;line-height:1;opacity:.06;letter-spacing:-.06em;pointer-events:none}
+.sh{display:grid;grid-template-columns:repeat(12,1fr);gap:32px;margin-bottom:48px;align-items:end}
+.sh .t{grid-column:1/7}.sh p{grid-column:8/13;margin:0;color:var(--mute)}
+.sh h2{font-size:clamp(32px,4vw,48px);margin-top:12px}
+.flag{display:inline-block;background:var(--r);color:var(--w);padding:4px 8px}
+.grid{display:grid;gap:1px;background:var(--k);border:1px solid var(--k)}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.grid>*{background:var(--w);padding:28px 24px;margin:0}
+.svc .n{font-size:11px;font-weight:700;letter-spacing:.15em;color:var(--mute)}
+.svc svg{display:block;width:32px;height:32px;stroke:var(--k);fill:none;stroke-width:1.6;margin:28px 0 24px}
+.svc h3{font-size:20px;margin-bottom:8px}
+.svc p{margin:0;font-size:14px;color:var(--mute)}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--k);border-top:2px solid var(--k);border-bottom:2px solid var(--k)}
+.strip .photo{aspect-ratio:4/3}
+.grey{background:var(--g)}
+.grey .grid>*{background:var(--g)}
+.grey .grid{background:#bdbdbd;border-color:#bdbdbd}
+.stat{border-top:4px solid var(--r);padding-top:14px}
+.stat b{display:block;font-size:80px;line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:64px}
+.stats .stat:not(:first-child){border-top-color:var(--k)}
+.q blockquote{margin:0 0 24px;font-size:17px;line-height:1.55}
+.q figcaption{border-top:1px solid var(--k);padding-top:12px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{border-bottom:1px solid var(--k);padding:14px 0;font-size:16px}
+td:last-child{text-align:right;font-weight:700}
+tr:first-child td{border-top:2px solid var(--k)}
+.visit{display:grid;grid-template-columns:repeat(12,1fr);gap:32px}
+.visit .a{grid-column:1/6}.visit .b{grid-column:7/13}
+.addr{font-size:28px;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin:16px 0 32px}
+.map{position:relative;min-height:360px;border:2px solid var(--k);background:var(--g)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1)}
+footer{border-top:2px solid var(--k);padding:24px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:900px){
- .grid{grid-template-columns:1fr 1fr}.notes,.specs,.contact,.hero-grid{grid-template-columns:1fr}
- .drawing{max-width:420px}
+ .hero .txt,.hero .side,.sh .t,.sh p,.visit .a,.visit .b{grid-column:1/-1}
+ .hero .side{margin-top:40px}.hero .photo{aspect-ratio:4/3}
+ .g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}
 }
 @media (max-width:600px){
- .links{display:none}.hero{padding:44px 0 56px}.hero-box{padding:32px 20px}
- .grid{grid-template-columns:1fr}.sh .sheet{display:none}section{padding:52px 0}
- nav .btn{padding:8px 10px;font-size:12px}
+ .wrap{padding:0 20px}.links{display:none}.hero .wrap{padding-top:48px;padding-bottom:48px}
+ section{padding:64px 0}.num{font-size:100px}.g4{grid-template-columns:1fr}
+ .strip{grid-template-columns:1fr 1fr}.strip .photo:last-child{display:none}
+ .stat b{font-size:56px}.addr{font-size:22px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -102,116 +99,85 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 <div class="demo">Demo website prepared for Motospot Services by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a> · not yet live</div>
 <nav aria-label="Main">
  <div class="wrap">
-  <a class="logo" href="#top">MOTOSPOT<small>Fig. 1.0 &mdash; Services CC</small></a>
-  <div class="links"><a href="#services">Services</a><a href="#specs">Hours</a><a href="#notes">Reviews</a><a href="#contact">Contact</a></div>
-  <a class="btn solid" href="tel:+27217125021">[ Call_Workshop ]</a>
+  <a class="logo" href="#top">Motospot<span>.</span></a>
+  <div class="links"><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#hours">Hours</a><a href="#visit">Visit</a></div>
+  <a class="btn sm" href="tel:+27217125021">021 712 5021</a>
  </div>
 </nav>
-<div class="ruler" aria-hidden="true"></div>
 
-<header class="hero" id="top">
- <div class="wrap hero-grid">
-  <div class="hero-box">
-   <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br bbr"></span>
-   <div class="meta"><span>Project: Motospot</span><span>Loc: Bergvliet 7945</span><span>Rev: 4.8 / 114</span></div>
-   <h1>Your car, serviced <span class="u2">properly</span>.</h1>
-   <p class="lead">A clean, well-run workshop on Main Service Road. Services and maintenance, diagnostics and repairs, and a mechanic who comes out when your car won't.</p>
-   <div class="ctas"><a class="btn solid" href="tel:+27217125021">[ Book_Service ]</a><a class="btn" href="#contact">[ Find_Workshop ]</a></div>
-   <div class="dim-line" aria-hidden="true"><span>0</span><span class="l"></span><span>10 Main Service Rd</span></div>
+<main id="top">
+<header class="hero">
+ <div class="wrap">
+  <div class="txt">
+   <div class="label">Car service &amp; repairs — Bergvliet</div>
+   <h1>Serviced right.<br>Back on the <em>road</em>.</h1>
+   <p>A clean, well-run workshop on Main Service Road. Services, diagnostics, repairs and call-out help, done efficiently and explained plainly.</p>
+   <div class="ctas"><a class="btn red" href="tel:+27217125021">Book a service</a><a class="btn out" href="#visit">Find the workshop</a></div>
   </div>
-  <div class="drawing" aria-hidden="true">
-   <svg viewBox="0 0 320 300" fill="none" stroke="#F0F8FF" stroke-width="1.5">
-    <circle cx="160" cy="150" r="96"/><circle cx="160" cy="150" r="62" stroke-dasharray="4 4"/><circle cx="160" cy="150" r="22"/>
-    <g stroke-width="2">
-     <path d="M160 54v26M160 220v26M64 150h26M230 150h26M92 82l18 18M210 200l18 18M228 82l-18 18M110 200l-18 18"/>
-    </g>
-    <path d="M10 150h50M260 150h50M160 10v34M160 256v34" stroke-dasharray="6 4" opacity=".6"/>
-    <path d="M60 280h200" opacity=".6"/><path d="M64 274v12M256 274v12" opacity=".6"/>
-    <text x="160" y="296" fill="#F0F8FF" stroke="none" font-family="Courier Prime,monospace" font-size="11" text-anchor="middle">Ø 192 &mdash; WHEEL ASSY</text>
-    <text x="246" y="40" fill="#F0F8FF" stroke="none" font-family="Courier Prime,monospace" font-size="11" font-style="italic">Fig. 1.1</text>
-    <path d="M240 44l-50 50" opacity=".6"/>
-   </svg>
+  <div class="side">
+   <figure class="photo"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=900&q=70" alt="A mechanic working on a car engine" onerror="this.parentNode.style.display='none'"></figure>
+   <div class="spec"><div><b>4.8</b><span class="label">Google rating</span></div><div><b>114</b><span class="label">Reviews</span></div></div>
   </div>
  </div>
 </header>
 
 <section id="services">
+ <span class="num" aria-hidden="true">01</span>
  <div class="wrap">
-  <div class="sh"><span class="box">01 / Services</span><span class="rule"></span><span class="sheet">Sheet 02</span></div>
-  <div class="grid">
-   <article class="card"><span class="tag">DWG-01</span><span class="pt"></span>
-    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/></svg>
-    <h3>Services &amp; maintenance</h3><p>Routine services to keep the family car running right, year after year.</p></article>
-   <article class="card"><span class="tag">DWG-02</span><span class="pt"></span>
-    <svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="24"/><path d="M10 26l7-8 6 5 6-9 9 12M18 40h12M24 34v6"/></svg>
-    <h3>Diagnostics &amp; repairs</h3><p>Find the fault, explain it plainly, and fix it.</p></article>
-   <article class="card"><span class="tag">DWG-03</span><span class="pt"></span>
-    <svg viewBox="0 0 48 48"><path d="M8 32h32l-4-12H12z"/><circle cx="15" cy="34" r="4"/><circle cx="33" cy="34" r="4"/><path d="M24 6v8M20 10h8"/></svg>
-    <h3>Call-out help</h3><p>Stuck at home? Phone the workshop and they'll send a mechanic.</p></article>
-   <article class="card"><span class="tag">DWG-04</span><span class="pt"></span>
-    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 14v10l7 5"/></svg>
-    <h3>Quick fixes</h3><p>Small jobs like a broken indicator bulb, often done while you wait.</p></article>
+  <div class="sh"><div class="t"><span class="label flag">Services</span><h2>What we do</h2></div><p>Four things, done properly. Phone the workshop to book or to describe the problem.</p></div>
+  <div class="grid g4">
+   <article class="svc"><span class="n">01</span><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5M6.8 6.8l3.5 3.5M21.7 21.7l3.5 3.5M25.2 6.8l-3.5 3.5M10.3 21.7l-3.5 3.5"/></svg><h3>Services &amp; maintenance</h3><p>Routine services to keep the family car running right.</p></article>
+   <article class="svc"><span class="n">02</span><svg viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="16"/><path d="M8 18l5-5 4 3 7-7M12 27h8M16 23v4"/></svg><h3>Diagnostics &amp; repairs</h3><p>Find the fault, explain it plainly, and fix it.</p></article>
+   <article class="svc"><span class="n">03</span><svg viewBox="0 0 32 32"><path d="M4 22h24l-3-8H7z"/><circle cx="10" cy="24" r="3"/><circle cx="22" cy="24" r="3"/><path d="M16 3v6M13 6h6"/></svg><h3>Call-out help</h3><p>Stuck at home? Phone and they'll send a mechanic.</p></article>
+   <article class="svc"><span class="n">04</span><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg><h3>Quick fixes</h3><p>Small jobs like a blown indicator bulb, often done while you wait.</p></article>
   </div>
  </div>
 </section>
 
-<section id="specs">
+<div class="strip">
+ <figure class="photo"><img src="https://images.unsplash.com/photo-1771340012319-0b4fca008b54?auto=format&fit=crop&w=800&q=70" alt="A mechanic working on an engine in a workshop" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
+ <figure class="photo"><img src="https://images.unsplash.com/photo-1643700973089-baa86a1ab9ee?auto=format&fit=crop&w=800&q=70" alt="A mechanic changing a car's oil" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
+ <figure class="photo"><img src="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?auto=format&fit=crop&w=800&q=70" alt="A mechanic changing a tyre" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
+</div>
+
+<section id="reviews" class="grey">
+ <span class="num" aria-hidden="true">02</span>
  <div class="wrap">
-  <div class="sh"><span class="box">02 / Specifications</span><span class="rule"></span><span class="sheet">Sheet 03</span></div>
-  <div class="specs">
+  <div class="sh"><div class="t"><span class="label">Reviews</span><h2>Customers on Google</h2></div><p>Quoted word for word.</p></div>
+  <div class="stats">
+   <div class="stat"><b>4.8</b><span class="label">Google rating</span></div>
+   <div class="stat"><b>114</b><span class="label">Reviews</span></div>
+   <div class="stat"><b>15<small style="font-size:.4em">min</small></b><span class="label">To a call-out, per Mike</span></div>
+   <div class="stat"><b>5<small style="font-size:.4em">min</small></b><span class="label">Bulb swap, per Craig</span></div>
+  </div>
+  <div class="grid g3">
+   <figure class="q"><blockquote>"Exceptionally friendly staff, well run business. Workshop is clean, neat and tidy. I would recommend Motospot very highly indeed."</blockquote><figcaption class="label">Sinclair</figcaption></figure>
+   <figure class="q"><blockquote>"My Mercedes would not budge out of Park. I phoned Motospot and within 15 minutes they sent a mechanic."</blockquote><figcaption class="label">Mike</figcaption></figure>
+   <figure class="q"><blockquote>"Very friendly and efficient. They replaced my broken indicator bulb in 5 minutes, without prior notice."</blockquote><figcaption class="label">Craig</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="hours">
+ <span class="num" aria-hidden="true">03</span>
+ <div class="wrap visit">
+  <div class="a">
+   <span class="label">Hours</span><h2 style="font-size:clamp(32px,4vw,48px);margin:12px 0 32px">Workshop hours</h2>
    <table>
-    <caption>Table A &mdash; Workshop hours</caption>
-    <thead><tr><th scope="col">Day</th><th scope="col">Open</th></tr></thead>
-    <tbody>
-     <tr><td>Mon &ndash; Thu</td><td>07:30 &ndash; 16:30</td></tr>
-     <tr><td>Friday</td><td>07:30 &ndash; 16:00</td></tr>
-     <tr><td>Sat &ndash; Sun</td><td>Closed</td></tr>
-    </tbody>
+    <tr><td>Monday – Thursday</td><td>07:30 – 16:30</td></tr>
+    <tr><td>Friday</td><td>07:30 – 16:00</td></tr>
+    <tr><td>Saturday – Sunday</td><td>Closed</td></tr>
    </table>
-   <div class="stat">
-    <div><b>4.8</b><span>Google rating</span></div>
-    <div><b>114</b><span>Reviews</span></div>
-    <div><b>15<small style="font-size:18px">min</small></b><span>To a call-out (per Mike)</span></div>
-    <div><b>5<small style="font-size:18px">min</small></b><span>Bulb swap (per Craig)</span></div>
-   </div>
   </div>
- </div>
-</section>
-
-<section id="notes">
- <div class="wrap">
-  <div class="sh"><span class="box">03 / Field notes</span><span class="rule"></span><span class="sheet">Sheet 04</span></div>
-  <div class="notes">
-   <figure class="note"><span class="tag">NOTE-A</span>
-    <blockquote>"Exceptionally friendly staff, well run business. Workshop is clean, neat and tidy. I would recommend Motospot very highly indeed."</blockquote>
-    <figcaption><span>Sinclair</span><span>Google review</span></figcaption></figure>
-   <figure class="note"><span class="tag">NOTE-B</span>
-    <blockquote>"My Mercedes would not budge out of Park. I phoned Motospot and within 15 minutes they sent a mechanic."</blockquote>
-    <figcaption><span>Mike</span><span>Google review</span></figcaption></figure>
-   <figure class="note"><span class="tag">NOTE-C</span>
-    <blockquote>"Very friendly and efficient. They replaced my broken indicator bulb in 5 minutes, without prior notice."</blockquote>
-    <figcaption><span>Craig</span><span>Google review</span></figcaption></figure>
-  </div>
- </div>
-</section>
-
-<section id="contact">
- <div class="wrap">
-  <div class="sh"><span class="box">04 / Site plan</span><span class="rule"></span><span class="sheet">Sheet 05</span></div>
-  <div class="contact">
-   <div class="panel">
-    <dl>
-     <dt>Address</dt><dd>10 Main Service Rd<br>Bergvliet, Cape Town 7945</dd>
-     <dt>Phone</dt><dd><a href="tel:+27217125021">021 712 5021</a></dd>
-     <dt>Hours</dt><dd>Mon&ndash;Thu 07:30&ndash;16:30<br>Fri 07:30&ndash;16:00</dd>
-    </dl>
-    <div class="ctas"><a class="btn solid" href="tel:+27217125021">[ Call_Now ]</a><a class="btn" href="https://www.google.com/maps?cid=17147464443683600968" target="_blank" rel="noopener">[ Directions ]</a></div>
-   </div>
+  <div class="b" id="visit">
+   <span class="label">Visit</span>
+   <p class="addr">10 Main Service Rd<br>Bergvliet, Cape Town 7945</p>
+   <div class="ctas" style="margin-bottom:32px"><a class="btn red" href="tel:+27217125021">Call 021 712 5021</a><a class="btn out" href="https://www.google.com/maps?cid=17147464443683600968" target="_blank" rel="noopener">Directions</a></div>
    <div class="map"><iframe title="Map to Motospot Services" loading="lazy" src="https://www.google.com/maps?q=Motospot%20Services%2C%2010%20Main%20Service%20Rd%2C%20Bergvliet%2C%20Cape%20Town&output=embed"></iframe></div>
   </div>
  </div>
 </section>
-
-<footer><div class="wrap"><span>&copy; Motospot Services CC &middot; Bergvliet</span><span>Drawn to scale &middot; Rev. 1</span></div></footer>
+</main>
+<footer><div class="wrap"><span class="label">Motospot Services CC</span><span class="label" style="color:var(--mute)">Bergvliet · Photos via Unsplash</span></div></footer>
 </body>
 </html>
