@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Come Brew | Coffee Shop in Kenilworth</title>
+<meta name="description" content="Good coffee, toasties and the warmest welcome in Kenilworth. Come Brew, Rosmead Ave and Wetton Rd. WhatsApp 079 975 6711.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+/* claude-design-styles: "groovy style" (spec/groovy.md) */
+:root{--cream:#fdf6e3;--orange:#e8621a;--mustard:#d4a017;--avocado:#6b7c35;--brown:#8b4513;--rust:#b7410e;--ink:#2d1b00;--muted:#5c4630}
+*{box-sizing:border-box}html{scroll-behavior:smooth;accent-color:var(--orange);scrollbar-color:var(--brown) var(--cream);caret-color:var(--orange)}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.7 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--mustard);color:var(--ink)}
+a{color:inherit;text-underline-offset:.2em}a:focus-visible{outline:3px solid var(--orange);outline-offset:4px;border-radius:12px}
+h1,h2,h3{font-family:Righteous,"DM Sans",sans-serif;font-weight:400;margin:0;line-height:1.1}
+.wrap{max-width:70rem;margin:0 auto;padding:0 24px}
+.demo{background:var(--ink);color:#f3e6c8;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff}
+nav{border-bottom:3px solid var(--ink);background:var(--cream)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Righteous,sans-serif;font-size:24px;text-decoration:none}
+.logo svg{width:38px;height:38px}
+.links{display:flex;gap:26px;font-weight:500}
+.links a{text-decoration:none;padding:6px 0}.links a:hover{color:var(--rust)}
+.btn{display:inline-block;background:var(--orange);color:#fff;border:3px solid var(--ink);border-radius:100px;font-family:Righteous,sans-serif;font-size:16px;text-decoration:none;padding:12px 30px;box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn.mus{background:var(--mustard);color:var(--ink)}
+.btn.sm{padding:8px 20px;font-size:15px;box-shadow:3px 3px 0 var(--ink)}
+.hero{position:relative;padding:80px 0 96px;background-image:radial-gradient(circle at 85% 20%,#e8621a22 0%,transparent 45%),radial-gradient(circle at 10% 90%,#d4a01733 0%,transparent 45%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(42px,6.4vw,76px)}
+.hero h1 .o{color:var(--orange)}
+.hero p{font-size:19px;color:var(--muted);margin:24px 0 34px;max-width:42ch}
+.ctas{display:flex;gap:16px;flex-wrap:wrap}
+.pic{position:relative}
+.photo{margin:0;border:3px solid var(--ink);overflow:hidden;background:#f3e6c8;box-shadow:8px 8px 0 var(--ink)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.9) sepia(.12)}
+.hero .photo{aspect-ratio:4/5;border-radius:200px 200px 32px 32px}
+.badge{position:absolute;left:-18px;bottom:36px;display:grid;place-items:center;text-align:center;width:118px;height:118px;border:3px solid var(--ink);border-radius:50%;background:var(--mustard);font-family:Righteous,sans-serif;font-size:14px;line-height:1.2;text-transform:uppercase;transform:rotate(-8deg)}
+.badge b{display:block;font-size:30px;font-weight:400}
+.sun{position:absolute;right:-14px;top:-14px;width:72px;height:72px}
+.wave{display:block;width:100%;height:40px}
+section{padding:96px 0}
+.sh{text-align:center;max-width:40rem;margin:0 auto 56px}
+.sh .k{display:inline-block;font-family:Righteous,sans-serif;color:var(--rust);text-transform:uppercase;letter-spacing:.08em;font-size:15px}
+.sh h2{font-size:clamp(32px,4.4vw,52px);margin-top:8px}
+.sh p{color:var(--muted);margin:14px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.card{background:#fff;border:3px solid var(--ink);border-radius:40px 20px 40px 20px;box-shadow:6px 6px 0 var(--ink);padding:32px}
+.card .ic{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;border:3px solid var(--ink);margin-bottom:18px}
+.card .ic svg{width:26px;height:26px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:24px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted)}
+.t-orange{background:#fff3e0}.t-mustard{background:#fffde7}.t-green{background:#f1f8e9}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.strip .photo{aspect-ratio:1;border-radius:32px}
+.ariel{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ariel h2{font-size:clamp(30px,4vw,46px)}
+.ariel p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.stat{background:#fff;border:3px solid var(--ink);border-radius:28px;padding:24px;text-align:center;box-shadow:5px 5px 0 var(--ink)}
+.stat b{display:block;font-family:Righteous,sans-serif;font-weight:400;font-size:52px;line-height:1;color:var(--orange)}
+.stat:nth-child(2) b{color:var(--avocado)}
+.stat span{color:var(--muted);font-weight:500}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.quote{margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.quote blockquote{margin:0;font-size:18px}
+.quote figcaption{font-family:Righteous,sans-serif;color:var(--rust)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+dl{margin:0 0 32px;display:grid;grid-template-columns:auto 1fr;gap:10px 28px}
+dt{font-family:Righteous,sans-serif;color:var(--rust)}dd{margin:0}
+.map{position:relative;min-height:360px;border:3px solid var(--ink);border-radius:32px;overflow:hidden;box-shadow:6px 6px 0 var(--ink)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:sepia(.25) saturate(.9)}
+footer{background:var(--ink);color:#f3e6c8;padding:28px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:820px){
+ .links{display:none}.hero{padding:56px 0 72px}.hero .wrap,.ariel,.visit{grid-template-columns:1fr;gap:44px}
+ .hero .photo{aspect-ratio:1;border-radius:160px 160px 28px 28px}.badge{left:8px;bottom:16px;width:100px;height:100px;font-size:12px}.badge b{font-size:24px}
+ .grid,.quotes{grid-template-columns:1fr;gap:24px}section{padding:72px 0}
+ .strip{grid-template-columns:1fr 1fr;gap:16px}.strip .photo:last-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="demo">Demo website prepared for Come Brew by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a> · not yet live</div>
+<nav aria-label="Main">
+ <div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#d4a017" stroke="#2d1b00" stroke-width="3"/><path d="M11 17h15v6a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6z" fill="#fdf6e3" stroke="#2d1b00" stroke-width="2.5"/><path d="M26 19h2a3 3 0 0 1 0 6h-2" fill="none" stroke="#2d1b00" stroke-width="2.5"/><path d="M15 9c-1 2 1 3 0 5M20 9c-1 2 1 3 0 5" fill="none" stroke="#2d1b00" stroke-width="2" stroke-linecap="round"/></svg>Come Brew</a>
+  <div class="links"><a href="#menu">Menu</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></div>
+  <a class="btn sm" href="https://wa.me/27799756711">WhatsApp</a>
+ </div>
+</nav>
+
+<main id="top">
+<header class="hero">
+ <div class="wrap">
+  <div>
+   <h1>Come in for coffee, <span class="o">leave feeling</span> like family</h1>
+   <p>A hidden little gem in Kenilworth with seriously good coffee, toasties worth crossing town for, and a barista who sets the vibe from the first hello.</p>
+   <div class="ctas"><a class="btn" href="#visit">Find us</a><a class="btn mus" href="https://wa.me/27799756711">WhatsApp us</a></div>
+  </div>
+  <div class="pic">
+   <figure class="photo"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=900&q=70" alt="A warm coffee shop counter with an espresso machine and pendant lights" onerror="this.parentNode.style.display='none'"></figure>
+   <div class="badge"><span><b>4.8</b>on Google</span></div>
+   <svg class="sun" viewBox="0 0 72 72" aria-hidden="true"><g stroke="#2d1b00" stroke-width="3"><circle cx="36" cy="36" r="14" fill="#e8621a"/><path d="M36 6v10M36 56v10M6 36h10M56 36h10M15 15l7 7M50 50l7 7M15 57l7-7M50 22l7-7" stroke-linecap="round"/></g></svg>
+  </div>
+ </div>
+</header>
+<svg class="wave" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 75 0 150 20 T 300 20 T 450 20 T 600 20 T 750 20 T 900 20 T 1050 20 T 1200 20 V40 H0z" fill="#fff3e0"/></svg>
+
+<section id="menu" class="t-orange" style="padding-top:64px">
+ <div class="wrap">
+  <div class="sh"><span class="k">What's brewing</span><h2>Coffee, food and a good seat</h2><p>Breakfast spot, catch-up spot, laptop spot. Whatever you need it to be.</p></div>
+  <div class="grid">
+   <article class="card"><div class="ic" style="background:#e8621a"><svg viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/></svg></div><h3>Proper coffee</h3><p>Flat whites, cappuccinos and espresso made with real care, every single cup.</p></article>
+   <article class="card"><div class="ic" style="background:#d4a017"><svg viewBox="0 0 24 24"><path d="M4 11a8 5 0 0 1 16 0v1H4z"/><path d="M4 15h16l-2 4H6z"/></svg></div><h3>Breakfast &amp; toasties</h3><p>The chicken toastie is the regulars' favourite: the perfect balance of spicy and sweet.</p></article>
+   <article class="card"><div class="ic" style="background:#a9b86b"><svg viewBox="0 0 24 24"><path d="M5 18c4-6 10-6 14 0"/><path d="M8.5 14.5c2-2 5-2 7 0"/><circle cx="12" cy="18" r="1"/></svg></div><h3>Wifi &amp; good vibes</h3><p>Free wifi and comfy couches, so bring the laptop and stay a while.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="t-mustard">
+ <div class="wrap strip">
+  <figure class="photo"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=70" alt="Friends clinking cups of latte art coffee" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
+  <figure class="photo"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=70" alt="Two cappuccinos on a wooden table between potted plants" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
+  <figure class="photo"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=70" alt="A barista pouring a slow filter coffee" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
+ </div>
+</section>
+
+<section class="t-green">
+ <div class="wrap ariel">
+  <div>
+   <span class="k" style="font-family:Righteous,sans-serif;color:var(--rust);text-transform:uppercase;letter-spacing:.08em">Meet the barista</span>
+   <h2 style="margin-top:8px">Ariel carries the whole vibe</h2>
+   <p>Ask any regular why they keep coming back and you'll hear the same name. A glass of cold water before you've even opened the menu, real attention to detail, and a welcome that makes the morning better.</p>
+  </div>
+  <div class="stats">
+   <div class="stat"><b>4.8</b><span>Google rating</span></div>
+   <div class="stat"><b>242</b><span>Happy reviews</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="reviews">
+ <div class="wrap">
+  <div class="sh"><span class="k">Reviews</span><h2>The regulars say it best</h2><p>From Google reviews.</p></div>
+  <div class="quotes">
+   <figure class="card quote"><blockquote>"Coming here feels like coming home, being welcomed by family members who are truly happy to see you. Best atmosphere and vibe for a coffee shop in the South!"</blockquote><figcaption>Yumnah</figcaption></figure>
+   <figure class="card quote"><blockquote>"Great coffee, great space to work, but the barista, Ariel, carries the entire vibe of the café and puts real care and effort into everything he does."</blockquote><figcaption>Tasneem</figcaption></figure>
+   <figure class="card quote"><blockquote>"A hidden little gem! Once you step through their doors, it is a whole different ballgame. Warm, friendly and attentive staff."</blockquote><figcaption>Zaida</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="visit" class="t-orange">
+ <div class="wrap visit">
+  <div>
+   <div class="sh" style="text-align:left;margin:0 0 32px"><span class="k">Visit</span><h2>Pop in</h2></div>
+   <dl>
+    <dt>Where</dt><dd>Corner of Rosmead Avenue and Wetton Road<br>Kenilworth, Cape Town</dd>
+    <dt>Call</dt><dd><a href="tel:+27799756711">079 975 6711</a></dd>
+    <dt>Weekdays</dt><dd>6:30 to 15:30</dd>
+    <dt>Saturday</dt><dd>7:30 to 13:30</dd>
+    <dt>Sunday</dt><dd>Closed</dd>
+   </dl>
+   <div class="ctas"><a class="btn" href="https://www.google.com/maps?cid=9126863372020807030" target="_blank" rel="noopener">Directions</a><a class="btn mus" href="https://wa.me/27799756711">WhatsApp us</a></div>
+  </div>
+  <div class="map"><iframe title="Map to Come Brew" loading="lazy" src="https://www.google.com/maps?q=Come%20Brew%2C%20Rosmead%20Avenue%2C%20Kenilworth%2C%20Cape%20Town&output=embed"></iframe></div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap"><span>Come Brew · Kenilworth, Cape Town</span><span>Photos via Unsplash</span></div></footer>
+</body>
+</html>
