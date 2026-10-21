@@ -8,103 +8,105 @@
 <meta name="description" content="Indoor plants, garden plants, seedlings and good advice at 31 Newlands Avenue, Newlands. Open seven days. WhatsApp 069 729 3748.">
 <meta name="theme-color" content="#f6f3ec">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
-/* claude-design-styles: "scandinavian style", warm linen with sage and forest green */
-:root{--bg:#f6f3ec;--card:#fffdf8;--sand:#ece6da;--ink:#1f2a22;--muted:#5f6a61;--sage:#8fa58a;--green:#2f5d3a;--green-dk:#234a2d;--ease:cubic-bezier(.2,.7,.2,1)}
+/* claude-design-styles: "scandinavian style" as a centred magazine layout, warm linen with forest green */
+:root{--bg:#f6f3ec;--card:#fffdf8;--sand:#ece6da;--ink:#1f2a22;--muted:#5f6a61;--green:#2f5d3a;--green-dk:#234a2d;--leaf:#e5ecdf;--ease:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;accent-color:var(--green)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--sage);color:#fff}
+::selection{background:var(--green);color:#fff}
 a{color:inherit;text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:8px}
-h1,h2,h3{margin:0;font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.025em;line-height:1.05}
-.wrap{max-width:72rem;margin:0 auto;padding:0 24px}
-.eyebrow{display:block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+h1,h2,h3{margin:0;font-family:Fraunces,Georgia,serif;font-weight:400;letter-spacing:-.02em;line-height:1.02}
+.wrap{max-width:74rem;margin:0 auto;padding:0 24px}
+.eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
 .demo{background:var(--sand);color:var(--muted);font-size:12px;padding:6px 12px;text-align:center}.demo a{color:var(--ink)}
-nav.top{position:sticky;top:0;z-index:10;background:rgba(246,243,236,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
-nav.top.scrolled{box-shadow:0 8px 24px -18px rgba(31,42,34,.35)}
-nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
-.logo{display:flex;white-space:nowrap;align-items:center;gap:10px;font-family:Fraunces,Georgia,serif;font-size:21px;font-weight:600;text-decoration:none}
-.logo svg{width:26px;height:26px;fill:none;stroke:var(--green);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.links{display:flex;gap:30px;font-size:15px}
-.links a{color:var(--muted);text-decoration:none;padding:6px 0;transition:color .2s}.links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;padding:14px 24px;transition:background .25s,color .25s,transform .25s var(--ease),box-shadow .25s}
-.btn.pri{background:var(--green);color:#fff}.btn.pri:hover{background:var(--green-dk);transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(47,93,58,.6)}
-.btn.sec{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1px #d7d0c2}.btn.sec:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px var(--sage)}
+/* nav: links split around a centred wordmark */
+nav.top{position:sticky;top:0;z-index:10;background:rgba(246,243,236,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .3s}
+nav.top.scrolled{box-shadow:0 10px 26px -22px rgba(31,42,34,.5)}
+nav.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-top:18px;padding-bottom:18px;gap:16px}
+.nl,.nr{display:flex;gap:30px;font-size:15px}
+.nr{justify-content:flex-end;align-items:center}
+.nl a,.nr a.t{color:var(--muted);text-decoration:none;padding:6px 0;transition:color .2s}.nl a:hover,.nr a.t:hover{color:var(--ink)}
+.logo{text-align:center;text-decoration:none;font-family:Fraunces,Georgia,serif;font-size:24px;line-height:1;white-space:nowrap}
+.logo small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--green);margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;padding:14px 26px;transition:background .25s,color .25s,transform .25s var(--ease),box-shadow .25s}
+.btn.pri{background:var(--green);color:#fff}.btn.pri:hover{background:var(--green-dk);transform:translateY(-2px)}
+.btn.sec{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1px #d7d0c2}.btn.sec:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px var(--green)}
 .btn.sm{padding:10px 18px;font-size:15px}
-.hero{padding:56px 0 40px}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:10px;background:var(--card);border-radius:999px;padding:7px 16px 7px 12px;font-size:14px;color:var(--muted);box-shadow:0 1px 0 #e5dfd2}
+/* hero: centred type, panoramic photo below */
+.hero{text-align:center;padding:80px 0 0}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--card);border-radius:999px;padding:7px 16px 7px 12px;font-size:14px;color:var(--muted)}
 .pill i{width:8px;height:8px;border-radius:50%;background:#4f9a60}.pill i.off{background:#b7b0a3}
-.hero h1{font-size:clamp(48px,6.4vw,86px);margin:24px 0 22px}
+.hero h1{font-size:clamp(56px,9vw,136px);margin:28px auto 26px;max-width:11ch}
 .hero h1 em{font-style:italic;color:var(--green)}
-.hero p{font-size:19px;color:var(--muted);max-width:40ch;margin:0 0 32px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.art{position:relative;display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:560px}
-.art figure{margin:0;border-radius:28px;overflow:hidden;background:var(--sand)}
-.art figure:first-child{grid-row:1/3}
-.art img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
-.art figure:hover img{transform:scale(1.04)}
-.leaf{position:absolute;left:-26px;bottom:34px;background:var(--card);border-radius:20px;padding:16px 20px;box-shadow:0 24px 40px -24px rgba(31,42,34,.45);display:flex;gap:14px;align-items:center;animation:float 6s ease-in-out infinite}
-.leaf b{font-family:Fraunces,Georgia,serif;font-size:34px;font-weight:600;color:var(--green);line-height:1}
-.leaf span{font-size:13px;color:var(--muted);line-height:1.35}
-@keyframes float{50%{transform:translateY(-8px)}}
-section{padding:104px 0}
-.sh{max-width:38rem;margin-bottom:52px}
-.sh h2{font-size:clamp(36px,4.6vw,58px)}
-.sh p{color:var(--muted);font-size:18px;margin:18px 0 0}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:var(--card);border-radius:24px;padding:28px 24px;transition:transform .35s var(--ease),box-shadow .35s}
-.card:hover{transform:translateY(-5px);box-shadow:0 26px 40px -28px rgba(31,42,34,.5)}
-.card .ic{width:48px;height:48px;border-radius:16px;background:#e5ecdf;display:grid;place-items:center;margin-bottom:22px}
-.card svg{width:24px;height:24px;fill:none;stroke:var(--green);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-size:23px;margin-bottom:8px}
-.card p{margin:0;color:var(--muted);font-size:16px}
-.story{background:var(--sand)}
-.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.story figure{margin:0;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:#ddd5c6}
-.story img{display:block;width:100%;height:100%;object-fit:cover}
-.story h2{font-size:clamp(36px,4.6vw,58px)}
-.story p{color:#47524a;font-size:18px;margin:22px 0 0}
-.ticks{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}
-.ticks li{display:flex;gap:12px;align-items:flex-start}
-.ticks svg{flex:none;width:22px;height:22px;margin-top:3px;fill:none;stroke:var(--green);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.rating{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;background:var(--card);border-radius:28px;padding:48px}
-.rating .n{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
-.rating b{font-family:Fraunces,Georgia,serif;font-size:clamp(64px,8vw,104px);font-weight:500;color:var(--green);line-height:1}
-.rating h3{font-size:28px}
-.rating p{color:var(--muted);margin:10px 0 0;max-width:48ch}
-.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
-.visit h2{font-size:clamp(36px,4.6vw,58px);margin-bottom:20px}
-.addr{color:var(--muted);margin:0 0 26px;font-size:18px}.addr b{color:var(--ink);font-weight:600}
-.hours{list-style:none;margin:0 0 30px;padding:8px;background:var(--card);border-radius:22px;display:grid;gap:4px}
-.hours li{display:flex;justify-content:space-between;gap:16px;padding:14px 16px;border-radius:14px}
-.hours li span{color:var(--muted);white-space:nowrap}
-.hours li.today{background:#e5ecdf}.hours li.today span{color:var(--green);font-weight:600}
-.map{position:relative;min-height:420px;border-radius:28px;overflow:hidden;background:var(--sand)}
+.hero p{font-size:20px;color:var(--muted);max-width:44ch;margin:0 auto 34px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.pano{margin:72px auto 0;max-width:92rem;padding:0 24px}
+.pano figure{margin:0;border-radius:36px;overflow:hidden;aspect-ratio:21/8;background:var(--sand)}
+.pano img{width:100%;height:120%;object-fit:cover;display:block;will-change:transform}
+section{padding:120px 0}
+/* catalogue: big serif rows with a hover photo preview */
+.cat-h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.cat-h h2{font-size:clamp(40px,5vw,68px);margin-top:14px}
+.cat-h p{margin:0;color:var(--muted);max-width:32ch}
+.cat{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cat li{position:relative;display:grid;grid-template-columns:70px 1fr 1.1fr 40px;align-items:center;gap:24px;padding:28px 30px;border-radius:24px;background:transparent;transition:background .35s,padding .35s var(--ease)}
+.cat li:hover{background:var(--card);padding-left:40px}
+.cat .n{font-family:Fraunces,Georgia,serif;font-size:22px;color:var(--green)}
+.cat h3{font-size:clamp(32px,3.8vw,52px)}
+.cat p{margin:0;color:var(--muted)}
+.cat svg{width:28px;height:28px;fill:none;stroke:var(--green);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s var(--ease)}
+.cat li:hover svg{transform:translateX(6px) rotate(-45deg)}
+.peek{position:fixed;left:0;top:0;width:220px;height:280px;border-radius:22px;overflow:hidden;pointer-events:none;z-index:20;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .3s,transform .3s var(--ease);box-shadow:0 30px 60px -30px rgba(31,42,34,.6)}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.peek img{width:100%;height:100%;object-fit:cover;display:block}
+/* advice: asymmetric photo collage with a pull quote */
+.collage{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:20px;align-items:start}
+.collage .a{grid-column:1;grid-row:1/3;margin:0;border-radius:200px 200px 28px 28px;overflow:hidden;aspect-ratio:3/5;background:var(--sand)}
+.collage .b{grid-column:3;grid-row:2;margin:0;border-radius:28px;overflow:hidden;aspect-ratio:1;background:var(--sand)}
+.collage img{width:100%;height:100%;object-fit:cover;display:block}
+.collage .q{grid-column:2/4;grid-row:1;padding:20px 0 40px 20px}
+.collage .q h2{font-size:clamp(34px,4vw,56px);font-style:italic}
+.collage .q p{color:var(--muted);font-size:18px;margin:22px 0 0;max-width:46ch}
+.collage .s{grid-column:2;grid-row:2;background:var(--green);color:#fff;border-radius:28px;padding:32px;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between}
+.collage .s b{font-family:Fraunces,Georgia,serif;font-size:80px;font-weight:400;line-height:1}
+.collage .s span{color:#cfe0d1}
+.collage .s a{color:#fff;font-weight:600}
+/* visit: centred card with hour chips, wide map */
+.visit{text-align:center}
+.visit h2{font-size:clamp(44px,6vw,84px);margin:16px 0 18px}
+.visit .addr{font-size:19px;color:var(--muted);margin:0 0 28px}.visit .addr b{color:var(--ink);font-weight:600}
+.chips{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;list-style:none;margin:0 0 32px;padding:0}
+.chips li{background:var(--card);border-radius:999px;padding:12px 22px;font-size:16px}
+.chips li span{color:var(--muted);margin-left:10px;white-space:nowrap}
+.chips li.today{background:var(--leaf)}.chips li.today span{color:var(--green);font-weight:600}
+.map{position:relative;margin-top:56px;height:440px;border-radius:36px;overflow:hidden;background:var(--sand)}
 .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.6) sepia(.12)}
-.cta{text-align:center;background:var(--green);color:#fff;border-radius:32px;padding:76px 24px;position:relative;overflow:hidden}
-.cta h2{font-size:clamp(36px,5vw,62px)}
-.cta p{color:#d9e6da;margin:16px auto 30px;max-width:40ch;font-size:18px}
-.cta .ctas{justify-content:center}
-.cta .btn.pri{background:#fff;color:var(--green)}.cta .btn.pri:hover{background:#f0f4ee}
-.cta .btn.sec{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.close{background:var(--green);color:#fff;text-align:center;padding:110px 24px}
+.close h2{font-size:clamp(40px,6vw,80px);max-width:16ch;margin:0 auto}
+.close p{color:#d9e6da;margin:20px auto 32px;max-width:42ch;font-size:18px}
+.close .btn.pri{background:#fff;color:var(--green)}.close .btn.pri:hover{background:#eef3ec}
+.close .btn.sec{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
 footer{padding:32px 0;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.js .up{opacity:0;transform:translateY(22px);animation:fadeUp .9s var(--ease) forwards;animation-delay:calc(var(--i,0) * 100ms + 80ms)}
+.js .up{opacity:0;transform:translateY(22px);animation:fadeUp 1s var(--ease) forwards;animation-delay:calc(var(--i,0) * 110ms + 80ms)}
 @keyframes fadeUp{to{opacity:1;transform:none}}
-.js [data-r]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
+.js [data-r]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease),background .35s,padding .35s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
 .js [data-r].in{opacity:1;transform:none}
+.js .cat li[data-r].in{transition-delay:0s}
 @media (max-width:900px){
- .links{display:none}.navwa{display:none}.hero .wrap,.story .wrap,.visit{grid-template-columns:1fr;gap:44px}
- .art{height:420px}.leaf{left:12px;bottom:12px}.cards{grid-template-columns:1fr 1fr}
- .rating{grid-template-columns:1fr;padding:32px}section{padding:76px 0}
+ .nl,.nr a.t{display:none}nav.top .wrap{grid-template-columns:1fr auto}.logo{text-align:left}
+ .hero{padding-top:56px}.pano figure{aspect-ratio:4/3;border-radius:28px}
+ .cat li{grid-template-columns:44px 1fr;gap:6px 16px;padding:22px 18px}.cat li p{grid-column:2}.cat li svg{display:none}
+ .collage{grid-template-columns:1fr 1fr}.collage .q{grid-column:1/-1;grid-row:1;padding:0 0 8px}
+ .collage .a{grid-column:1;grid-row:2}.collage .b{grid-column:2;grid-row:3}.collage .s{grid-column:2;grid-row:2}
+ section{padding:84px 0}.map{height:340px}.close{padding:80px 24px}
 }
-@media (max-width:560px){.cards{grid-template-columns:1fr}.art{height:340px}}
 @media (prefers-reduced-motion:reduce){
  *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
- .js .up,.js [data-r]{opacity:1;transform:none}
+ .js .up,.js [data-r]{opacity:1;transform:none}.pano img{transform:none!important}
 }
 </style>
 </head>
@@ -112,64 +114,43 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="demo">Demo website prepared for The Greenhouse Nursery by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a> · not yet live</div>
 <nav class="top" aria-label="Main">
  <div class="wrap">
-  <a class="logo" href="#top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V10"/><path d="M12 13c-4 0-7-2.5-7-7 4 0 7 2.5 7 7z"/><path d="M12 11c0-3.5 2.5-6 6.5-6 0 3.5-2.5 6-6.5 6z"/></svg>The Greenhouse</a>
-  <div class="links"><a href="#plants">Plants</a><a href="#about">About</a><a href="#visit">Visit</a></div>
-  <a class="btn pri sm" href="https://wa.me/27697293748">WhatsApp<span class="navwa"> us</span></a>
+  <div class="nl"><a href="#plants">Plants</a><a href="#advice">Advice</a></div>
+  <a class="logo" href="#top">The Greenhouse<small>Nursery · Newlands</small></a>
+  <div class="nr"><a class="t" href="#visit">Visit</a><a class="btn pri sm" href="https://wa.me/27697293748">WhatsApp</a></div>
  </div>
 </nav>
 
 <main id="top">
 <header class="hero">
  <div class="wrap">
-  <div>
-   <span class="pill up" style="--i:0"><i id="dot"></i><span id="status">Plant nursery in Newlands</span></span>
-   <h1 class="up" style="--i:1">Grow something <em>good.</em></h1>
-   <p class="up" style="--i:2">A friendly little nursery on Newlands Avenue, full of healthy plants for your home, your garden and that bare corner of the stoep.</p>
-   <div class="ctas up" style="--i:3"><a class="btn pri" href="#visit">Plan a visit</a><a class="btn sec" href="https://wa.me/27697293748">Ask what's in stock</a></div>
-  </div>
-  <div class="art up" style="--i:2">
-   <figure><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=70" alt="Rows of young seedlings sprouting in a seed tray" onerror="this.parentNode.style.display='none'"></figure>
-   <figure><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=70" alt="A young green plant against a white wall" onerror="this.parentNode.style.display='none'"></figure>
-   <figure><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=70" alt="A garden trowel resting in fresh potting soil" onerror="this.parentNode.style.display='none'"></figure>
-   <div class="leaf"><b>4.8</b><span>Google rating<br>from 45 reviews</span></div>
-  </div>
+  <span class="pill up" style="--i:0"><i id="dot"></i><span id="status">Plant nursery in Newlands</span></span>
+  <h1 class="up" style="--i:1">Grow something <em>good.</em></h1>
+  <p class="up" style="--i:2">A friendly little nursery on Newlands Avenue, full of healthy plants for your home, your garden and that bare corner of the stoep.</p>
+  <div class="ctas up" style="--i:3"><a class="btn pri" href="#visit">Plan a visit</a><a class="btn sec" href="https://wa.me/27697293748">Ask what's in stock</a></div>
  </div>
+ <div class="pano up" style="--i:4"><figure><img id="pano" src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=2000&q=70" alt="Rows of young seedlings sprouting in a seed tray" onerror="this.style.display='none'"></figure></div>
 </header>
 
 <section id="plants">
  <div class="wrap">
-  <div class="sh" data-r><span class="eyebrow">What we grow</span><h2>Plants that are ready to thrive.</h2><p>Stock changes with the seasons, so send us a message if you're after something specific.</p></div>
-  <div class="cards">
-   <article class="card" data-r style="--i:0"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 21h10l1-8H6z"/><path d="M12 13V8"/><path d="M12 9c-3 0-5-2-5-5 3 0 5 2 5 5zM12 8c0-2.5 2-4.5 5-4.5 0 2.5-2 4.5-5 4.5z"/></svg></div><h3>Indoor plants</h3><p>Easy going greenery for bright rooms, dim corners and busy people.</p></article>
-   <article class="card" data-r style="--i:1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21v-6"/><circle cx="12" cy="9" r="6"/></svg></div><h3>Garden plants</h3><p>Shrubs, perennials and colour for the garden, chosen to suit the Cape climate.</p></article>
-   <article class="card" data-r style="--i:2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M8 20v-4M12 20v-6M16 20v-3"/><path d="M12 14c-2 0-3.5-1.5-3.5-3.5 2 0 3.5 1.5 3.5 3.5z"/></svg></div><h3>Seedlings and herbs</h3><p>Veg and herb seedlings for the kitchen garden, plus everything to get them going.</p></article>
-   <article class="card" data-r style="--i:3"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 9h14l-1.5 11h-11z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg></div><h3>Pots and potting</h3><p>Pots, soil and compost, and a hand with repotting if you need one.</p></article>
-  </div>
+  <div class="cat-h" data-r><div><span class="eyebrow">What we grow</span><h2>The plant list.</h2></div><p>Stock changes with the seasons, so send us a message if you're after something specific.</p></div>
+  <ul class="cat">
+   <li data-r data-img="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=500&q=70"><span class="n">01</span><h3>Indoor plants</h3><p>Easy going greenery for bright rooms, dim corners and busy people.</p><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+   <li data-r data-img="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=500&q=70"><span class="n">02</span><h3>Garden plants</h3><p>Shrubs, perennials and colour for the garden, chosen to suit the Cape climate.</p><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+   <li data-r data-img="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=500&q=70"><span class="n">03</span><h3>Seedlings and herbs</h3><p>Veg and herb seedlings for the kitchen garden, plus everything to get them going.</p><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+   <li data-r data-img="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=500&q=70"><span class="n">04</span><h3>Succulents and cacti</h3><p>Hardy, waterwise plants for sunny windowsills and dry Cape summers.</p><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+   <li data-r data-img="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=500&q=70"><span class="n">05</span><h3>Pots and potting</h3><p>Pots, soil and compost, and a hand with repotting if you need one.</p><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+  </ul>
  </div>
 </section>
+<div class="peek" id="peek" aria-hidden="true"><img alt="" id="peekimg"></div>
 
-<section class="story" id="about">
- <div class="wrap">
-  <figure data-r><img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=900&q=70" alt="A small potted tree in a green ceramic pot" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
-  <div data-r style="--i:1">
-   <span class="eyebrow">About the nursery</span>
-   <h2>Real advice from people who love plants.</h2>
-   <p>Not sure what will grow in a shady Newlands garden? Ask. We're happy to talk light, water and soil until you leave with the right plant for the spot you have in mind.</p>
-   <ul class="ticks">
-    <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Healthy, well cared for stock</li>
-    <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Honest advice for your garden and home</li>
-    <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Open seven days a week</li>
-   </ul>
-  </div>
- </div>
-</section>
-
-<section>
- <div class="wrap">
-  <div class="rating" data-r>
-   <div><div class="n"><b data-count="4.8" data-dec="1">4.8</b><h3>out of 5 on Google</h3></div><p>45 people have rated The Greenhouse Nursery on Google Maps. Have a read, then come and browse.</p></div>
-   <a class="btn sec" href="https://maps.google.com/?cid=2152472800948648394" target="_blank" rel="noopener">Read the reviews</a>
-  </div>
+<section id="advice" style="padding-top:0">
+ <div class="wrap collage">
+  <figure class="a" data-r><img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=700&q=70" alt="A small potted tree in a green ceramic pot" loading="lazy" onerror="this.style.display='none'"></figure>
+  <div class="q" data-r style="--i:1"><span class="eyebrow">Advice</span><h2 style="margin-top:16px">"What will grow in my shady Newlands garden?"</h2><p>Ask us. We're happy to talk light, water and soil until you leave with the right plant for the spot you have in mind. Send a photo on WhatsApp and we'll suggest a few before you visit.</p></div>
+  <div class="s" data-r style="--i:2"><b data-count="4.8" data-dec="1">4.8</b><div><span>Rated by 45 people on Google.</span><br><a href="https://maps.google.com/?cid=2152472800948648394" target="_blank" rel="noopener">Read the reviews</a></div></div>
+  <figure class="b" data-r style="--i:3"><img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=600&q=70" alt="A row of tall green cacti" loading="lazy" onerror="this.style.display='none'"></figure>
  </div>
 </section>
 
@@ -178,8 +159,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div data-r>
    <span class="eyebrow">Visit</span>
    <h2>Come and browse.</h2>
-   <p class="addr"><b>31 Newlands Avenue</b><br>Newlands, Cape Town</p>
-   <ul class="hours" id="hours">
+   <p class="addr"><b>31 Newlands Avenue</b>, Newlands, Cape Town</p>
+   <ul class="chips" id="hours">
     <li data-days="1,2,3,4,5,6">Monday to Saturday <span>9:00 to 17:00</span></li>
     <li data-days="0">Sunday <span>9:00 to 16:00</span></li>
    </ul>
@@ -189,22 +170,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  </div>
 </section>
 
-<section style="padding-top:0">
- <div class="wrap"><div class="cta" data-r><h2>Looking for something?</h2><p>Send a photo of your spot on WhatsApp and we'll suggest a few plants that will love it.</p><div class="ctas"><a class="btn pri" href="https://wa.me/27697293748">WhatsApp us</a><a class="btn sec" href="#visit">Opening hours</a></div></div></div>
+<section class="close">
+ <div data-r><h2>Looking for something special?</h2><p>Send a photo of your spot on WhatsApp and we'll suggest a few plants that will love it.</p><div class="ctas"><a class="btn pri" href="https://wa.me/27697293748">WhatsApp us</a><a class="btn sec" href="#visit">Opening hours</a></div></div>
 </section>
 </main>
 <footer><div class="wrap"><span>The Greenhouse Nursery · 31 Newlands Avenue, Newlands</span><span>Photos via Unsplash</span></div></footer>
 <script>
 (function(){
  var nav=document.querySelector('nav.top');
- var onScroll=function(){nav.classList.toggle('scrolled',scrollY>8)};onScroll();addEventListener('scroll',onScroll,{passive:true});
+ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,pano=document.getElementById('pano');
+ var onScroll=function(){nav.classList.toggle('scrolled',scrollY>8);
+  // gentle parallax on the panoramic photo
+  if(!reduce&&pano){var r=pano.parentNode.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)pano.style.transform='translateY('+(-(r.top/innerHeight)*8-8)+'%)'}};
+ onScroll();addEventListener('scroll',onScroll,{passive:true});
  var H={0:[540,960],1:[540,1020],2:[540,1020],3:[540,1020],4:[540,1020],5:[540,1020],6:[540,1020]};
  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Johannesburg'})),d=now.getDay(),m=now.getHours()*60+now.getMinutes();
  document.querySelectorAll('#hours li').forEach(function(li){if(li.dataset.days.split(',').indexOf(String(d))>-1)li.classList.add('today')});
- var h=H[d],open=h&&m>=h[0]&&m<h[1];
+ var h=H[d],open=m>=h[0]&&m<h[1];
  document.getElementById('status').textContent=open?'Open now in Newlands':'Plant nursery in Newlands';
  if(!open)document.getElementById('dot').classList.add('off');
- var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('[data-r]');
+ // photo preview that follows the pointer over the plant list (mouse only)
+ var peek=document.getElementById('peek'),pimg=document.getElementById('peekimg');
+ if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!reduce){
+  document.querySelectorAll('.cat li').forEach(function(li){
+   li.addEventListener('mouseenter',function(){pimg.src=li.dataset.img;peek.classList.add('on')});
+   li.addEventListener('mouseleave',function(){peek.classList.remove('on')});
+   li.addEventListener('mousemove',function(e){peek.style.left=(e.clientX+150)+'px';peek.style.top=e.clientY+'px'});
+  });
+ }
+ var els=document.querySelectorAll('[data-r]');
  function count(el){var t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),s=null;if(reduce)return;
   function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1200,1),e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(dec);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}

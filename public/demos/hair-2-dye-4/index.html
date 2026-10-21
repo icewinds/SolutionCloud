@@ -11,197 +11,169 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
-/* claude-design-styles: "soft gradient / glass" modern style, blush, plum and copper with frosted cards */
-:root{--bg:#faf6f4;--glass:rgba(255,255,255,.62);--line:rgba(255,255,255,.75);--ink:#241a22;--muted:#6e6069;--plum:#6b2d5c;--plum-dk:#55224a;--copper:#c7744a;--blush:#f3d9d3;--ease:cubic-bezier(.2,.7,.2,1)}
+/* claude-design-styles: "soft gradient / glass" as a split screen: sticky photo panel left, scrolling story right */
+:root{--bg:#faf6f4;--glass:rgba(255,255,255,.66);--ink:#241a22;--muted:#6e6069;--plum:#6b2d5c;--plum-dk:#55224a;--copper:#c7744a;--blush:#f3d9d3;--ease:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;accent-color:var(--plum)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--plum);color:#fff}
-a{color:inherit;text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:10px}
+a{color:inherit;text-underline-offset:.2em}a:focus-visible,summary:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:10px}
 h1,h2,h3{margin:0;font-family:"DM Serif Display",Georgia,serif;font-weight:400;letter-spacing:-.015em;line-height:1.02}
-.wrap{max-width:74rem;margin:0 auto;padding:0 24px}
-.over{display:block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:16px}
-.aura{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.aura i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55}
-.aura .a{width:560px;height:560px;left:-160px;top:-120px;background:#f2c1cf;animation:drift 18s ease-in-out infinite alternate}
-.aura .b{width:520px;height:520px;right:-180px;top:120px;background:#e9c3a6;animation:drift 22s ease-in-out infinite alternate-reverse}
-.aura .c{width:480px;height:480px;left:30%;bottom:-260px;background:#d7c0e6;animation:drift 20s ease-in-out infinite alternate}
-@keyframes drift{to{transform:translate(60px,40px) scale(1.1)}}
-.demo{background:var(--ink);color:#cbbcc6;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff}
-nav.top{position:sticky;top:0;z-index:10;background:rgba(250,246,244,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:background .3s,box-shadow .3s}
-nav.top.scrolled{background:rgba(250,246,244,.86);box-shadow:0 10px 30px -22px rgba(36,26,34,.4)}
-nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:15px;padding-bottom:15px}
-.logo{white-space:nowrap;font-family:"DM Serif Display",Georgia,serif;font-size:25px;text-decoration:none;letter-spacing:-.01em}
-.logo em{color:var(--copper)}
-.links{display:flex;gap:30px;font-size:15px;font-weight:500}
-.links a{color:var(--muted);text-decoration:none;padding:6px 0;transition:color .2s}.links a:hover{color:var(--ink)}
+.over{display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin-bottom:18px}
+.demo{position:relative;z-index:30;background:var(--ink);color:#cbbcc6;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:100vh}
+/* left: sticky photo stack that crossfades per section */
+.panel{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--blush)}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1s var(--ease),transform 2.2s var(--ease)}
+.panel img.on{opacity:1;transform:scale(1)}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,26,34,.35),transparent 30%,transparent 65%,rgba(36,26,34,.55))}
+.brand{position:absolute;left:36px;top:32px;z-index:2;color:#fff;text-decoration:none;font-family:"DM Serif Display",Georgia,serif;font-size:30px;white-space:nowrap}
+.brand em{color:#f6c9ad}
+.badge{position:absolute;left:36px;bottom:36px;z-index:2;display:flex;align-items:center;gap:16px;padding:16px 22px;border-radius:22px;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.badge b{font-family:"DM Serif Display",Georgia,serif;font-size:42px;font-weight:400;line-height:1;color:var(--plum)}
+.badge span{font-size:13px;color:var(--muted);line-height:1.35}
+.tick{position:absolute;right:30px;top:50%;z-index:2;transform:translateY(-50%);display:grid;gap:10px}
+.tick i{width:6px;height:28px;border-radius:6px;background:rgba(255,255,255,.45);transition:background .4s,height .4s var(--ease)}
+.tick i.on{background:#fff;height:48px}
+/* right: story column */
+.story{position:relative;padding:0 64px 140px}
+.story::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 500px at 90% 10%,#f6d7e0,transparent),radial-gradient(500px 420px at 10% 60%,#f1dcc9,transparent),radial-gradient(520px 460px at 80% 95%,#e5d5ef,transparent)}
+.chap{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:96px 0}
+.chip{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:7px 16px 7px 12px;border-radius:999px;font-size:14px;color:var(--muted);background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.chip i{width:8px;height:8px;border-radius:50%;background:#3fa36b}.chip i.off{background:#b9a9b2}
+.chap h1{font-size:clamp(52px,6.2vw,100px);margin:26px 0 24px}
+.chap h1 em,.chap h2 em{font-style:italic;background:linear-gradient(100deg,var(--plum),var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chap h2{font-size:clamp(40px,4.4vw,68px);margin-bottom:20px}
+.chap p.lede{font-size:19px;color:var(--muted);max-width:40ch;margin:0 0 34px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;padding:14px 24px;transition:background .25s,transform .25s var(--ease),box-shadow .25s}
 .btn.pri{background:var(--plum);color:#fff;box-shadow:0 14px 30px -16px rgba(107,45,92,.7)}.btn.pri:hover{background:var(--plum-dk);transform:translateY(-2px)}
-.btn.sec{background:var(--glass);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(36,26,34,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.btn.sec:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px rgba(107,45,92,.4)}
-.btn.sm{padding:10px 18px;font-size:15px}
+.btn.sec{background:var(--glass);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(36,26,34,.14)}.btn.sec:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px rgba(107,45,92,.4)}
 .btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.glass{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:28px;box-shadow:0 30px 60px -40px rgba(36,26,34,.35)}
-.hero{padding:64px 0 56px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
-.chip{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 12px;border-radius:999px;font-size:14px;color:var(--muted)}
-.chip i{width:8px;height:8px;border-radius:50%;background:#3fa36b}.chip i.off{background:#b9a9b2}
-.hero h1{font-size:clamp(52px,7vw,96px);margin:24px 0 22px}
-.hero h1 em{font-style:italic;background:linear-gradient(100deg,var(--plum),var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:19px;color:var(--muted);max-width:40ch;margin:0 0 32px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.portrait{position:relative}
-.portrait figure{margin:0;border-radius:200px 200px 32px 32px;overflow:hidden;aspect-ratio:4/5;background:var(--blush)}
-.portrait img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.6s var(--ease)}
-.portrait.in img{transform:scale(1)}
-.portrait .glass{position:absolute;right:-18px;bottom:40px;background:rgba(255,255,255,.88);padding:18px 22px;display:flex;gap:14px;align-items:center;animation:float 6s ease-in-out infinite}
-.portrait .glass b{font-family:"DM Serif Display",Georgia,serif;font-size:40px;font-weight:400;line-height:1;color:var(--plum)}
-.portrait .glass span{font-size:13px;color:var(--muted);line-height:1.35}
-@keyframes float{50%{transform:translateY(-8px)}}
-section{padding:104px 0}
-.sh{text-align:center;max-width:40rem;margin:0 auto 56px}
-.sh h2{font-size:clamp(38px,5vw,64px)}
-.sh p{color:var(--muted);font-size:18px;margin:16px 0 0}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc{padding:32px;transition:transform .4s var(--ease),box-shadow .4s}
-.svc:hover{transform:translateY(-6px);box-shadow:0 36px 60px -36px rgba(107,45,92,.45)}
-.swatch{display:flex;margin-bottom:24px}
-.swatch i{width:34px;height:34px;border-radius:50%;border:3px solid #fff;margin-right:-10px;transition:transform .35s var(--ease)}
-.svc:hover .swatch i:nth-child(2){transform:translateX(6px)}.svc:hover .swatch i:nth-child(3){transform:translateX(12px)}
-.svc h3{font-size:30px;margin-bottom:10px}
-.svc p{margin:0;color:var(--muted)}
-.gal{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:20px;align-items:end}
-.gal figure{margin:0;border-radius:28px;overflow:hidden;background:var(--blush)}
-.gal figure:nth-child(1){aspect-ratio:3/4}.gal figure:nth-child(2){aspect-ratio:4/5}.gal figure:nth-child(3){aspect-ratio:3/4}
-.gal img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
-.gal figure:hover img{transform:scale(1.05)}
-.rate{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:48px 52px}
-.rate b{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(72px,9vw,120px);line-height:.9;background:linear-gradient(120deg,var(--plum),var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent}
-.rate h3{font-size:32px;margin-bottom:8px}
-.rate p{margin:0;color:var(--muted);max-width:44ch}
-.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:28px}
-.visit .info{padding:40px}
-.visit h2{font-size:clamp(36px,4.6vw,56px);margin-bottom:20px}
-.addr{color:var(--muted);margin:0 0 24px;font-size:18px}.addr b{color:var(--ink);font-weight:600}
-.hours{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:6px}
-.hours li{display:flex;justify-content:space-between;gap:16px;padding:13px 18px;border-radius:16px;background:rgba(255,255,255,.55)}
+/* services as an accordion */
+.acc{display:grid;gap:12px}
+.acc details{background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:24px;padding:0 28px;transition:background .3s,box-shadow .3s}
+.acc details[open]{background:rgba(255,255,255,.85);box-shadow:0 30px 50px -36px rgba(107,45,92,.5)}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 0}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary h3{font-size:32px}
+.acc summary .sw{display:flex;margin-left:auto;margin-right:14px}
+.acc summary .sw i{width:26px;height:26px;border-radius:50%;border:3px solid #fff;margin-left:-8px}
+.acc summary .pm{flex:none;width:36px;height:36px;border-radius:50%;background:var(--blush);display:grid;place-items:center;transition:transform .35s var(--ease),background .3s}
+.acc details[open] .pm{transform:rotate(45deg);background:var(--plum)}
+.acc .pm svg{width:16px;height:16px;fill:none;stroke:var(--plum);stroke-width:2.4;stroke-linecap:round}
+.acc details[open] .pm svg{stroke:#fff}
+.acc .body{padding:0 0 26px;color:var(--muted);max-width:48ch;animation:open .45s var(--ease)}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}}
+.big{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(110px,14vw,200px);line-height:.85;background:linear-gradient(120deg,var(--plum),var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hours{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:8px;max-width:460px}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:15px 20px;border-radius:16px;background:var(--glass)}
 .hours li span{color:var(--muted);white-space:nowrap}
 .hours li.today{background:var(--plum);color:#fff}.hours li.today span{color:#f3dbe9}
-.map{position:relative;min-height:440px;border-radius:28px;overflow:hidden;background:var(--blush)}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.6) sepia(.15) hue-rotate(-10deg)}
-.cta{text-align:center;padding:72px 24px;background:linear-gradient(120deg,var(--plum),#8b3e62 55%,var(--copper));color:#fff;border-radius:32px}
-.cta h2{font-size:clamp(38px,5.2vw,66px)}
-.cta p{color:#f5dfe8;margin:16px auto 30px;max-width:40ch;font-size:18px}
-.cta .ctas{justify-content:center}
-.cta .btn.pri{background:#fff;color:var(--plum)}.cta .btn.pri:hover{background:#fbeff4}
-.cta .btn.sec{background:rgba(255,255,255,.14);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
-footer{padding:30px 0 40px;font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.js .up{opacity:0;transform:translateY(24px);animation:fadeUp .9s var(--ease) forwards;animation-delay:calc(var(--i,0) * 100ms + 80ms)}
+.addr{color:var(--muted);margin:0 0 26px;font-size:18px}.addr b{color:var(--ink);font-weight:600}
+.map{position:relative;height:280px;border-radius:24px;overflow:hidden;background:var(--blush);margin-top:32px;max-width:560px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.6) sepia(.15)}
+/* floating pill nav at the bottom */
+.dock{position:fixed;left:50%;bottom:22px;z-index:20;transform:translateX(-50%);display:flex;align-items:center;gap:4px;padding:6px;border-radius:999px;background:rgba(36,26,34,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 40px -20px rgba(36,26,34,.6)}
+.dock a{color:#e8dbe3;text-decoration:none;font-size:15px;font-weight:600;padding:10px 16px;border-radius:999px;transition:background .25s,color .25s;white-space:nowrap}
+.dock a:hover,.dock a.on{background:rgba(255,255,255,.14);color:#fff}
+.dock a.call{background:#fff;color:var(--plum)}.dock a.call:hover{background:#fbeff4}
+footer{font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.js .up{opacity:0;transform:translateY(26px);animation:fadeUp .95s var(--ease) forwards;animation-delay:calc(var(--i,0) * 110ms + 120ms)}
 @keyframes fadeUp{to{opacity:1;transform:none}}
-.js [data-r]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease),box-shadow .4s;transition-delay:calc(var(--i,0) * 90ms)}
+.js [data-r]{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
 .js [data-r].in{opacity:1;transform:none}
-.js .svc[data-r].in:hover{transform:translateY(-6px);transition-delay:0s}
+.js .dock{animation:dockIn .8s var(--ease) .9s both}
+@keyframes dockIn{from{opacity:0;transform:translate(-50%,24px)}}
 @media (max-width:900px){
- .links{display:none}.hero .wrap,.visit{grid-template-columns:1fr;gap:44px}
- .portrait .glass{right:12px;bottom:16px}.services{grid-template-columns:1fr}
- .gal{grid-template-columns:1fr 1fr}.gal figure:nth-child(2){grid-column:1/-1;grid-row:1;aspect-ratio:4/3}
- .rate{grid-template-columns:1fr;gap:18px;padding:34px}.visit .info{padding:30px}section{padding:76px 0}
+ .split{grid-template-columns:minmax(0,1fr)}.panel{position:relative;height:68vh}
+ .brand{left:20px;top:20px;font-size:26px}.badge{left:20px;bottom:20px}.tick{display:none}
+ .story{padding:0 22px 120px}.chap{min-height:auto;padding:72px 0}
+ .dock a{padding:9px 12px;font-size:14px}.dock a.hide{display:none}
 }
 @media (prefers-reduced-motion:reduce){
  *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
- .js .up,.js [data-r]{opacity:1;transform:none}.portrait img{transform:none}
+ .js .up,.js [data-r]{opacity:1;transform:none}.panel img{transform:none}
 }
 </style>
 </head>
 <body>
-<div class="aura" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i></div>
 <div class="demo">Demo website prepared for Hair 2 Dye 4 by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a> · not yet live</div>
-<nav class="top" aria-label="Main">
- <div class="wrap">
-  <a class="logo" href="#top">Hair 2 Dye <em>4</em></a>
-  <div class="links"><a href="#services">Services</a><a href="#visit">Visit</a></div>
-  <a class="btn pri sm" href="tel:+27216714446">Book a chair</a>
+<div class="split" id="top">
+ <div class="panel" aria-hidden="true">
+  <img class="on" data-for="intro" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1400&q=70" alt="" onerror="this.style.display='none'">
+  <img data-for="services" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=70" alt="" loading="lazy" onerror="this.style.display='none'">
+  <img data-for="loved" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1400&q=70" alt="" loading="lazy" onerror="this.style.display='none'">
+  <img data-for="visit" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1400&q=70" alt="" loading="lazy" onerror="this.style.display='none'">
+  <a class="brand" href="#top">Hair 2 Dye <em>4</em></a>
+  <div class="badge"><b>4.7</b><span>Google rating<br>from 49 reviews</span></div>
+  <div class="tick"><i class="on"></i><i></i><i></i><i></i></div>
  </div>
-</nav>
 
-<main id="top">
-<header class="hero">
- <div class="wrap">
-  <div>
-   <span class="chip glass up" style="--i:0"><i id="dot"></i><span id="status">Hair salon in Newlands</span></span>
+ <main class="story">
+  <section class="chap" id="intro">
+   <span class="chip up" style="--i:0"><i id="dot"></i><span id="status">Hair salon in Newlands</span></span>
    <h1 class="up" style="--i:1">Colour you'll <em>love</em> to wear.</h1>
-   <p class="up" style="--i:2">Cuts, colour and styling in a relaxed little salon on Main Road, Newlands. Walk out feeling like the best version of you.</p>
+   <p class="lede up" style="--i:2">Cuts, colour and styling in a relaxed little salon on Main Road, Newlands. Walk out feeling like the best version of you.</p>
    <div class="ctas up" style="--i:3"><a class="btn pri" href="tel:+27216714446"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>021 671 4446</a><a class="btn sec" href="#services">Our services</a></div>
-  </div>
-  <div class="portrait in up" style="--i:2">
-   <figure><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=70" alt="A hairstylist blow drying a client's hair in a bright salon" onerror="this.parentNode.style.display='none'"></figure>
-   <div class="glass"><b>4.7</b><span>Google rating<br>from 49 reviews</span></div>
-  </div>
- </div>
-</header>
+  </section>
 
-<section id="services" style="padding-top:56px">
- <div class="wrap">
-  <div class="sh" data-r><span class="over">Services</span><h2>Everything your hair needs.</h2><p>Not sure what to go for? Call us for a chat and we'll talk it through.</p></div>
-  <div class="services">
-   <article class="glass svc" data-r style="--i:0"><div class="swatch"><i style="background:#6b2d5c"></i><i style="background:#a2486e"></i><i style="background:#c7744a"></i></div><h3>Colour</h3><p>Full colour, root touch ups and grey coverage, matched to your skin tone and style.</p></article>
-   <article class="glass svc" data-r style="--i:1"><div class="swatch"><i style="background:#d8b27a"></i><i style="background:#e9cf9f"></i><i style="background:#f5e6c8"></i></div><h3>Highlights</h3><p>Foils, balayage and toning for soft, natural looking brightness that grows out beautifully.</p></article>
-   <article class="glass svc" data-r style="--i:2"><div class="swatch"><i style="background:#3b2a2f"></i><i style="background:#6e5156"></i><i style="background:#a68a8a"></i></div><h3>Cut and style</h3><p>Trims, restyles, blow dries and treatments to keep your hair healthy and looking great.</p></article>
-  </div>
- </div>
-</section>
+  <section class="chap" id="services">
+   <div data-r><span class="over">Services</span><h2>Everything your hair <em>needs.</em></h2><p class="lede">Tap a service to read more, then call to book a time.</p></div>
+   <div class="acc" data-r style="--i:1">
+    <details open><summary><h3>Colour</h3><span class="sw"><i style="background:#6b2d5c"></i><i style="background:#a2486e"></i><i style="background:#c7744a"></i></span><span class="pm"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Full colour, root touch ups and grey coverage, matched to your skin tone and style.</div></details>
+    <details><summary><h3>Highlights</h3><span class="sw"><i style="background:#d8b27a"></i><i style="background:#e9cf9f"></i><i style="background:#f5e6c8"></i></span><span class="pm"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Foils, balayage and toning for soft, natural looking brightness that grows out beautifully.</div></details>
+    <details><summary><h3>Cut and style</h3><span class="sw"><i style="background:#3b2a2f"></i><i style="background:#6e5156"></i><i style="background:#a68a8a"></i></span><span class="pm"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Trims, restyles and blow dries to keep your hair looking great between colours.</div></details>
+    <details><summary><h3>Treatments</h3><span class="sw"><i style="background:#9fb8a4"></i><i style="background:#c7d6c9"></i><i style="background:#e6eee7"></i></span><span class="pm"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Conditioning treatments to bring back shine and strength, especially after colour.</div></details>
+   </div>
+  </section>
 
-<div class="wrap gal">
- <figure data-r><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=70" alt="A woman with long wavy brown hair against a pink wall" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
- <figure data-r style="--i:1"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=70" alt="A bright salon with pink chairs and mirrors" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
- <figure data-r style="--i:2"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=70" alt="A stylist blow drying a client's hair with a round brush" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
+  <section class="chap" id="loved">
+   <div data-r><span class="over">Reviews</span><div class="big" data-count="4.7" data-dec="1">4.7</div><h2 style="margin-top:18px">Loved by 49 clients on Google.</h2><p class="lede">Read what people say about their visits, then book your own.</p><a class="btn sec" href="https://maps.google.com/?cid=2956885404732958390" target="_blank" rel="noopener">Read the reviews</a></div>
+  </section>
+
+  <section class="chap" id="visit">
+   <div data-r>
+    <span class="over">Visit</span><h2>Find the <em>salon.</em></h2>
+    <p class="addr"><b>Shop 3, Aska House, Main Road</b><br>Newlands, Cape Town</p>
+    <ul class="hours" id="hours">
+     <li data-days="2,3,4,5,6">Tuesday to Saturday <span>9:00 to 17:00</span></li>
+     <li data-days="0,1">Sunday and Monday <span>Closed</span></li>
+    </ul>
+    <div class="ctas"><a class="btn pri" href="tel:+27216714446">Call to book</a><a class="btn sec" href="https://maps.google.com/?cid=2956885404732958390" target="_blank" rel="noopener">Get directions</a></div>
+    <div class="map"><iframe title="Map to Hair 2 Dye 4" loading="lazy" src="https://www.google.com/maps?q=Aska%20House%2C%20Main%20Road%2C%20Newlands%2C%20Cape%20Town&output=embed"></iframe></div>
+   </div>
+  </section>
+  <footer><span>Hair 2 Dye 4 · Aska House, Main Road, Newlands</span><span>Photos via Unsplash</span></footer>
+ </main>
 </div>
 
-<section>
- <div class="wrap">
-  <div class="glass rate" data-r>
-   <b data-count="4.7" data-dec="1">4.7</b>
-   <div><h3>Loved by 49 clients on Google</h3><p>Read what people say about their visits, then book your own.</p></div>
-   <a class="btn sec" href="https://maps.google.com/?cid=2956885404732958390" target="_blank" rel="noopener">Read the reviews</a>
-  </div>
- </div>
-</section>
-
-<section id="visit" style="padding-top:0">
- <div class="wrap visit">
-  <div class="glass info" data-r>
-   <span class="over">Visit</span>
-   <h2>Find the salon.</h2>
-   <p class="addr"><b>Shop 3, Aska House, Main Road</b><br>Newlands, Cape Town</p>
-   <ul class="hours" id="hours">
-    <li data-days="2,3,4,5,6">Tuesday to Saturday <span>9:00 to 17:00</span></li>
-    <li data-days="0,1">Sunday and Monday <span>Closed</span></li>
-   </ul>
-   <div class="ctas"><a class="btn pri" href="tel:+27216714446">Call to book</a><a class="btn sec" href="https://maps.google.com/?cid=2956885404732958390" target="_blank" rel="noopener">Get directions</a></div>
-  </div>
-  <div class="map" data-r style="--i:1"><iframe title="Map to Hair 2 Dye 4" loading="lazy" src="https://www.google.com/maps?q=Aska%20House%2C%20Main%20Road%2C%20Newlands%2C%20Cape%20Town&output=embed"></iframe></div>
- </div>
-</section>
-
-<section style="padding-top:0">
- <div class="wrap"><div class="cta" data-r><h2>Ready for a change?</h2><p>Give us a call and we'll find a time that suits you, Tuesday to Saturday.</p><div class="ctas"><a class="btn pri" href="tel:+27216714446">Call 021 671 4446</a><a class="btn sec" href="#visit">Opening hours</a></div></div></div>
-</section>
-</main>
-<footer><div class="wrap"><span>Hair 2 Dye 4 · Aska House, Main Road, Newlands</span><span>Photos via Unsplash</span></div></footer>
+<nav class="dock" aria-label="Main">
+ <a href="#intro" class="hide">Home</a><a href="#services">Services</a><a href="#loved" class="hide">Reviews</a><a href="#visit">Visit</a><a class="call" href="tel:+27216714446">Book</a>
+</nav>
 <script>
 (function(){
- var nav=document.querySelector('nav.top');
- var onScroll=function(){nav.classList.toggle('scrolled',scrollY>8)};onScroll();addEventListener('scroll',onScroll,{passive:true});
  var H={2:[540,1020],3:[540,1020],4:[540,1020],5:[540,1020],6:[540,1020]};
  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Johannesburg'})),d=now.getDay(),m=now.getHours()*60+now.getMinutes();
  document.querySelectorAll('#hours li').forEach(function(li){if(li.dataset.days.split(',').indexOf(String(d))>-1)li.classList.add('today')});
  var h=H[d],open=h&&m>=h[0]&&m<h[1];
  document.getElementById('status').textContent=open?'Open now in Newlands':'Hair salon in Newlands';
  if(!open)document.getElementById('dot').classList.add('off');
+ // keep one service open at a time
+ var ds=document.querySelectorAll('.acc details');
+ ds.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)ds.forEach(function(y){if(y!==x)y.open=false})})});
  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('[data-r]');
+ var chaps=[].slice.call(document.querySelectorAll('.chap')),imgs=document.querySelectorAll('.panel img'),ticks=document.querySelectorAll('.tick i'),dock=document.querySelectorAll('.dock a[href^="#"]');
+ function show(id){if(innerWidth<900)return;var i=chaps.findIndex(function(c){return c.id===id});
+  imgs.forEach(function(im){im.classList.toggle('on',im.dataset.for===id)});
+  ticks.forEach(function(t,k){t.classList.toggle('on',k===i)});
+  dock.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)})}
  function count(el){var t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),s=null;if(reduce)return;
-  function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1200,1),e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(dec);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
- if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1300,1),e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(dec);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+ var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)show(e.target.id)})},{rootMargin:'-45% 0px -50% 0px'});
+ chaps.forEach(function(c){co.observe(c)});
+ if(reduce){els.forEach(function(e){e.classList.add('in')});return}
  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');t.querySelectorAll('[data-count]').forEach(count);io.unobserve(t)}})},{rootMargin:'0px 0px -10% 0px'});
  els.forEach(function(e){io.observe(e)});
 })();
