@@ -82,6 +82,7 @@ section{padding:90px 0}
 .cta p{color:#d7ebe6;margin:14px auto 28px;max-width:40ch;font-size:18px}
 .cta .ctas{justify-content:center}
 .cta .btn.sec{background:rgba(255,255,255,.14);color:#fff}.cta .btn.sec:hover{background:rgba(255,255,255,.24)}
+.tabs{display:none}
 footer{padding:30px 0 40px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .js .up{opacity:0;transform:translateY(20px) scale(.98);animation:pop .8s var(--ease) forwards;animation-delay:calc(var(--i,0) * 90ms + 80ms)}
@@ -96,6 +97,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  .hero .main{padding:30px}.hero .photo{grid-column:1/-1;min-height:280px}.hero .score{grid-column:1/-1}
  .menu .a{min-height:320px}.menu .e,.menu .g{grid-column:span 1;min-height:200px}.menu .f{grid-column:1/-1;order:1}
  .visit .m{min-height:320px}section{padding:64px 0}
+ .tabs{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:12px;right:12px;bottom:12px;z-index:20;background:rgba(43,33,28,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:22px;padding:6px}
+ .tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;border-radius:16px;color:#d8cfc6;text-decoration:none;font-size:12px;font-weight:600}
+ .tabs a.go{background:var(--teal);color:#fff}
+ .tabs svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+ nav.top .btn{display:none}footer{padding-bottom:110px}
 }
 @media (prefers-reduced-motion:reduce){
  *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
@@ -159,6 +165,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  </div>
 </section>
 </main>
+<nav class="tabs" aria-label="Quick links">
+ <a href="#top"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</a>
+ <a href="#menu"><svg viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/></svg>Menu</a>
+ <a href="#visit"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Visit</a>
+ <a class="go" href="https://wa.me/27813357372"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>WhatsApp</a>
+</nav>
 <footer><div class="wrap"><span>Nowbl Café · Dean Street Arcade, Newlands, Cape Town</span><span>Photos via Unsplash</span></div></footer>
 <script>
 (function(){

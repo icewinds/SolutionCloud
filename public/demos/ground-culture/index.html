@@ -11,112 +11,116 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
-/* claude-design-styles: "dark mode / bold product" direction, charcoal with a flame orange accent */
-:root{--bg:#0d0c0b;--surface:#171513;--surface-2:#201d1a;--border:#2e2a26;--text:#f5f0ea;--muted:#a89f95;--brand:#ff6b2c;--brand-hi:#ff8a52;--brand-dk:#d9501a;--ease:cubic-bezier(.2,.7,.2,1)}
+/* claude-design-styles: "dark mode / bold product", cinematic full-bleed layout, charcoal with flame orange */
+:root{--bg:#0d0c0b;--surface:#171513;--surface-2:#201d1a;--border:#2e2a26;--text:#f5f0ea;--muted:#a89f95;--brand:#ff6b2c;--brand-hi:#ff8a52;--ease:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;accent-color:var(--brand);color-scheme:dark;scrollbar-color:var(--border) var(--bg)}
+html{scroll-behavior:smooth;accent-color:var(--brand);color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 Archivo,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--brand);color:#140a05}
-a{color:inherit;text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:10px}
-h1,h2,h3{margin:0;font-weight:900;letter-spacing:-.045em;line-height:.95;text-transform:uppercase}
-.wrap{max-width:74rem;margin:0 auto;padding:0 24px}
-.label{display:inline-flex;align-items:center;gap:10px;color:var(--brand);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:18px}
-.label::before{content:"";width:22px;height:2px;background:var(--brand);border-radius:2px}
-.demo{background:#070606;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px;padding:6px 12px;text-align:center}.demo a{color:var(--text)}
-nav.top{position:sticky;top:0;z-index:10;background:rgba(13,12,11,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-nav.top.scrolled{border-bottom-color:var(--border);background:rgba(13,12,11,.94)}
-nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
-.logo{display:flex;white-space:nowrap;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;font-size:20px;text-decoration:none;text-transform:uppercase}
-.logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--brand)}
-.logo svg{width:19px;height:19px;fill:none;stroke:#140a05;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.links{display:flex;gap:30px;font-size:15px;font-weight:500}
-.links a{color:var(--muted);text-decoration:none;padding:6px 0;transition:color .2s}.links a:hover{color:var(--text)}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;font-weight:800;font-size:16px;text-decoration:none;padding:14px 22px;transition:background .25s,border-color .25s,transform .25s var(--ease),box-shadow .25s}
-.btn.pri{background:var(--brand);color:#140a05;box-shadow:0 12px 32px -12px rgba(255,107,44,.6)}.btn.pri:hover{background:var(--brand-hi);transform:translateY(-2px)}
-.btn.sec{border:1px solid #453e37;color:#ece4da}.btn.sec:hover{border-color:#6a5f54;transform:translateY(-2px)}
-.btn.sm{padding:9px 16px;font-size:15px}
+a{color:inherit;text-underline-offset:.2em}a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:10px}
+h1,h2,h3{margin:0;font-weight:900;letter-spacing:-.045em;line-height:.92;text-transform:uppercase}
+.wrap{max-width:80rem;margin:0 auto;padding:0 24px}
+.label{display:block;color:var(--brand);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:16px}
+.demo{position:relative;z-index:30;background:#070606;color:var(--muted);font-size:12px;padding:6px 12px;text-align:center}.demo a{color:var(--text)}
+/* nav: three columns, logo centred, sits over the hero photo */
+nav.top{position:fixed;left:0;right:0;top:27px;z-index:20;transition:background .35s,top .35s,backdrop-filter .35s}
+nav.top.scrolled{top:0;background:rgba(13,12,11,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+nav.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-top:16px;padding-bottom:16px}
+.links{display:flex;gap:28px;font-size:15px;font-weight:600}
+.links a{text-decoration:none;color:#e6ddd2;padding:6px 0;transition:color .2s}.links a:hover{color:var(--brand-hi)}
+.logo{font-weight:900;font-size:22px;letter-spacing:-.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.logo span{color:var(--brand)}
+.navr{justify-self:end}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;padding:14px 24px;border:0;cursor:pointer;transition:background .25s,transform .25s var(--ease),box-shadow .25s,color .25s}
+.btn.pri{background:var(--brand);color:#140a05}.btn.pri:hover{background:var(--brand-hi);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(255,107,44,.6)}
+.btn.ghost{background:rgba(255,255,255,.1);color:var(--text);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.btn.ghost:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.btn.sm{padding:10px 18px;font-size:15px}
 .btn svg{width:18px;height:18px;fill:currentColor}
-.hero{position:relative;padding:72px 0 0;overflow:hidden}
-.hero .glow{position:absolute;right:-200px;top:-140px;width:760px;height:620px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,107,44,.18),transparent);pointer-events:none;animation:breathe 9s ease-in-out infinite alternate}
-@keyframes breathe{to{transform:scale(1.1);opacity:.7}}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:end}
-.badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 14px 6px 10px;font-size:14px;color:#e7dfd5}
-.dot{position:relative;width:8px;height:8px;border-radius:50%;background:#7fd88f}
+/* hero: full-bleed photo, type anchored bottom left, info strip below */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0;margin:0;background:#1a1512}
+.hero .bg img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.12);animation:settle 2.4s var(--ease) forwards}
+@keyframes settle{to{transform:scale(1.02)}}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,12,11,.55),rgba(13,12,11,.15) 35%,rgba(13,12,11,.85) 78%,var(--bg))}
+.hero .wrap{position:relative;width:100%;padding-top:140px}
+.hero h1{font-size:clamp(64px,13vw,210px);max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero .row{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin:28px 0 40px}
+.hero p{margin:0;max-width:40ch;font-size:19px;color:#e2d9ce}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.strip{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-bottom:28px}
+.strip div{background:rgba(23,21,19,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:18px;padding:18px 22px}
+.strip b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em}
+.strip span{color:var(--muted);font-size:14px}
+.strip .live b{display:flex;align-items:center;gap:10px}
+.dot{position:relative;width:9px;height:9px;border-radius:50%;background:#7fd88f}
 .dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#7fd88f;animation:ping 2s var(--ease) infinite}
 .dot.off{background:var(--muted)}.dot.off::after{display:none}
 @keyframes ping{75%,100%{transform:scale(2.4);opacity:0}}
-.hero h1{font-size:clamp(56px,9vw,128px);margin:26px 0 24px}
-.hero h1 em{font-style:normal;color:var(--brand)}
-.hero p{color:var(--muted);font-size:19px;max-width:42ch;margin:0 0 34px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.shot{position:relative;margin:0;border-radius:28px 28px 0 0;overflow:hidden;aspect-ratio:4/4.6;background:var(--surface)}
-.shot img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.6s var(--ease)}
-.shot.in img{transform:scale(1)}
-.sticker{position:absolute;right:18px;top:18px;display:grid;place-items:center;text-align:center;width:118px;height:118px;border-radius:50%;background:var(--brand);color:#140a05;font-weight:900;line-height:1.05;font-size:13px;text-transform:uppercase;letter-spacing:.02em;animation:spin 18s linear infinite}
-.sticker b{display:block;font-size:34px;letter-spacing:-.04em}
-@keyframes spin{to{transform:rotate(360deg)}}
-.sticker span{display:block;animation:spin 18s linear infinite reverse}
-.ticker{background:var(--surface);overflow:hidden;white-space:nowrap}
-.ticker div{display:inline-flex;gap:44px;padding:18px 0;animation:slide 32s linear infinite;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:20px;color:#d8cfc4}
-.ticker i{font-style:normal;color:var(--brand)}
+.ticker{background:var(--brand);color:#140a05;overflow:hidden;white-space:nowrap}
+.ticker div{display:inline-flex;gap:40px;padding:16px 0;animation:slide 30s linear infinite;font-weight:900;text-transform:uppercase;font-size:20px;letter-spacing:-.01em}
 @keyframes slide{to{transform:translateX(-50%)}}
-section{padding:112px 0}
-.sh{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:52px}
-.sh h2{font-size:clamp(40px,5.6vw,72px)}
-.sh p{color:var(--muted);margin:0;font-size:18px;max-width:36ch}
-.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.item{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
-.item:hover{transform:translateY(-5px);border-color:#4a4139;box-shadow:0 26px 50px -20px rgba(255,107,44,.25)}
-.item figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--surface-2)}
-.item img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
-.item:hover img{transform:scale(1.06)}
-.item div{padding:24px 26px 28px}
-.item h3{font-size:26px;margin-bottom:10px}
-.item p{margin:0;color:var(--muted)}
-.item .n{position:absolute;left:16px;top:16px;background:rgba(13,12,11,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700;color:var(--brand-hi)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.split .photo{margin:0;border-radius:24px;overflow:hidden;aspect-ratio:5/4;background:var(--surface)}
-.split .photo img{display:block;width:100%;height:100%;object-fit:cover}
-.split h2{font-size:clamp(40px,5.2vw,64px)}
-.split p.big{font-size:20px;color:#e2d9ce;margin:24px 0 0}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
-.fact{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px}
-.fact b{display:block;font-size:44px;font-weight:900;letter-spacing:-.045em;line-height:1;color:var(--brand-hi)}
-.fact span{display:block;margin-top:8px;color:var(--muted);font-size:15px}
-.proof{background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:56px;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center}
-.proof .big{font-size:clamp(72px,10vw,128px);font-weight:900;letter-spacing:-.06em;line-height:.9;color:var(--brand)}
-.proof h3{font-size:30px;margin-bottom:10px}
-.proof p{margin:0;color:var(--muted);max-width:44ch}
-.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
-.visit h2{font-size:clamp(40px,5.2vw,64px);margin-bottom:22px}
-.hours{list-style:none;margin:0 0 32px;padding:0;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden}
-.hours li{display:flex;justify-content:space-between;gap:16px;padding:16px 22px}
-.hours li+li{box-shadow:inset 0 1px 0 var(--border)}
+section{padding:120px 0}
+/* menu: horizontal scroll-snap carousel */
+.mh{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.mh h2{font-size:clamp(48px,7vw,104px)}
+.arrows{display:flex;gap:10px}
+.arrows button{width:52px;height:52px;border-radius:50%;border:0;background:var(--surface-2);color:var(--text);cursor:pointer;display:grid;place-items:center;transition:background .25s,transform .25s var(--ease)}
+.arrows button:hover{background:var(--brand);color:#140a05;transform:scale(1.06)}
+.arrows svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw,380px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(24px,calc((100vw - 80rem)/2 + 24px)) 12px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.dish{scroll-snap-align:start;position:relative;border-radius:26px;overflow:hidden;aspect-ratio:3/4;background:var(--surface)}
+.dish img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.dish:hover img{transform:scale(1.06)}
+.dish::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(13,12,11,.92))}
+.dish div{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:26px}
+.dish i{font-style:normal;font-weight:800;color:var(--brand-hi);font-size:14px}
+.dish h3{font-size:32px;margin:8px 0 8px}
+.dish p{margin:0;color:#d4cabe;font-size:15px}
+.dish.note{background:var(--brand);color:#140a05;display:flex;align-items:flex-end}
+.dish.note::after{display:none}
+.dish.note h3{font-size:40px}.dish.note p{color:#3a1b0c}
+/* the spot: wide photo with overlapping card */
+.spot{position:relative}
+.spot figure{margin:0;border-radius:32px;overflow:hidden;aspect-ratio:21/9;background:var(--surface)}
+.spot figure img{width:100%;height:100%;object-fit:cover;display:block}
+.spot .card{position:relative;margin:-140px 0 0 auto;width:min(560px,92%);background:var(--surface);border-radius:28px;padding:40px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.spot h2{font-size:clamp(36px,4.4vw,56px);margin-bottom:18px}
+.spot p{margin:0;color:var(--muted);font-size:18px}
+/* big centred score */
+.score{text-align:center}
+.score b{display:block;font-size:clamp(120px,22vw,300px);font-weight:900;letter-spacing:-.07em;line-height:.85;background:linear-gradient(180deg,var(--brand-hi),var(--brand) 60%,#b9441a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.score p{margin:18px auto 28px;color:var(--muted);font-size:19px;max-width:36ch}
+/* visit: map full width with hours card on top */
+.visit{position:relative;border-radius:32px;overflow:hidden;min-height:560px;background:var(--surface);display:flex;align-items:center}
+.visit iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.6) brightness(.9)}
+.visit .card{position:relative;margin:40px;width:min(420px,calc(100% - 32px));background:rgba(13,12,11,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:24px;padding:34px}
+.visit h2{font-size:44px;margin-bottom:16px}
+.addr{color:var(--muted);margin:0 0 22px}.addr b{color:var(--text)}
+.hours{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:6px}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:12px 16px;border-radius:12px;background:var(--surface-2)}
 .hours li span{color:var(--muted);white-space:nowrap}
-.hours li.today{background:var(--surface-2)}.hours li.today span{color:var(--brand-hi)}
-.addr{color:var(--muted);margin:0 0 28px}.addr b{color:var(--text)}
-.map{position:relative;min-height:420px;border-radius:24px;overflow:hidden;border:1px solid var(--border);background:var(--surface)}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.7) brightness(.95)}
-.cta{position:relative;overflow:hidden;text-align:center;border-radius:28px;background:var(--brand);color:#140a05;padding:80px 24px}
-.cta h2{font-size:clamp(44px,6vw,80px)}
-.cta p{margin:18px auto 32px;max-width:40ch;font-size:18px;font-weight:500}
-.cta .ctas{justify-content:center}
-.cta .btn.pri{background:#140a05;color:var(--text);box-shadow:none}.cta .btn.pri:hover{background:#2a1810}
-.cta .btn.sec{border-color:rgba(20,10,5,.4);color:#140a05}.cta .btn.sec:hover{border-color:#140a05}
-footer{background:#070606;padding:30px 0;font-size:14px;color:var(--muted)}
+.hours li.today{background:var(--brand);color:#140a05}.hours li.today span{color:#140a05}
+.end{padding:120px 0 80px;text-align:center}
+.end a.giant{display:inline-block;font-weight:900;text-transform:uppercase;letter-spacing:-.06em;font-size:clamp(72px,15vw,240px);line-height:.85;text-decoration:none;transition:color .3s,transform .4s var(--ease)}
+.end a.giant:hover{color:var(--brand);transform:translateY(-6px)}
+.end p{color:var(--muted);margin:22px 0 0}
+footer{background:#070606;padding:28px 0;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.js .up{opacity:0;transform:translateY(26px);animation:fadeUp .8s var(--ease) forwards;animation-delay:calc(var(--i,0) * 90ms + 80ms)}
+.js .up{opacity:0;transform:translateY(30px);animation:fadeUp .9s var(--ease) forwards;animation-delay:calc(var(--i,0) * 110ms + 200ms)}
 @keyframes fadeUp{to{opacity:1;transform:none}}
-.js [data-r]{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
+.js [data-r]{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
 .js [data-r].in{opacity:1;transform:none}
 @media (max-width:860px){
- .links{display:none}.navwa{display:none}.hero{padding-top:52px}.hero .wrap,.split,.visit{grid-template-columns:1fr;gap:40px}
- .shot{aspect-ratio:4/3.4}.menu{grid-template-columns:1fr}section{padding:80px 0}
- .proof{grid-template-columns:1fr;padding:36px 28px;gap:20px}.sticker{width:96px;height:96px;font-size:11px}.sticker b{font-size:28px}
+ .links{display:none}nav.top .wrap{grid-template-columns:1fr auto}.logo{grid-column:1}.navr{grid-column:2}
+ .strip{grid-template-columns:1fr 1fr}.strip div:last-child{grid-column:1/-1}
+ section{padding:84px 0}.spot figure{aspect-ratio:4/3}.spot .card{margin-top:-60px;padding:28px}
+ .visit{min-height:640px;align-items:flex-end}.visit .card{margin:16px}
 }
 @media (prefers-reduced-motion:reduce){
  *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
- .js .up,.js [data-r]{opacity:1;transform:none}.shot img{transform:none}
+ .js .up,.js [data-r]{opacity:1;transform:none}.hero .bg img{transform:none}
 }
 </style>
 </head>
@@ -124,109 +128,95 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="demo">Demo website prepared for Ground Culture by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a> · not yet live</div>
 <nav class="top" aria-label="Main">
  <div class="wrap">
-  <a class="logo" href="#top"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11a8 6 0 0 1 16 0z"/><path d="M3 14.5h18"/><path d="M4 17.5h16v.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg></i>Ground Culture</a>
-  <div class="links"><a href="#menu">Menu</a><a href="#about">The spot</a><a href="#visit">Visit</a></div>
-  <a class="btn pri sm" href="https://wa.me/27737705908">Order<span class="navwa"> on WhatsApp</span></a>
+  <div class="links"><a href="#menu">Menu</a><a href="#spot">The spot</a><a href="#visit">Visit</a></div>
+  <a class="logo" href="#top">Ground<span>/</span>Culture</a>
+  <div class="navr"><a class="btn pri sm" href="https://wa.me/27737705908">Order</a></div>
  </div>
 </nav>
 
 <main id="top">
 <header class="hero">
- <div class="glow"></div>
+ <figure class="bg"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=2000&q=70" alt="A tall double cheeseburger with bacon on a wooden board" onerror="this.style.display='none'"></figure>
  <div class="wrap">
-  <div style="padding-bottom:72px">
-   <span class="badge up" style="--i:0"><span class="dot" id="dot"></span><span id="status">Glenhof Manor, Newlands</span></span>
-   <h1 class="up" style="--i:1">Stacked.<br>Smashed.<br><em>Sorted.</em></h1>
-   <p class="up" style="--i:2">Proper burgers made fresh to order at the Glenhof Manor estate in Newlands. Open from noon every day and late into the evening.</p>
-   <div class="ctas up" style="--i:3"><a class="btn pri" href="https://wa.me/27737705908"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>073 770 5908</a><a class="btn sec" href="#menu">See the menu</a></div>
+  <h1 class="up" style="--i:0">Burgers <em>worth</em> the drive.</h1>
+  <div class="row">
+   <p class="up" style="--i:1">Proper burgers made fresh to order at the Glenhof Manor estate in Newlands. Open from noon every day and late into the evening.</p>
+   <div class="ctas up" style="--i:2"><a class="btn pri" href="https://wa.me/27737705908"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>Order on WhatsApp</a><a class="btn ghost" href="#menu">See the menu</a></div>
   </div>
-  <div class="up" style="--i:2;position:relative">
-   <figure class="shot in"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=1000&q=70" alt="A tall double cheeseburger with bacon on a wooden board" onerror="this.parentNode.style.display='none'"></figure>
-   <div class="sticker" aria-label="Rated 4.9 on Google"><span><b>4.9</b>on Google</span></div>
+  <div class="strip up" style="--i:3">
+   <div class="live"><b><span class="dot" id="dot"></span><span id="status">Open from noon</span></b><span id="today">Today</span></div>
+   <div><b>4.9 on Google</b><span>From 117 reviews</span></div>
+   <div><b>Glenhof Manor</b><span>12 Glenhof Road, Newlands</span></div>
   </div>
  </div>
 </header>
 
 <div class="ticker" aria-hidden="true"><div>
- <span>Fresh to order</span><i>/</i><span>Open from noon</span><i>/</i><span>Loaded fries</span><i>/</i><span>Glenhof Manor</span><i>/</i><span>Late nights</span><i>/</i>
- <span>Fresh to order</span><i>/</i><span>Open from noon</span><i>/</i><span>Loaded fries</span><i>/</i><span>Glenhof Manor</span><i>/</i><span>Late nights</span><i>/</i>
+ <span>Fresh to order</span><span>Open from noon</span><span>Loaded fries</span><span>Glenhof Manor</span><span>Late nights</span><span>Fresh to order</span><span>Open from noon</span><span>Loaded fries</span><span>Glenhof Manor</span><span>Late nights</span>
 </div></div>
 
 <section id="menu">
- <div class="wrap">
-  <div class="sh" data-r><div><span class="label">The menu</span><h2>Built to be<br>messy.</h2></div><p>A short menu done properly. Ask on WhatsApp for today's specials.</p></div>
-  <div class="menu">
-   <article class="item" data-r style="--i:0"><span class="n">01</span><figure><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=70" alt="A classic cheeseburger with lettuce and tomato" loading="lazy" onerror="this.parentNode.style.display='none'"></figure><div><h3>The classic</h3><p>Seared beef patty, melted cheese, crisp lettuce, tomato and house sauce on a toasted bun.</p></div></article>
-   <article class="item" data-r style="--i:1"><span class="n">02</span><figure><img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=700&q=70" alt="A double burger with a pile of fries" loading="lazy" onerror="this.parentNode.style.display='none'"></figure><div><h3>Double stack</h3><p>Two patties, double cheese and pickles for when one just won't do. Add a side of fries.</p></div></article>
-   <article class="item" data-r style="--i:2"><span class="n">03</span><figure><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=700&q=70" alt="A bacon cheeseburger against a black background" loading="lazy" onerror="this.parentNode.style.display='none'"></figure><div><h3>Bacon and cheese</h3><p>Crispy bacon, cheddar and a little heat. The one regulars come back for.</p></div></article>
-  </div>
+ <div class="wrap mh" data-r><div><span class="label">The menu</span><h2>Built to be messy.</h2></div>
+  <div class="arrows"><button type="button" aria-label="Previous" data-dir="-1"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" aria-label="Next" data-dir="1"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+ </div>
+ <div class="rail" id="rail">
+  <article class="dish" data-r><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=70" alt="A classic cheeseburger with lettuce and tomato" loading="lazy" onerror="this.style.display='none'"><div><i>01</i><h3>The classic</h3><p>Seared beef patty, melted cheese, lettuce, tomato and house sauce on a toasted bun.</p></div></article>
+  <article class="dish" data-r style="--i:1"><img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=700&q=70" alt="A double burger with a pile of fries" loading="lazy" onerror="this.style.display='none'"><div><i>02</i><h3>Double stack</h3><p>Two patties, double cheese and pickles, with a side of fries.</p></div></article>
+  <article class="dish" data-r style="--i:2"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=700&q=70" alt="A bacon cheeseburger against a black background" loading="lazy" onerror="this.style.display='none'"><div><i>03</i><h3>Bacon and cheese</h3><p>Crispy bacon, cheddar and a little heat.</p></div></article>
+  <article class="dish" data-r style="--i:3"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=700&q=70" alt="A cheeseburger with lettuce and tomato on a dark table" loading="lazy" onerror="this.style.display='none'"><div><i>04</i><h3>The fresh one</h3><p>Loaded with salad, tomato and a lighter sauce.</p></div></article>
+  <article class="dish note" data-r style="--i:4"><div><i style="color:#3a1b0c">Specials</i><h3>Ask what's on today</h3><p>Message us on WhatsApp for today's specials and sides.</p></div></article>
  </div>
 </section>
 
-<section id="about" style="padding-top:0">
- <div class="wrap split">
-  <figure class="photo" data-r><img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=1000&q=70" alt="A vintage food truck parked under trees" loading="lazy" onerror="this.parentNode.style.display='none'"></figure>
-  <div data-r style="--i:1">
-   <span class="label">The spot</span>
-   <h2>Burgers on a heritage estate.</h2>
-   <p class="big">Find us at Glenhof Manor on Glenhof Road, a historic estate tucked away in leafy Newlands. Grab a burger after work, before the rugby, or late on a Saturday.</p>
-   <div class="facts">
-    <div class="fact"><b data-count="4.9" data-dec="1">4.9</b><span>Google rating</span></div>
-    <div class="fact"><b data-count="117">117</b><span>Google reviews</span></div>
-    <div class="fact"><b>7</b><span>Days a week</span></div>
-    <div class="fact"><b>11pm</b><span>Latest close</span></div>
+<section id="spot" style="padding-top:0">
+ <div class="wrap spot">
+  <figure data-r><img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=1800&q=70" alt="A vintage food truck parked under trees" loading="lazy" onerror="this.style.display='none'"></figure>
+  <div class="card" data-r style="--i:1"><span class="label">The spot</span><h2>Burgers on a heritage estate.</h2><p>Find us at Glenhof Manor on Glenhof Road, a historic estate tucked away in leafy Newlands. Grab a burger after work, before the rugby, or late on a Saturday.</p></div>
+ </div>
+</section>
+
+<section class="score" style="padding-top:0">
+ <div class="wrap" data-r><b data-count="4.9" data-dec="1">4.9</b><p>Rated by 117 locals on Google Maps. Read what they say, then come and taste it.</p><a class="btn ghost" href="https://maps.google.com/?cid=4669447978596547393" target="_blank" rel="noopener">Read the reviews</a></div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <div class="wrap">
+  <div class="visit" data-r>
+   <iframe title="Map to Ground Culture" loading="lazy" src="https://www.google.com/maps?q=12%20Glenhof%20Road%2C%20Newlands%2C%20Cape%20Town&output=embed"></iframe>
+   <div class="card">
+    <span class="label">Visit</span><h2>Come hungry.</h2>
+    <p class="addr"><b>Glenhof Manor, 12 Glenhof Road</b><br>Newlands, Cape Town</p>
+    <ul class="hours" id="hours">
+     <li data-days="1,2,3,4,5,6">Monday to Saturday <span>12:00 to 23:00</span></li>
+     <li data-days="0">Sunday <span>12:00 to 20:00</span></li>
+    </ul>
+    <div class="ctas"><a class="btn pri sm" href="https://maps.google.com/?cid=4669447978596547393" target="_blank" rel="noopener">Directions</a><a class="btn ghost sm" href="tel:+27737705908">073 770 5908</a></div>
    </div>
   </div>
  </div>
 </section>
 
-<section style="padding-top:0">
- <div class="wrap">
-  <div class="proof" data-r>
-   <div class="big" data-count="4.9" data-dec="1">4.9</div>
-   <div><h3>Rated by 117 locals</h3><p>Ground Culture is one of the best rated food spots in Newlands on Google Maps. Read what people say, then come and see for yourself.</p></div>
-   <a class="btn sec" href="https://maps.google.com/?cid=4669447978596547393" target="_blank" rel="noopener">Read the reviews</a>
-  </div>
- </div>
-</section>
-
-<section id="visit" style="padding-top:0">
- <div class="wrap visit">
-  <div data-r>
-   <span class="label">Visit</span>
-   <h2>Come hungry.</h2>
-   <p class="addr"><b>Glenhof Manor, 12 Glenhof Road</b><br>Newlands, Cape Town</p>
-   <ul class="hours" id="hours">
-    <li data-days="1,2,3,4,5,6">Monday to Saturday <span>12:00 to 23:00</span></li>
-    <li data-days="0">Sunday <span>12:00 to 20:00</span></li>
-   </ul>
-   <div class="ctas"><a class="btn pri" href="https://maps.google.com/?cid=4669447978596547393" target="_blank" rel="noopener">Get directions</a><a class="btn sec" href="tel:+27737705908">Call 073 770 5908</a></div>
-  </div>
-  <div class="map" data-r style="--i:1"><iframe title="Map to Ground Culture" loading="lazy" src="https://www.google.com/maps?q=12%20Glenhof%20Road%2C%20Newlands%2C%20Cape%20Town&output=embed"></iframe></div>
- </div>
-</section>
-
-<section style="padding-top:0">
- <div class="wrap"><div class="cta" data-r><h2>Hungry yet?</h2><p>Send your order on WhatsApp and we'll have it ready when you arrive.</p><div class="ctas"><a class="btn pri" href="https://wa.me/27737705908">Order on WhatsApp</a><a class="btn sec" href="#visit">Opening hours</a></div></div></div>
-</section>
+<div class="end"><div class="wrap" data-r><a class="giant" href="https://wa.me/27737705908">Hungry?</a><p>Tap to order on WhatsApp and we'll have it ready when you arrive.</p></div></div>
 </main>
 <footer><div class="wrap"><span>Ground Culture · Glenhof Manor, Newlands, Cape Town</span><span>Photos via Unsplash</span></div></footer>
 <script>
 (function(){
  var nav=document.querySelector('nav.top');
- var onScroll=function(){nav.classList.toggle('scrolled',scrollY>8)};onScroll();addEventListener('scroll',onScroll,{passive:true});
- // opening hours in minutes per weekday (0 = Sunday), Cape Town time
+ var onScroll=function(){nav.classList.toggle('scrolled',scrollY>40)};onScroll();addEventListener('scroll',onScroll,{passive:true});
+ var rail=document.getElementById('rail');
+ document.querySelectorAll('.arrows button').forEach(function(b){b.addEventListener('click',function(){rail.scrollBy({left:+b.dataset.dir*400,behavior:'smooth'})})});
  var H={0:[720,1200],1:[720,1380],2:[720,1380],3:[720,1380],4:[720,1380],5:[720,1380],6:[720,1380]};
  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Johannesburg'})),d=now.getDay(),m=now.getHours()*60+now.getMinutes();
  document.querySelectorAll('#hours li').forEach(function(li){if(li.dataset.days.split(',').indexOf(String(d))>-1)li.classList.add('today')});
- var h=H[d],open=h&&m>=h[0]&&m<h[1];
- document.getElementById('status').textContent=open?'Open now at Glenhof Manor':'Glenhof Manor, Newlands';
+ var h=H[d],open=m>=h[0]&&m<h[1],fmt=function(x){return Math.floor(x/60)+':'+('0'+x%60).slice(-2)};
+ document.getElementById('status').textContent=open?'Open now':(m<h[0]?'Opens at noon':'Closed for tonight');
+ document.getElementById('today').textContent='Today '+fmt(h[0])+' to '+fmt(h[1]);
  if(!open)document.getElementById('dot').classList.add('off');
  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('[data-r]');
  function count(el){var t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),s=null;if(reduce)return;
-  function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1200,1),e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(dec);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+  function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1400,1),e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(dec);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
- var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');if(t.dataset.count)count(t);t.querySelectorAll('[data-count]').forEach(count);io.unobserve(t)}})},{rootMargin:'0px 0px -10% 0px'});
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');t.querySelectorAll('[data-count]').forEach(count);io.unobserve(t)}})},{rootMargin:'0px 0px -8% 0px',threshold:0});
  els.forEach(function(e){io.observe(e)});
 })();
 </script>
