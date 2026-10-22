@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Style by Nath's | Hair Salon in Retreat, Cape Town</title>
+<meta name="description" content="Cuts, colour, styling and treatments at Style by Nath's in Retreat, Cape Town. Rated 4.9 from 94 Google reviews. Saturdays from 07:00. Book on WhatsApp 078 508 7060.">
+<meta name="theme-color" content="#fbf3f1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* UI/UX Pro Max design system: "Beauty/Spa/Wellness Service". Pattern: Hero-Centric + Social Proof.
+   Style: Soft UI Evolution. Colours: soft pastels (blush, cream) with gold accents (if_luxury rule), plum text.
+   Type: "Luxury Serif", Cormorant + Montserrat. Effects: soft shadows, smooth 200 to 300ms transitions, gentle hover.
+   Layout: centred split nav, centred editorial hero with three arches, two-column service list, masonry gallery, week strip. */
+:root{--bg:#fbf3f1;--blush:#f6e1dc;--rose:#d9a5a0;--plum:#5b1f3a;--plum-2:#7a3352;--gold:#a8823f;--gold-lt:#e8d3a6;--card:#fffaf8;--muted:#7d6670;--line:#ecd8d3;--ease:cubic-bezier(.25,.8,.25,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--plum);font:400 16px/1.75 Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
+h1,h2,h3{font-family:Cormorant,Georgia,serif;font-weight:600;margin:0;line-height:1.05;letter-spacing:-.01em}
+em{font-style:italic;font-weight:500;color:var(--gold)}
+.wrap{max-width:70rem;margin:0 auto;padding:0 20px}
+.demo{background:var(--plum);color:#e6c9d3;font-size:12px;padding:6px 12px;text-align:center;font-family:Montserrat,sans-serif}.demo a{color:#fff}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+
+/* centred nav with the name in the middle */
+nav.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:26px 20px;max-width:70rem;margin:0 auto}
+nav .l,nav .r{display:flex;gap:30px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+nav .r{justify-content:flex-end;align-items:center}
+nav a{text-decoration:none;transition:color .25s}
+nav .l a:hover,nav .r a:not(.btn):hover{color:var(--gold)}
+.brand{font-family:Cormorant,serif;font-size:30px;font-weight:600;text-decoration:none;text-align:center;line-height:1}
+.brand small{display:block;font-family:Montserrat,sans-serif;font-size:10px;font-weight:600;letter-spacing:.4em;color:var(--gold);margin-top:6px;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font:600 13px Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .3s var(--ease),color .3s,box-shadow .3s,transform .3s var(--ease)}
+.btn-dark{background:var(--plum);color:#fff;box-shadow:0 14px 30px -18px rgba(91,31,58,.9)}
+.btn-dark:hover{background:var(--plum-2);transform:translateY(-2px)}
+.btn-soft{background:var(--card);color:var(--plum);box-shadow:inset 0 0 0 1px var(--line)}
+.btn-soft:hover{box-shadow:inset 0 0 0 1px var(--gold)}
+
+/* hero */
+.hero{text-align:center;padding:40px 0 0}
+.hero h1{font-size:clamp(3rem,8.5vw,6.6rem);max-width:13ch;margin:18px auto 20px}
+.hero p{max-width:34rem;margin:0 auto 30px;color:var(--muted);font-size:17px}
+.hero .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.rating{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-size:14px;color:var(--muted)}
+.rating b{font-family:Cormorant,serif;font-size:26px;color:var(--plum)}
+.arches{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:22px;align-items:end;margin:60px auto 0;max-width:62rem}
+.arch{border-radius:999px 999px 24px 24px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(91,31,58,.6);background:var(--blush)}
+.arch img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.arch:hover img{transform:scale(1.05)}
+.arch.a1{aspect-ratio:3/4.2}.arch.a2{aspect-ratio:3/4.6}.arch.a3{aspect-ratio:3/4.2}
+.js .arch{opacity:0;transform:translateY(60px)}
+.js .arch.in{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1.1s var(--ease)}
+.js .arch.a2.in{transition-delay:.12s}.js .arch.a3.in{transition-delay:.24s}
+
+section{padding:100px 0}
+.center{text-align:center;max-width:40rem;margin:0 auto 56px}
+.center h2{font-size:clamp(2.4rem,5vw,3.8rem);margin:12px 0 14px}
+.center p{color:var(--muted);margin:0}
+
+/* services as a two-column list */
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.group{background:var(--card);border-radius:28px;padding:36px 34px;box-shadow:0 1px 0 var(--line),0 24px 50px -40px rgba(91,31,58,.5);transition:transform .35s var(--ease),box-shadow .35s}
+.group:hover{transform:translateY(-4px);box-shadow:0 1px 0 var(--line),0 34px 60px -38px rgba(91,31,58,.55)}
+.group h3{font-size:32px;display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+.group h3 span{font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;letter-spacing:.2em;color:var(--gold)}
+.svc{display:flex;align-items:baseline;gap:12px;padding:12px 0}
+.svc b{font-weight:500}
+.svc i{flex:1;border-bottom:1px dotted var(--rose);transform:translateY(-4px)}
+.svc small{color:var(--muted);font-size:13px;white-space:nowrap}
+.fine{text-align:center;color:var(--muted);font-size:13px;margin-top:28px}
+
+/* band */
+.band{background:var(--plum);color:#f6e6ec;border-radius:36px;padding:56px 48px;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center}
+.band .t{font-family:Cormorant,serif;font-size:clamp(4rem,9vw,7rem);line-height:.9;color:var(--gold-lt)}
+.band h2{font-size:clamp(1.9rem,3.6vw,2.8rem);color:#fff;margin-bottom:8px}
+.band p{margin:0;color:#e0c1cd}
+.band .btn-soft{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+
+/* masonry */
+.masonry{columns:3 260px;column-gap:20px}
+.masonry figure{margin:0 0 20px;break-inside:avoid;border-radius:22px;overflow:hidden;position:relative}
+.masonry img{width:100%;transition:transform 1s var(--ease)}
+.masonry figure:hover img{transform:scale(1.04)}
+.masonry figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,250,248,.92);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.card{background:var(--card);border-radius:28px;padding:40px;box-shadow:0 1px 0 var(--line),0 24px 50px -40px rgba(91,31,58,.5)}
+.card h2{font-size:clamp(2.2rem,4vw,3.2rem);margin:10px 0 14px}
+.card p{color:var(--muted)}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:22px 0 8px}
+.day{border-radius:16px;padding:14px 4px;text-align:center;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);transition:transform .3s var(--ease)}
+.day:hover{transform:translateY(-3px)}
+.day b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.day span{display:block;font-size:11.5px;color:var(--muted);line-height:1.35;margin-top:6px}
+.day.today{background:var(--plum);color:#fff;box-shadow:none}.day.today span{color:#e6c9d3}
+.addr{font-size:15px;margin-top:20px}
+.quote{background:var(--blush);display:flex;flex-direction:column;justify-content:center}
+.quote p{font-family:Cormorant,serif;font-style:italic;font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.25;color:var(--plum);margin:10px 0 18px}
+
+footer{text-align:center;padding:50px 20px 60px;color:var(--muted);font-size:13px}
+footer .brand{display:inline-block;margin-bottom:12px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  nav.top{grid-template-columns:1fr auto}
+  nav .l{display:none}
+  .brand{text-align:left}
+  .menu,.visit{grid-template-columns:1fr}
+  .band{grid-template-columns:1fr;padding:40px 30px;text-align:center}
+  .arches{gap:10px}
+  .card{padding:30px 24px}
+  .week{grid-template-columns:repeat(4,1fr)}
+  section{padding:76px 0}
+}
+@media (max-width:480px){nav .r a:not(.btn){display:none}.group{padding:28px 22px}.svc small{display:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.js .arch{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo website prepared for Style by Nath's by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a>, not yet live</div>
+
+<nav class="top">
+  <div class="l"><a href="#services">Services</a><a href="#work">Work</a></div>
+  <a class="brand" href="#top">Style by Nath's<small>Hair studio</small></a>
+  <div class="r"><a href="#visit">Visit</a><a class="btn btn-dark" href="https://wa.me/27785087060?text=Hi%20Nath%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">Book</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow rv">Retreat, Cape Town</span>
+    <h1 class="rv">Hair that feels like <em>you</em>, only better.</h1>
+    <p class="rv">Cuts, colour, blow-outs and treatments in a calm, welcoming chair. Early Saturday slots for the busy ones.</p>
+    <div class="ctas rv">
+      <a class="btn btn-dark" href="https://wa.me/27785087060?text=Hi%20Nath%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-soft" href="#services">View services</a>
+    </div>
+    <div class="rating rv"><b>4.9</b>from 94 Google reviews</div>
+  </div>
+  <div class="wrap">
+    <div class="arches">
+      <div class="arch a1"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=80&auto=format&fit=crop" alt="Long, glossy brown hair after a blow-out"></div>
+      <div class="arch a2"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&auto=format&fit=crop" alt="A stylist blow-drying a client's hair"></div>
+      <div class="arch a3"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=700&q=80&auto=format&fit=crop" alt="A client relaxing at the basin during a wash"></div>
+    </div>
+  </div>
+</header>
+
+<section id="services"><div class="wrap">
+  <div class="center rv"><span class="eyebrow">Services</span><h2>Everything for <em>great hair</em></h2><p>A selection of what Nath offers. Send a WhatsApp for prices and the next open slot.</p></div>
+  <div class="menu">
+    <div class="group rv"><h3>Cut and style <span>01</span></h3>
+      <div class="svc"><b>Ladies' cut and blow-dry</b><i></i><small>45 to 60 min</small></div>
+      <div class="svc"><b>Wash and blow-out</b><i></i><small>30 to 45 min</small></div>
+      <div class="svc"><b>Kids' cuts</b><i></i><small>30 min</small></div>
+      <div class="svc"><b>Curls, waves and sleek styling</b><i></i><small>On request</small></div>
+    </div>
+    <div class="group rv"><h3>Colour <span>02</span></h3>
+      <div class="svc"><b>Full colour</b><i></i><small>From 90 min</small></div>
+      <div class="svc"><b>Root touch-up</b><i></i><small>60 min</small></div>
+      <div class="svc"><b>Highlights and balayage</b><i></i><small>From 2 hrs</small></div>
+      <div class="svc"><b>Toner and gloss</b><i></i><small>30 min</small></div>
+    </div>
+    <div class="group rv"><h3>Treatments <span>03</span></h3>
+      <div class="svc"><b>Deep conditioning</b><i></i><small>30 min</small></div>
+      <div class="svc"><b>Keratin smoothing</b><i></i><small>From 2 hrs</small></div>
+      <div class="svc"><b>Scalp treatment</b><i></i><small>30 min</small></div>
+    </div>
+    <div class="group rv"><h3>Occasions <span>04</span></h3>
+      <div class="svc"><b>Matric dance and wedding hair</b><i></i><small>Book ahead</small></div>
+      <div class="svc"><b>Up-dos and braids</b><i></i><small>On request</small></div>
+      <div class="svc"><b>Bridal party bookings</b><i></i><small>Enquire</small></div>
+    </div>
+  </div>
+  <p class="fine rv">Service list is an example for this demo. The live site would show Nath's own menu and prices.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="band rv">
+    <div class="t">07:00</div>
+    <div><h2>Saturday mornings, sorted.</h2><p>Doors open at seven on Saturdays, so you can have your hair done before the day gets going.</p></div>
+    <a class="btn btn-soft" href="https://wa.me/27785087060?text=Hi%20Nath%2C%20do%20you%20have%20an%20early%20Saturday%20slot%3F" target="_blank" rel="noopener">Grab a slot</a>
+  </div>
+</div></section>
+
+<section id="work" style="padding-top:0"><div class="wrap">
+  <div class="center rv"><span class="eyebrow">The work</span><h2>Fresh from <em>the chair</em></h2><p>On the live site, this gallery shows Nath's own photos of clients' hair.</p></div>
+  <div class="masonry">
+    <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=700&q=80&auto=format" alt="A stylist working on a client's hair"><figcaption>Blow-out</figcaption></figure>
+    <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=700&q=80&auto=format" alt="Brushes, combs and a hair dryer laid out"><figcaption>The tools</figcaption></figure>
+    <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&h=900&q=80&auto=format&fit=crop" alt="Long healthy hair from behind"><figcaption>Healthy lengths</figcaption></figure>
+    <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&q=80&auto=format" alt="A bright, clean salon interior"><figcaption>The studio</figcaption></figure>
+    <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=700&q=80&auto=format" alt="A client having a hair wash"><figcaption>Treatments</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="visit" style="padding-top:0"><div class="wrap visit">
+  <div class="card rv">
+    <span class="eyebrow">Visit</span>
+    <h2>Come see Nath</h2>
+    <div class="week" id="week">
+      <div class="day" data-d="1"><b>Mon</b><span>09:00<br>18:00</span></div>
+      <div class="day" data-d="2"><b>Tue</b><span>09:00<br>18:00</span></div>
+      <div class="day" data-d="3"><b>Wed</b><span>09:00<br>18:00</span></div>
+      <div class="day" data-d="4"><b>Thu</b><span>09:00<br>18:00</span></div>
+      <div class="day" data-d="5"><b>Fri</b><span>09:00<br>18:00</span></div>
+      <div class="day" data-d="6"><b>Sat</b><span>07:00<br>15:30</span></div>
+      <div class="day" data-d="0"><b>Sun</b><span>10:00<br>12:00</span></div>
+    </div>
+    <p class="addr">15 Frans Maroney Street, Retreat, Cape Town, 7945<br><a href="https://maps.google.com/?cid=1721120704081036193" target="_blank" rel="noopener">Get directions</a></p>
+    <a class="btn btn-dark" href="https://wa.me/27785087060?text=Hi%20Nath%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">WhatsApp 078 508 7060</a>
+  </div>
+  <div class="card quote rv">
+    <span class="eyebrow">Loved locally</span>
+    <p>4.9 out of 5 across 94 Google reviews. On the live site, your clients' favourite words go right here.</p>
+    <span style="font-size:13px;color:var(--muted)">Google Maps, October 2026</span>
+  </div>
+</div></section>
+
+<footer><a class="brand" href="#top">Style by Nath's<small>Hair studio</small></a><div>15 Frans Maroney St, Retreat, Cape Town. 078 508 7060</div></footer>
+
+<script>
+(function(){
+  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Johannesburg'}));
+  var d=document.querySelector('#week .day[data-d="'+now.getDay()+'"]');if(d)d.classList.add('today');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv,.arch').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

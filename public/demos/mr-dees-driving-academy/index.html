@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mr Dee's Driving Academy | Driving Lessons in Steenberg, Cape Town</title>
+<meta name="description" content="Patient, friendly driving lessons from Steenberg. Learner's licence help, lessons and test preparation. Rated 5.0 from 94 Google reviews. WhatsApp 074 363 8526.">
+<meta name="theme-color" content="#0d9488">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* UI/UX Pro Max design system: "Educational App" reasoning with the "Trust and Authority" landing pattern.
+   Colours: education teal #0D9488 with amber #D97706 (LMS palette). Type: "Corporate Trust", Lexend + Source Sans 3.
+   Effects: smooth stat reveal, badge hover, progress animation (if_gamification rule).
+   Layout: split hero with animated road, vertical progress timeline, package cards, FAQ accordion, contact band. */
+:root{--teal:#0d9488;--teal-dk:#0f766e;--teal-xdk:#134e4a;--teal-lt:#ccfbf1;--amber:#d97706;--amber-lt:#fef3c7;--bg:#f0fdfa;--card:#fff;--ink:#0f2e2b;--muted:#4b6360;--line:#cde7e3;--ease:cubic-bezier(.2,.75,.25,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:Lexend,system-ui,sans-serif;margin:0;line-height:1.12;letter-spacing:-.02em;font-weight:700}
+.wrap{max-width:72rem;margin:0 auto;padding:0 20px}
+.demo{background:var(--teal-xdk);color:#b6d8d3;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff}
+
+header.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:Lexend,sans-serif;font-weight:700;font-size:19px;white-space:nowrap}
+.logo .l{width:38px;height:38px;border-radius:10px;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:18px;font-weight:700;position:relative}
+.logo .l::after{content:"L";position:absolute;right:-6px;bottom:-6px;width:18px;height:18px;border-radius:4px;background:var(--amber);color:#fff;font-size:11px;display:grid;place-items:center;border:2px solid #fff}
+.logo small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:26px;font-weight:600;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}.nav a:hover{color:var(--teal-dk)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:12px;font:600 16px Lexend,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s,background .2s}
+.btn svg{width:19px;height:19px}
+.btn-p{background:var(--teal);color:#fff;box-shadow:0 10px 22px -12px rgba(13,148,136,.9)}
+.btn-p:hover{background:var(--teal-dk);transform:translateY(-2px)}
+.btn-s{background:#fff;color:var(--teal-xdk);border:1.5px solid var(--line)}
+.btn-s:hover{border-color:var(--teal)}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--amber-lt);color:#92400e;font-weight:600;font-size:14px;padding:6px 14px;border-radius:999px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);margin:18px 0 18px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:32rem;margin:0 0 28px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;color:var(--muted);font-size:15px}
+.trust b{display:block;font-family:Lexend,sans-serif;font-size:26px;color:var(--ink)}
+.stage{position:relative;background:linear-gradient(160deg,var(--teal) 0%,var(--teal-xdk) 100%);border-radius:28px;aspect-ratio:1/1;overflow:hidden;box-shadow:0 40px 70px -40px rgba(19,78,74,.8)}
+.stage svg.road{position:absolute;inset:0;width:100%;height:100%}
+.road .lane{stroke-dasharray:14 18;animation:lane 1.4s linear infinite}
+@keyframes lane{to{stroke-dashoffset:-32}}
+.car{offset-path:path("M -40 330 C 90 330 120 180 230 180 S 360 70 470 70");offset-rotate:auto;animation:drive 7s var(--ease) infinite}
+@keyframes drive{0%{offset-distance:0%}70%,100%{offset-distance:100%}}
+.badge{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 20px 40px -20px rgba(0,0,0,.45);font-size:14px;color:var(--muted);transition:transform .3s var(--ease)}
+.badge:hover{transform:translateY(-4px)}
+.badge b{display:block;font-family:Lexend,sans-serif;color:var(--ink);font-size:18px}
+.b1{left:18px;bottom:18px}.b2{left:18px;top:18px}
+.b2 b{color:var(--amber)}
+.how{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.how figure{margin:0;position:sticky;top:100px;border-radius:24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -36px rgba(19,78,74,.7)}
+.how figure img{width:100%;height:100%;object-fit:cover}
+.how figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(255,255,255,.94);border-radius:14px;padding:12px 16px;font-size:15px;color:var(--muted)}
+.how figcaption b{display:block;font-family:Lexend,sans-serif;color:var(--ink)}
+
+/* steps */
+section{padding:88px 0}
+.sh{max-width:40rem;margin-bottom:44px}
+.sh .eyebrow{font-family:Lexend,sans-serif;font-weight:600;color:var(--teal);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.sh h2{font-size:clamp(2rem,4vw,2.9rem);margin:8px 0 12px}
+.sh p{color:var(--muted);margin:0}
+.timeline{position:relative;max-width:52rem;padding-left:64px}
+.timeline .track{position:absolute;left:23px;top:8px;bottom:8px;width:4px;background:var(--line);border-radius:4px}
+.timeline .fill{position:absolute;left:0;top:0;width:100%;height:0;background:linear-gradient(var(--teal),var(--amber));border-radius:4px;transition:height .15s linear}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;margin-bottom:20px;transition:border-color .3s,box-shadow .3s}
+.step .n{position:absolute;left:-64px;top:20px;width:50px;height:50px;border-radius:50%;background:#fff;border:3px solid var(--line);display:grid;place-items:center;font:700 18px Lexend,sans-serif;color:var(--muted);transition:all .4s var(--ease)}
+.step.done .n{background:var(--teal);border-color:var(--teal);color:#fff;transform:scale(1.06)}
+.step.done{border-color:#9ddad2;box-shadow:0 18px 40px -30px rgba(13,148,136,.7)}
+.step h3{font-size:20px;margin-bottom:6px}
+.step p{margin:0;color:var(--muted)}
+.step .meta{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;color:var(--teal-dk);background:var(--teal-lt);padding:3px 10px;border-radius:999px}
+
+/* packages */
+.pk-sec{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pack{border:1px solid var(--line);border-radius:20px;padding:30px 26px;display:flex;flex-direction:column;gap:12px;background:var(--bg);transition:transform .3s var(--ease),box-shadow .3s}
+.pack:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(19,78,74,.55)}
+.pack.hi{background:var(--teal-xdk);color:#e6fffb;border-color:var(--teal-xdk)}
+.pack.hi p,.pack.hi li{color:#b6d8d3}
+.pack .ic{width:48px;height:48px;border-radius:12px;background:var(--teal-lt);color:var(--teal-dk);display:grid;place-items:center}
+.pack.hi .ic{background:var(--amber);color:#fff}
+.pack .ic svg{width:24px;height:24px}
+.pack h3{font-size:21px}
+.pack p{margin:0;color:var(--muted)}
+.pack ul{margin:4px 0 8px;padding:0;list-style:none;display:grid;gap:8px}
+.pack li{display:flex;gap:10px;color:var(--muted);font-size:16px}
+.pack li svg{flex:none;width:18px;height:18px;margin-top:4px;color:var(--teal)}
+.pack.hi li svg{color:var(--amber)}
+.pack .btn{margin-top:auto}
+.pack.hi .btn-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+
+/* proof + faq */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.proof{background:var(--teal);color:#fff;border-radius:24px;padding:36px;position:sticky;top:96px}
+.proof .big{font:700 84px/1 Lexend,sans-serif}
+.proof p{color:#d2f4ef;margin:10px 0 22px}
+.bar{height:10px;border-radius:10px;background:rgba(255,255,255,.2);overflow:hidden;margin:6px 0 16px}
+.bar i{display:block;height:100%;width:0;background:var(--amber);border-radius:10px;transition:width 1.6s var(--ease)}
+.proof.in .bar i{width:100%}
+.proof small{color:#d2f4ef;font-size:14px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:20px 56px 20px 22px;font:600 17px Lexend,sans-serif;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:22px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--teal);border-bottom:2.5px solid var(--teal);transform:translateY(-70%) rotate(45deg);transition:transform .3s var(--ease)}
+details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+details .a{padding:0 22px 20px;color:var(--muted)}
+details[open] .a{animation:fade .35s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* contact */
+.contact{background:var(--teal-xdk);color:#e6fffb;border-radius:28px;padding:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.contact h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:12px}
+.contact p{color:#b6d8d3;margin:0 0 24px}
+.contact .btn-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.hrs{list-style:none;margin:0;padding:0;font-size:16px}
+.hrs li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.hrs li b{font-weight:600;font-variant-numeric:tabular-nums}
+.hrs li.today{color:var(--amber-lt)}
+.addr{margin-top:18px;color:#b6d8d3;font-size:15px}
+
+footer{padding:36px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .nav{display:none}
+  .hero .wrap,.split,.contact{grid-template-columns:1fr}
+  .packs{grid-template-columns:1fr}
+  .stage{max-width:460px}
+  .proof{position:static}
+  .how{grid-template-columns:1fr}.how figure{position:relative;top:0;aspect-ratio:16/11}
+  .contact{padding:30px}
+  .timeline{padding-left:56px}
+  .step .n{left:-56px;width:44px;height:44px}
+  .timeline .track{left:20px}
+}
+@media (max-width:520px){header.top .btn-p span{display:none}.logo small{display:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  .car{offset-distance:55%}
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo website prepared for Mr Dee's Driving Academy by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a>, not yet live</div>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top"><span class="l">D</span><span>Mr Dee's<small>Driving Academy</small></span></a>
+  <nav class="nav"><a href="#how">How it works</a><a href="#lessons">Lessons</a><a href="#faq">Questions</a><a href="#contact">Contact</a></nav>
+  <a class="btn btn-p" href="https://wa.me/27743638526?text=Hi%20Mr%20Dee%2C%20I%27d%20like%20to%20book%20a%20driving%20lesson" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span>Book a lesson</span></a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="pill">Rated 5.0 from 94 Google reviews</span>
+    <h1>Get your licence with a teacher who <em>stays calm</em> for you.</h1>
+    <p class="lead">Friendly, patient driving lessons from Steenberg, for first-time learners, nervous drivers and anyone getting ready for the test.</p>
+    <div class="ctas">
+      <a class="btn btn-p" href="https://wa.me/27743638526?text=Hi%20Mr%20Dee%2C%20I%27d%20like%20to%20book%20a%20driving%20lesson" target="_blank" rel="noopener">WhatsApp 074 363 8526</a>
+      <a class="btn btn-s" href="#how">See how it works</a>
+    </div>
+    <div class="trust">
+      <div><b>5.0</b>Google rating</div>
+      <div><b>94</b>happy reviews</div>
+      <div><b>7 days</b>lessons a week</div>
+    </div>
+  </div>
+  <div class="stage rv" aria-hidden="true">
+    <svg class="road" viewBox="0 0 440 440" preserveAspectRatio="xMidYMid slice">
+      <path d="M -40 330 C 90 330 120 180 230 180 S 360 70 470 70" fill="none" stroke="#0b3f3b" stroke-width="64" stroke-linecap="round"/>
+      <path class="lane" d="M -40 330 C 90 330 120 180 230 180 S 360 70 470 70" fill="none" stroke="#fef3c7" stroke-width="4"/>
+      <circle cx="80" cy="120" r="30" fill="#14b8a6" opacity=".35"/><circle cx="370" cy="330" r="46" fill="#14b8a6" opacity=".3"/><circle cx="330" cy="250" r="18" fill="#14b8a6" opacity=".4"/>
+      <g class="car"><rect x="-22" y="-12" width="44" height="24" rx="7" fill="#d97706"/><rect x="-6" y="-9" width="14" height="18" rx="3" fill="#fef3c7"/><rect x="-26" y="-4" width="10" height="8" rx="2" fill="#fff"/></g>
+    </svg>
+    <div class="badge b1"><b>Learner to licence</b>step by step</div>
+    <div class="badge b2"><b>Nervous?</b>that's fine</div>
+  </div>
+</div></section>
+
+<section id="how" style="padding-top:40px"><div class="wrap">
+  <div class="sh rv"><span class="eyebrow">Your road to a licence</span><h2>Four steps, at your own pace</h2><p>No shouting, no rushing. Mr Dee works with where you are today and gets you ready for the test day.</p></div>
+  <div class="how"><div class="timeline" id="tl">
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <div class="step rv"><span class="n">1</span><h3>Learner's licence</h3><p>Help with the rules of the road and the learner's test, so you can get behind the wheel legally.</p><span class="meta">Theory and test tips</span></div>
+    <div class="step rv"><span class="n">2</span><h3>First lessons</h3><p>Quiet streets first. Clutch control, steering, mirrors and getting comfortable in the car.</p><span class="meta">Picked up near you</span></div>
+    <div class="step rv"><span class="n">3</span><h3>Real road practice</h3><p>Traffic, circles, parking and hill starts around Steenberg, Tokai and Retreat until it all feels normal.</p><span class="meta">Builds real confidence</span></div>
+    <div class="step rv"><span class="n">4</span><h3>Test day ready</h3><p>Yard test practice, the full test route checklist and a calm run-through before you go in.</p><span class="meta">Go in prepared</span></div>
+  </div>
+  <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&q=80&auto=format&fit=crop" alt="A driver's hands on the steering wheel"><figcaption><b>One-on-one, every lesson</b>Just you, Mr Dee and the road.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="pk-sec" id="lessons"><div class="wrap">
+  <div class="sh rv"><span class="eyebrow">Lessons</span><h2>Pick what you need</h2><p>Prices are confirmed on WhatsApp. Packages can be mixed to suit your timeline.</p></div>
+  <div class="packs">
+    <div class="pack rv">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6.5a2.5 2.5 0 0 0 0 5H20"/></svg></span>
+      <h3>Learner's prep</h3><p>For people starting from zero.</p>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Road signs and rules</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Practice questions</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Booking guidance</li></ul>
+      <a class="btn btn-s" href="https://wa.me/27743638526?text=Hi%20Mr%20Dee%2C%20I%27m%20interested%20in%20learner%27s%20prep" target="_blank" rel="noopener">Ask about this</a>
+    </div>
+    <div class="pack hi rv">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v6.5M4.5 15.5 10 13M19.5 15.5 14 13"/></svg></span>
+      <h3>Driving lessons</h3><p>The most popular choice.</p>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>One-on-one lessons</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Lesson packs available</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Weekday and weekend slots</li></ul>
+      <a class="btn btn-p" href="https://wa.me/27743638526?text=Hi%20Mr%20Dee%2C%20I%27d%20like%20to%20book%20driving%20lessons" target="_blank" rel="noopener">Book lessons</a>
+    </div>
+    <div class="pack rv">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      <h3>Test preparation</h3><p>For learners close to test day.</p>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yard and parking practice</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mock test run</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Refreshers for licence holders</li></ul>
+      <a class="btn btn-s" href="https://wa.me/27743638526?text=Hi%20Mr%20Dee%2C%20I%27d%20like%20test%20preparation" target="_blank" rel="noopener">Ask about this</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap split">
+  <div class="proof rv" id="proof">
+    <div class="big">5.0</div>
+    <div class="bar"><i></i></div>
+    <p>Every one of Mr Dee's 94 Google reviews adds up to a perfect score. On the live site, this panel shows a few of those reviews in learners' own words.</p>
+    <small>Source: Google Maps listing, October 2026</small>
+  </div>
+  <div>
+    <div class="sh rv" style="margin-bottom:24px"><span class="eyebrow">Questions</span><h2>Good to know</h2></div>
+    <details class="rv"><summary>I'm really nervous. Is that a problem?</summary><div class="a">Not at all. Many learners start nervous. Lessons begin on quiet roads and only move on when you feel ready.</div></details>
+    <details class="rv"><summary>Do you pick me up?</summary><div class="a">Pick-ups around Steenberg and nearby suburbs can be arranged. Send your area on WhatsApp when you book.</div></details>
+    <details class="rv"><summary>How many lessons will I need?</summary><div class="a">It depends on your experience. After the first lesson, Mr Dee will give you an honest idea of how many lessons you're likely to need.</div></details>
+    <details class="rv"><summary>Can I book on a Sunday?</summary><div class="a">Yes, Sunday mornings from 09:00 to 12:00 are available, plus Monday to Saturday from 09:00 to 17:00.</div></details>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap">
+  <div class="contact rv">
+    <div>
+      <h2>Ready when you are.</h2>
+      <p>Send a WhatsApp with your name, your area and when you'd like to start. Mr Dee will come back to you with times.</p>
+      <div class="ctas">
+        <a class="btn btn-p" style="background:var(--amber)" href="https://wa.me/27743638526?text=Hi%20Mr%20Dee%2C%20I%27d%20like%20to%20book%20a%20driving%20lesson" target="_blank" rel="noopener">WhatsApp Mr Dee</a>
+        <a class="btn btn-s" href="tel:+27743638526">Call 074 363 8526</a>
+      </div>
+      <p class="addr">7 Opal Lane, Steenberg, Cape Town, 7945. <a href="https://maps.google.com/?cid=152343953974549675" target="_blank" rel="noopener">Open in Google Maps</a></p>
+    </div>
+    <ul class="hrs" id="hrs">
+      <li data-d="1">Monday<b>09:00 to 17:00</b></li>
+      <li data-d="2">Tuesday<b>09:00 to 17:00</b></li>
+      <li data-d="3">Wednesday<b>09:00 to 17:00</b></li>
+      <li data-d="4">Thursday<b>09:00 to 17:00</b></li>
+      <li data-d="5">Friday<b>09:00 to 17:00</b></li>
+      <li data-d="6">Saturday<b>09:00 to 17:00</b></li>
+      <li data-d="0">Sunday<b>09:00 to 12:00</b></li>
+    </ul>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>Mr Dee's Driving Academy, Steenberg, Cape Town</span><span>074 363 8526</span></div></footer>
+
+<script>
+(function(){
+  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Johannesburg'}));
+  var li=document.querySelector('#hrs li[data-d="'+now.getDay()+'"]');if(li)li.classList.add('today');
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  // timeline progress follows scroll, and steps tick off as the line reaches them
+  var tl=document.getElementById('tl'),fill=document.getElementById('fill'),steps=[].slice.call(tl.querySelectorAll('.step'));
+  function prog(){
+    var r=tl.getBoundingClientRect(),mid=innerHeight*.6;
+    var p=Math.max(0,Math.min(1,(mid-r.top)/r.height));
+    fill.style.height=(p*100)+'%';
+    steps.forEach(function(s){s.classList.toggle('done',s.getBoundingClientRect().top+30<mid)});
+  }
+  prog();addEventListener('scroll',prog,{passive:true});addEventListener('resize',prog);
+})();
+</script>
+</body>
+</html>
