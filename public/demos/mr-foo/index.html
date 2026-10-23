@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mr Foo | Chinese and Thai Takeaway in Bergvliet, Cape Town</title>
+<meta name="description" content="Chinese and Thai takeaway at Harry Goemans Garden Centre, 151 Main Road, Bergvliet. Order ahead on WhatsApp 082 633 3185.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=Playfair+Display:ital,wght@1,600;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* UI/UX Pro Max design system: "Bold Typography (Mobile Poster)" (near-black #0A0A0A, warm white #FAFAFA,
+   vermillion accent #FF3D00 for interaction only, edge-to-edge type, 0px radius, underline CTAs, 200ms colour shifts,
+   massive vertical spacing), type pairing "Bold Typography Mobile": Inter Tight + Playfair Display Italic + JetBrains Mono.
+   Product reasoning: Restaurant/Food Service (appetising red, warm gold).
+   Layout: poster hero with type bleeding off the edge, receipt ticker, numbered menu board with category filter,
+   three giant order steps, ticket-style hours and location. */
+:root{--bg:#0a0a0a;--fg:#fafafa;--m:#1a1a1a;--mf:#8a8a8a;--acc:#ff3d00;--gold:#e0a43a;--line:#262626;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.demo{background:#000;color:#777;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff}
+.wrap{max-width:84rem;margin:0 auto;padding:0 24px}
+.mono{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.it{font-family:"Playfair Display",serif;font-style:italic;font-weight:800;letter-spacing:-.01em}
+
+nav.top{position:sticky;top:0;z-index:30;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+nav .bar{display:flex;justify-content:space-between;align-items:center;height:64px;gap:16px}
+.logo{font-weight:900;font-size:22px;letter-spacing:-.04em;text-decoration:none}
+.logo span{color:var(--acc)}
+.links{display:flex;gap:28px}
+.links a{text-decoration:none;color:var(--mf);font-weight:500;transition:color .2s}
+.links a:hover{color:var(--fg)}
+.cta{display:inline-flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;padding:6px 0;border-bottom:3px solid var(--acc);transition:color .2s}
+.cta:hover{color:var(--acc)}
+.cta svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;padding:56px 0 0;overflow:hidden}
+.hero .kick{display:flex;flex-wrap:wrap;gap:12px 28px;color:var(--mf);margin-bottom:28px}
+.hero .kick b{color:var(--fg);font-weight:700}
+.hero h1{margin:0;font-weight:900;font-size:clamp(5rem,19vw,19rem);line-height:.8;letter-spacing:-.06em;white-space:nowrap;margin-left:-.06em}
+.hero h1 .it{color:var(--acc);font-size:.62em;letter-spacing:-.03em;margin-left:.1em}
+.hero .row{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-top:40px}
+.hero .sub{font-size:clamp(1.25rem,2.2vw,1.75rem);line-height:1.35;max-width:30ch;margin:0 0 28px;font-weight:500}
+.hero .sub em{font-family:"Playfair Display",serif;font-style:italic;color:var(--gold)}
+.ctas{display:flex;flex-wrap:wrap;gap:28px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 26px;background:var(--fg);color:var(--bg);font-weight:800;text-decoration:none;transition:background .2s,color .2s}
+.btn:hover{background:var(--acc);color:var(--bg)}
+.btn svg{width:20px;height:20px}
+.hero figure{margin:0;position:relative;aspect-ratio:4/5;overflow:hidden}
+.hero figure img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05);transform:scale(1.08);transition:transform 1.4s var(--ease)}
+.loaded .hero figure img{transform:scale(1)}
+.hero figure figcaption{position:absolute;left:0;bottom:0;background:var(--acc);color:var(--bg);padding:10px 14px;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* ticker */
+.ticker{margin-top:72px;background:var(--fg);color:var(--bg);overflow:hidden;white-space:nowrap}
+.ticker .run{display:inline-flex;animation:tk 30s linear infinite}
+.ticker span{font-weight:900;font-size:clamp(1.4rem,3vw,2.2rem);letter-spacing:-.03em;padding:14px 0}
+.ticker span i{font-family:"Playfair Display",serif;font-weight:800;color:var(--acc);padding:0 .6em}
+@keyframes tk{to{transform:translateX(-50%)}}
+
+/* menu board */
+section{padding:120px 0}
+.head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:48px}
+.head h2{margin:0;font-weight:900;font-size:clamp(3rem,8vw,7rem);line-height:.85;letter-spacing:-.05em}
+.head h2 .it{color:var(--acc)}
+.head p{margin:0;color:var(--mf);max-width:34ch}
+.filters{display:flex;flex-wrap:wrap;gap:8px 26px;margin-bottom:24px}
+.filters button{all:unset;cursor:pointer;font-weight:700;font-size:18px;color:var(--mf);padding:6px 0;border-bottom:3px solid transparent;transition:color .2s,border-color .2s}
+.filters button:hover{color:var(--fg)}
+.filters button[aria-pressed="true"]{color:var(--fg);border-color:var(--acc)}
+.board{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.dish{display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:baseline;padding:22px 0;border-top:1px solid var(--line);transition:background .2s}
+.dish:hover{background:var(--m)}
+.dish .n{font-family:"JetBrains Mono",monospace;color:var(--acc);font-weight:700;font-size:14px}
+.dish h3{margin:0;font-size:22px;font-weight:800;letter-spacing:-.02em}
+.dish p{margin:2px 0 0;color:var(--mf);font-size:15px}
+.dish .tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.dish[hidden]{display:none}
+.note{margin-top:28px;color:var(--mf);font-size:14px}
+
+/* photo strip */
+.strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4px}
+.strip img{width:100%;height:clamp(220px,32vw,460px);object-fit:cover;filter:grayscale(.15);transition:filter .3s}
+.strip img:hover{filter:none}
+
+/* order steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.step{padding:40px 32px 40px 0;border-top:3px solid var(--fg)}
+.step+.step{padding-left:32px;border-left:1px solid var(--line)}
+.step b{display:block;font-weight:900;font-size:clamp(5rem,10vw,9rem);line-height:.8;letter-spacing:-.06em;color:var(--acc);margin-bottom:24px}
+.step h3{margin:0 0 8px;font-size:26px;font-weight:800;letter-spacing:-.02em}
+.step p{margin:0;color:var(--mf)}
+
+/* visit */
+.visit{background:var(--fg);color:var(--bg)}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.visit h2{margin:0 0 24px;font-weight:900;font-size:clamp(3rem,8vw,7rem);line-height:.85;letter-spacing:-.05em}
+.visit h2 .it{color:var(--acc)}
+.visit address{font-style:normal;font-size:22px;font-weight:600;line-height:1.35;margin-bottom:28px}
+.visit .btn{background:var(--bg);color:var(--fg)}
+.visit .btn:hover{background:var(--acc)}
+.visit .cta{border-color:var(--acc)}
+.ticket{background:#f1efe9;padding:28px 28px 20px;font-family:"JetBrains Mono",monospace;font-size:14px;position:relative;-webkit-mask:radial-gradient(circle 8px at 50% 100%,transparent 98%,#000) 0 0/22px 100% repeat-x;mask:radial-gradient(circle 8px at 50% 100%,transparent 98%,#000) 0 0/22px 100% repeat-x}
+.ticket h3{font-family:"Inter Tight",sans-serif;margin:0 0 16px;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.ticket table{width:100%;border-collapse:collapse}
+.ticket td{padding:7px 0;border-bottom:1px dashed #bdbab2}
+.ticket td+td{text-align:right}
+.ticket tr.today td{color:var(--acc);font-weight:700}
+.ticket .tot{display:flex;justify-content:space-between;margin-top:16px;font-weight:700}
+.ticket .tot span:last-child{color:var(--acc)}
+
+footer{padding:40px 0 110px;color:var(--mf);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.fab{position:fixed;right:16px;bottom:16px;z-index:40;display:none;align-items:center;gap:10px;background:var(--acc);color:var(--bg);font-weight:800;padding:14px 20px;text-decoration:none}
+.fab svg{width:20px;height:20px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .links{display:none}
+  .hero .row,.visit .grid,.board,.head{grid-template-columns:1fr}
+  .hero figure{aspect-ratio:16/11}
+  .steps{grid-template-columns:1fr}
+  .step,.step+.step{padding:32px 0;border-left:0}
+  .strip{grid-template-columns:1fr 1fr}.strip img:first-child{grid-column:1/-1}
+  section{padding:88px 0}
+  .fab{display:inline-flex}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="demo">Demo website prepared for Mr Foo Chinese &amp; Thai Take Out by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a>, not yet live</div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap bar">
+    <a class="logo" href="#top">Mr Foo<span>.</span></a>
+    <div class="links"><a href="#menu">Menu</a><a href="#order">How to order</a><a href="#visit">Hours</a></div>
+    <a class="cta" href="https://wa.me/27826333185?text=Hi%20Mr%20Foo%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+      Order on WhatsApp</a>
+  </div>
+</nav>
+
+<main id="top">
+<header class="hero">
+  <div class="wrap">
+    <div class="kick mono"><span><b>Chinese</b> + <b>Thai</b> takeaway</span><span>Harry Goemans Centre, Bergvliet</span><span>147 Google reviews</span></div>
+  </div>
+  <h1>MR FOO<span class="it">wok.</span></h1>
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <p class="sub">Hot woks, fast boxes and the <em>Friday night fix</em> for the whole Constantia valley. Order ahead, pick up on your way home.</p>
+        <div class="ctas">
+          <a class="btn" href="https://wa.me/27826333185?text=Hi%20Mr%20Foo%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Order on WhatsApp</a>
+          <a class="cta" href="tel:+27826333185">082 633 3185</a>
+        </div>
+      </div>
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1100&q=75&auto=format&fit=crop" alt="Stir fried noodles with chopsticks on a dark table" width="1100" height="1375"><figcaption>Open today from 11:00</figcaption></figure>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true"><div class="run">
+    <span>SWEET AND SOUR<i>/</i>PAD THAI<i>/</i>CHOW MEIN<i>/</i>SPRING ROLLS<i>/</i>GREEN CURRY<i>/</i>EGG FRIED RICE<i>/</i>DIM SUM<i>/</i></span>
+    <span>SWEET AND SOUR<i>/</i>PAD THAI<i>/</i>CHOW MEIN<i>/</i>SPRING ROLLS<i>/</i>GREEN CURRY<i>/</i>EGG FRIED RICE<i>/</i>DIM SUM<i>/</i></span>
+  </div></div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>The <span class="it">board.</span></h2>
+      <p>Call the number, or send it on WhatsApp. Everything is cooked to order in the wok.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter menu">
+      <button type="button" data-f="all" aria-pressed="true">Everything</button>
+      <button type="button" data-f="wok" aria-pressed="false">From the wok</button>
+      <button type="button" data-f="thai" aria-pressed="false">Thai</button>
+      <button type="button" data-f="small" aria-pressed="false">Small bites</button>
+    </div>
+    <div class="board">
+      <div class="dish" data-c="wok"><span class="n">01</span><div><h3>Sweet and sour chicken</h3><p>Crispy chicken, peppers, pineapple, bright sauce</p></div><span class="tag">Wok</span></div>
+      <div class="dish" data-c="wok"><span class="n">02</span><div><h3>Beef and broccoli</h3><p>Tender strips, oyster sauce, garlic</p></div><span class="tag">Wok</span></div>
+      <div class="dish" data-c="wok"><span class="n">03</span><div><h3>Chicken chow mein</h3><p>Egg noodles, cabbage, carrot, soy</p></div><span class="tag">Wok</span></div>
+      <div class="dish" data-c="wok"><span class="n">04</span><div><h3>Egg fried rice</h3><p>On its own or as the side to everything</p></div><span class="tag">Wok</span></div>
+      <div class="dish" data-c="thai"><span class="n">05</span><div><h3>Pad thai</h3><p>Rice noodles, tamarind, peanuts, lime</p></div><span class="tag">Thai</span></div>
+      <div class="dish" data-c="thai"><span class="n">06</span><div><h3>Thai green curry</h3><p>Coconut, basil, chicken or veg, with rice</p></div><span class="tag">Thai</span></div>
+      <div class="dish" data-c="thai"><span class="n">07</span><div><h3>Red curry</h3><p>Fragrant, rich and a little hot</p></div><span class="tag">Thai</span></div>
+      <div class="dish" data-c="small"><span class="n">08</span><div><h3>Spring rolls</h3><p>Crispy veg rolls with sweet chilli</p></div><span class="tag">Small</span></div>
+      <div class="dish" data-c="small"><span class="n">09</span><div><h3>Dim sum</h3><p>Steamed dumplings by the basket</p></div><span class="tag">Small</span></div>
+      <div class="dish" data-c="small"><span class="n">10</span><div><h3>Salt and pepper calamari</h3><p>Crunchy, peppery, made for sharing</p></div><span class="tag">Small</span></div>
+    </div>
+    <p class="note">Sample menu for the demo. The live site shows Mr Foo's own menu and prices.</p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1200&q=70&auto=format&fit=crop" alt="" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy">
+</div>
+
+<section id="order">
+  <div class="wrap">
+    <div class="head rv"><h2>Three <span class="it">steps.</span></h2><p>No app, no account, no delivery fee. Just your phone.</p></div>
+    <div class="steps">
+      <div class="step rv"><b>1</b><h3>Send your order</h3><p>WhatsApp or call 082 633 3185 with what you want and a pickup time.</p></div>
+      <div class="step rv"><b>2</b><h3>We fire the wok</h3><p>Everything is cooked fresh, so it's hot and crisp when you arrive.</p></div>
+      <div class="step rv"><b>3</b><h3>Grab and go</h3><p>Collect at Harry Goemans Garden Centre on Main Road. Easy parking.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap grid">
+    <div class="rv">
+      <h2>Find <span class="it">us.</span></h2>
+      <address>Harry Goemans Garden Centre<br>151 Main Road, Bergvliet<br>Cape Town, 7945</address>
+      <div class="ctas">
+        <a class="btn" href="https://wa.me/27826333185?text=Hi%20Mr%20Foo%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="cta" href="https://maps.google.com/?cid=3942882026605645750" target="_blank" rel="noopener">Directions</a>
+      </div>
+    </div>
+    <div class="ticket rv" aria-label="Opening hours">
+      <h3>Opening hours</h3>
+      <table id="hours">
+        <tr data-d="1"><td>Monday</td><td>13:00 to 19:00</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>11:00 to 20:00</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>11:00 to 20:00</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>11:00 to 20:00</td></tr>
+        <tr data-d="5"><td>Friday</td><td>11:00 to 20:00</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>11:00 to 20:00</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>11:00 to 19:00</td></tr>
+      </table>
+      <div class="tot"><span>Rated on Google</span><span>4.0 from 147</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Mr Foo Chinese &amp; Thai Take Out, Bergvliet</span><span>082 633 3185</span></div></footer>
+<a class="fab" href="https://wa.me/27826333185?text=Hi%20Mr%20Foo%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Order now</a>
+
+<script>
+addEventListener('load',()=>document.body.classList.add('loaded'));
+const d=new Date().getDay();document.querySelector('#hours tr[data-d="'+d+'"]')?.classList.add('today');
+const bs=document.querySelectorAll('.filters button'),ds=document.querySelectorAll('.dish');
+bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria-pressed',x===b));const f=b.dataset.f;ds.forEach(x=>x.hidden=!(f==='all'||x.dataset.c===f))}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
