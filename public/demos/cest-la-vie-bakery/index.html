@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>C'est La Vie Bakery | Sourdough, Croissants and Coffee in Fish Hoek</title>
+<meta name="description" content="Sourdough, croissants, pain au chocolat and coffee at 4 Recreation Road, Fish Hoek, just off the beach. Open Wednesday to Sunday from 07:30. Put bread aside on WhatsApp 083 676 7430.">
+<meta name="theme-color" content="#fbf4e6">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Playfair+Display+SC:wght@700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* UI/UX Pro Max design system. Product reasoning: Bakery/Cafe ("Hero-Centric + Conversion",
+   style "Vibrant & Block-based + Soft UI Evolution", colour mood "Warm Brown + Cream + Appetizing accents",
+   typography "Warm + Inviting", key effects "Menu hover + Order animations",
+   anti-patterns "Poor food photos + Hidden hours").
+   Palette from colors.csv Bakery/Cafe: primary #92400E, secondary #B45309, background #FEF3C7 (softened to #FBF4E6), foreground #78350F.
+   Type pairing "Restaurant Menu": Playfair Display SC + Karla, with Playfair Display italic for the name.
+   Layout: shop window. Centred script hero with a live "open now" pill, three rounded window panes,
+   a tabbed bakery counter, a morning timeline, postcard reviews and a put-aside order builder that writes a WhatsApp message.
+   Hours are shown up front, never hidden. */
+:root{--cream:#fbf4e6;--paper:#fffaf0;--crust:#92400e;--honey:#b45309;--cocoa:#4a2410;--text:#5b3218;--soft:#8a6a52;--line:#ead9bd;--sage:#5f7a55;--ease:cubic-bezier(.22,.8,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--text);font:400 17px/1.65 Karla,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--crust);outline-offset:3px}
+.demo{background:var(--cocoa);color:#d9c4a8;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff}
+.wrap{max-width:74rem;margin:0 auto;padding:0 24px}
+.sc{font-family:"Playfair Display SC",serif;letter-spacing:.14em;font-size:13px;color:var(--honey)}
+h1,h2,h3{font-family:"Playfair Display",serif;color:var(--cocoa);font-weight:700;margin:0}
+h2{font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1.05;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--crust);font-weight:500}
+
+nav{padding:22px 0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mark{font-family:"Playfair Display",serif;font-style:italic;font-size:24px;text-decoration:none;color:var(--cocoa)}
+.navl{display:flex;gap:28px}
+.navl a{text-decoration:none;color:var(--soft);font-weight:500;transition:color .2s}
+.navl a:hover{color:var(--crust)}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 22px;border-radius:999px;background:var(--crust);color:#fff;text-decoration:none;font-weight:700;border:0;cursor:pointer;font:700 16px Karla,sans-serif;transition:background .25s,transform .25s;box-shadow:0 8px 22px -10px rgba(146,64,14,.7)}
+.pill:hover{background:var(--cocoa);transform:translateY(-2px)}
+.pill svg{width:18px;height:18px}
+.pill.light{background:var(--paper);color:var(--crust);box-shadow:0 6px 18px -10px rgba(74,36,16,.4)}
+.pill.light:hover{background:#fff}
+
+/* hero */
+.hero{text-align:center;padding:40px 0 0}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:14px;font-weight:500;color:var(--text)}
+.status i{width:9px;height:9px;border-radius:50%;background:#b8a58f;flex:none}
+.status.open i{background:var(--sage);box-shadow:0 0 0 0 rgba(95,122,85,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(95,122,85,0)}100%{box-shadow:0 0 0 0 rgba(95,122,85,0)}}
+.hero h1{font-style:italic;font-weight:500;font-size:clamp(4rem,13vw,10.5rem);line-height:.95;letter-spacing:-.03em;margin:26px 0 6px}
+.hero h1 span{display:inline-block;opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.loaded .hero h1 span{opacity:1;transform:none}
+.hero h1 span:nth-child(2){transition-delay:.12s}.hero h1 span:nth-child(3){transition-delay:.24s}
+.hero .sub{font-size:clamp(1.1rem,1.8vw,1.35rem);max-width:40ch;margin:12px auto 30px;color:var(--text)}
+.hero .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.panes{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:18px;margin-top:56px;align-items:end}
+.panes figure{margin:0;border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(74,36,16,.55);background:var(--line)}
+.panes figure:nth-child(1),.panes figure:nth-child(3){aspect-ratio:3/4}
+.panes figure:nth-child(2){aspect-ratio:4/4.3}
+.panes img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.panes figure:hover img{transform:scale(1.05)}
+
+.facts{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 40px;padding:34px 0;color:var(--soft);font-size:15px}
+.facts b{color:var(--cocoa);font-family:"Playfair Display",serif;font-size:20px;margin-right:6px}
+
+section{padding:100px 0}
+.center{text-align:center;max-width:44rem;margin:0 auto 46px}
+.center p{color:var(--soft);margin:16px 0 0}
+
+/* early bird band */
+.early{background:var(--crust);color:#fdebd3;padding:70px 0}
+.early .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.early h2{color:#fff}
+.early h2 em{color:#ffd9a8}
+.early p{margin:16px 0 0;font-size:18px;max-width:44ch}
+.early ol{list-style:none;margin:0;padding:0;counter-reset:t}
+.early li{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,235,210,.22)}
+.early li:last-child{border-bottom:0}
+.early li b{font-family:"Playfair Display",serif;font-size:22px;color:#fff}
+.early li span{color:#fde3c3}
+
+/* counter */
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.tabs button{min-height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--text);font:500 15px Karla,sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.tabs button[aria-selected="true"]{background:var(--cocoa);border-color:var(--cocoa);color:#fff}
+.counter{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.item{background:var(--paper);border-radius:22px;overflow:hidden;box-shadow:0 14px 34px -24px rgba(74,36,16,.45);transition:transform .35s var(--ease),box-shadow .35s var(--ease),opacity .3s}
+.item:hover{transform:translateY(-6px);box-shadow:0 24px 44px -24px rgba(74,36,16,.55)}
+.item .ph{aspect-ratio:4/3;overflow:hidden;background:var(--line)}
+.item img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.item:hover img{transform:scale(1.06)}
+.item .tx{padding:20px 22px 24px}
+.item h3{font-size:1.4rem}
+.item p{margin:6px 0 0;color:var(--soft);font-size:15px}
+.item .tag{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage)}
+.item[hidden]{display:none}
+.counter-note{text-align:center;color:var(--soft);font-size:14px;margin-top:26px}
+
+/* postcards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:var(--paper);padding:26px 24px 22px;border-radius:6px;box-shadow:0 18px 30px -22px rgba(74,36,16,.5);transition:transform .4s var(--ease)}
+.card:nth-child(odd){transform:rotate(-1.4deg)}.card:nth-child(even){transform:rotate(1.2deg) translateY(14px)}
+.card:hover{transform:rotate(0) translateY(-4px)}
+.card p{margin:0 0 18px;font-family:"Playfair Display",serif;font-style:italic;font-size:18px;line-height:1.45;color:var(--cocoa)}
+.card small{display:flex;justify-content:space-between;color:var(--soft);font-size:13px;border-top:1px dashed var(--line);padding-top:12px}
+
+/* order builder */
+.order{background:var(--paper)}
+.order .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.order .lead{color:var(--soft);margin:16px 0 0;max-width:38ch}
+.basket{background:var(--cream);border-radius:24px;padding:26px;border:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.row:last-of-type{border-bottom:0}
+.row label{font-weight:500}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--cocoa);font-size:20px;cursor:pointer;transition:background .2s}
+.qty button:hover{background:#fff}
+.qty output{min-width:26px;text-align:center;font-weight:700}
+.when{display:flex;gap:10px;align-items:center;margin:16px 0 20px;flex-wrap:wrap}
+.when select{min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--paper);font:500 15px Karla,sans-serif;color:var(--text)}
+.basket .pill{width:100%;justify-content:center}
+.basket .hint{font-size:13px;color:var(--soft);text-align:center;margin:12px 0 0}
+
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.vcard{background:var(--paper);border-radius:24px;padding:34px;box-shadow:0 14px 34px -26px rgba(74,36,16,.45)}
+.vcard h3{font-size:1.9rem;margin:8px 0 14px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:20px 0}
+.days div{text-align:center;padding:12px 0;border-radius:14px;background:var(--cream);font-size:13px;color:var(--soft)}
+.days div b{display:block;font-size:15px;color:var(--cocoa)}
+.days div.off{opacity:.45}
+.days div.today{background:var(--crust);color:#fde3c3}.days div.today b{color:#fff}
+.map{border-radius:24px;overflow:hidden;min-height:340px;background:var(--line)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;filter:sepia(.35) saturate(.85)}
+
+footer{padding:40px 0 50px;text-align:center;color:var(--soft);font-size:14px}
+footer .mark{font-size:30px;display:block;margin-bottom:8px}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+html:not(.js) .rv,html:not(.js) .hero h1 span{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .navl{display:none}
+  .counter{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .early .wrap,.order .wrap,.visit .wrap{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .panes{grid-template-columns:1fr 1fr}
+  .panes figure:nth-child(3){display:none}
+  .counter,.cards{grid-template-columns:1fr}
+  .card:nth-child(even){transform:rotate(1.2deg)}
+  .days{grid-template-columns:repeat(4,1fr)}
+  section{padding:76px 0}
+  nav .pill span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero h1 span{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo website prepared for C'est La Vie Bakery by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a>, not yet live</div>
+
+<nav aria-label="Main">
+  <div class="wrap bar">
+    <a class="mark" href="#top">C'est La Vie</a>
+    <div class="navl"><a href="#counter">The counter</a><a href="#early">Mornings</a><a href="#order">Put aside</a><a href="#visit">Find us</a></div>
+    <a class="pill" href="https://wa.me/27836767430" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.8.8 2.5.8 3.4.7a2.9 2.9 0 0 0 1.9-1.3 2.4 2.4 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.9 18l-1.7 6 6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg><span>WhatsApp</span></a>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="wrap">
+      <p class="status" id="status"><i></i><span>Wednesday to Sunday, 07:30 to 12:00</span></p>
+      <h1><span>C'est</span> <span>la</span> <span>vie</span></h1>
+      <p class="sc">Bakery &amp; coffee &middot; Fish Hoek</p>
+      <p class="sub">Sourdough, warm pain au chocolat and good coffee, a few steps from Fish Hoek beach. Baked in small batches every morning, so come early.</p>
+      <div class="ctas">
+        <a class="pill" href="#order">Put bread aside</a>
+        <a class="pill light" href="#counter">See what we bake</a>
+      </div>
+      <div class="panes">
+        <figure><img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=700&q=72&auto=format&fit=crop" alt="A floured sourdough loaf" fetchpriority="high"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=900&q=72&auto=format&fit=crop" alt="A tray of golden croissants on the counter" fetchpriority="high"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=700&q=72&auto=format&fit=crop" alt="Pastries lined up in a glass bakery display"></figure>
+      </div>
+      <div class="facts">
+        <span><b>4.6</b>from 237 Google reviews</span>
+        <span><b>07:30</b>doors open</span>
+        <span><b>2 min</b>walk to the beach</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="early" id="early">
+    <div class="wrap">
+      <div class="rv">
+        <p class="sc" style="color:#ffd9a8">A morning at the bakery</p>
+        <h2>Early birds get <em>the warm ones</em></h2>
+        <p>Everything is baked in limited batches, so the favourites can be gone before lunch. If you have your heart set on something, message us and we will put it aside.</p>
+      </div>
+      <ol class="rv">
+        <li><b>07:30</b><span>Doors open. First sourdough and croissants on the counter, coffee machine warmed up.</span></li>
+        <li><b>09:00</b><span>Beach walkers and swimmers arrive. Pain au chocolat is usually still warm.</span></li>
+        <li><b>10:30</b><span>The busiest stretch. Popular loaves start running low.</span></li>
+        <li><b>12:00</b><span>We close, or a little earlier if the shelves are empty.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="counter">
+    <div class="wrap">
+      <div class="center rv">
+        <p class="sc">The counter</p>
+        <h2>Baked here, <em>this morning</em></h2>
+        <p>What our regulars keep coming back for. The selection changes with the day.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Filter the counter">
+        <button type="button" role="tab" aria-selected="true" data-f="all">Everything</button>
+        <button type="button" role="tab" aria-selected="false" data-f="bread">Bread</button>
+        <button type="button" role="tab" aria-selected="false" data-f="pastry">Pastry</button>
+        <button type="button" role="tab" aria-selected="false" data-f="sweet">Cakes and coffee</button>
+      </div>
+      <div class="counter" id="items">
+        <article class="item" data-c="bread"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=700&q=70&auto=format&fit=crop" alt="Sliced sourdough loaf on a board"></div><div class="tx"><h3>Sourdough</h3><p>Several styles every morning, long fermented with a proper crust.</p><span class="tag">Regulars' favourite</span></div></article>
+        <article class="item" data-c="pastry"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=700&q=70&auto=format&fit=crop" alt="Croissants dusted with flour"></div><div class="tx"><h3>Croissants</h3><p>Buttery, flaky and best eaten on the walk down to the sand.</p><span class="tag">From 07:30</span></div></article>
+        <article class="item" data-c="pastry"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=700&q=70&auto=format&fit=crop&crop=bottom" alt="Pain au chocolat on a tray"></div><div class="tx"><h3>Pain au chocolat</h3><p>Ask for one warm. You will not regret it.</p><span class="tag">Sells out first</span></div></article>
+        <article class="item" data-c="pastry"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=700&q=70&auto=format&fit=crop" alt="Assorted breads and twists"></div><div class="tx"><h3>Cinnamon twists</h3><p>Sticky, spiced and twisted by hand.</p><span class="tag">Morning bake</span></div></article>
+        <article class="item" data-c="sweet"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=700&q=70&auto=format&fit=crop" alt="Bakery shelves with cakes and loaves"></div><div class="tx"><h3>Carrot cake and muffins</h3><p>Carrot cake people dream about, plus chocolate and banana muffins.</p><span class="tag">By the slice</span></div></article>
+        <article class="item" data-c="sweet"><div class="ph"><img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=70&auto=format&fit=crop" alt="Cup of coffee on a wooden table"></div><div class="tx"><h3>Coffee</h3><p>Cappuccinos and flat whites to go with whatever you picked.</p><span class="tag">Take away or stay</span></div></article>
+      </div>
+      <p class="counter-note">Prices at the counter. Sample photos, to be replaced with the bakery's own.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="center rv">
+        <p class="sc">Postcards from our customers</p>
+        <h2>4.6 from <em>237 reviews</em></h2>
+      </div>
+      <div class="cards rv">
+        <div class="card"><p>"Some of the best sourdough bread I've ever had! The pain au chocolat is also amazing, especially when it's warm."</p><small><span>Chris M.</span><span>Google</span></small></div>
+        <div class="card"><p>"Quintessential Fish Hoek beach experience. An understated gem."</p><small><span>Cayla</span><span>Google</span></small></div>
+        <div class="card"><p>"I'm dreaming of the carrot cake from 6000 miles away. You guys are great!"</p><small><span>J. Z.</span><span>Google</span></small></div>
+        <div class="card"><p>"Best croissants, cinnamon twist, choc and banana muffins and the bread. Amazing!"</p><small><span>Greta N.</span><span>Google</span></small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="wrap">
+      <div class="rv">
+        <p class="sc">Put it aside</p>
+        <h2>Don't miss <em>your loaf</em></h2>
+        <p class="lead">Pick what you want and the day you are coming. We open WhatsApp with your message ready to send, and we keep it behind the counter for you.</p>
+      </div>
+      <form class="basket rv" id="basket" onsubmit="return false">
+        <div class="row"><label id="l1">Sourdough loaf</label><div class="qty"><button type="button" aria-label="Fewer sourdough loaves">&minus;</button><output aria-labelledby="l1">0</output><button type="button" aria-label="More sourdough loaves">+</button></div></div>
+        <div class="row"><label id="l2">Croissant</label><div class="qty"><button type="button" aria-label="Fewer croissants">&minus;</button><output aria-labelledby="l2">0</output><button type="button" aria-label="More croissants">+</button></div></div>
+        <div class="row"><label id="l3">Pain au chocolat</label><div class="qty"><button type="button" aria-label="Fewer pain au chocolat">&minus;</button><output aria-labelledby="l3">0</output><button type="button" aria-label="More pain au chocolat">+</button></div></div>
+        <div class="row"><label id="l4">Cinnamon twist</label><div class="qty"><button type="button" aria-label="Fewer cinnamon twists">&minus;</button><output aria-labelledby="l4">0</output><button type="button" aria-label="More cinnamon twists">+</button></div></div>
+        <div class="row"><label id="l5">Slice of carrot cake</label><div class="qty"><button type="button" aria-label="Fewer slices of carrot cake">&minus;</button><output aria-labelledby="l5">0</output><button type="button" aria-label="More slices of carrot cake">+</button></div></div>
+        <div class="when"><label for="day">Collecting on</label>
+          <select id="day"><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select>
+        </div>
+        <button type="button" class="pill" id="send">Send on WhatsApp</button>
+        <p class="hint" id="hint">Add at least one item to send.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div class="vcard rv">
+        <p class="sc">Find us</p>
+        <h3>4 Recreation Road, Fish Hoek</h3>
+        <p style="margin:0;color:var(--soft)">Just up from the beach. Outside tables, or take it with you to the sand.</p>
+        <div class="days" id="days">
+          <div class="off" data-d="1">Mon<b>Closed</b></div>
+          <div class="off" data-d="2">Tue<b>Closed</b></div>
+          <div data-d="3">Wed<b>7:30</b></div>
+          <div data-d="4">Thu<b>7:30</b></div>
+          <div data-d="5">Fri<b>7:30</b></div>
+          <div data-d="6">Sat<b>7:30</b></div>
+          <div data-d="0">Sun<b>7:30</b></div>
+        </div>
+        <p style="margin:0 0 22px;color:var(--soft);font-size:15px">Open 07:30 to 12:00, or until we sell out.</p>
+        <a class="pill" href="https://wa.me/27836767430" target="_blank" rel="noopener">WhatsApp 083 676 7430</a>
+      </div>
+      <a class="map rv" href="https://maps.google.com/?q=C%27est+La+Vie+Bakery+4+Recreation+Rd+Fish+Hoek" target="_blank" rel="noopener" aria-label="Open in Google Maps"><iframe title="Map of 4 Recreation Road, Fish Hoek" loading="lazy" src="https://maps.google.com/maps?q=4%20Recreation%20Rd%2C%20Fish%20Hoek%2C%20Cape%20Town&z=16&output=embed"></iframe></a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span class="mark">C'est La Vie</span>Bakery and coffee, 4 Recreation Road, Fish Hoek &middot; 083 676 7430</div></footer>
+
+<script>
+addEventListener('load',()=>document.documentElement.classList.add('loaded'));
+setTimeout(()=>document.documentElement.classList.add('loaded'),800);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// live open status (Cape Town time)
+(function(){
+  const now=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Johannesburg'}));
+  const d=now.getDay(),m=now.getHours()*60+now.getMinutes(),st=document.getElementById('status');
+  const openDay=d===0||d>=3,isOpen=openDay&&m>=450&&m<720;
+  let txt;
+  if(isOpen)txt='Open now, until 12:00 or sold out';
+  else if(openDay&&m<450)txt='Opening today at 07:30';
+  else{let n=(d+1)%7,k=1;while(!(n===0||n>=3)){n=(n+1)%7;k++}txt='Closed now, back '+(k===1?'tomorrow':['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][n])+' at 07:30'}
+  st.querySelector('span').textContent=txt;if(isOpen)st.classList.add('open');
+  const t=document.querySelector('#days [data-d="'+d+'"]');if(t)t.classList.add('today');
+})();
+
+// counter filter
+const tabs=document.querySelectorAll('.tabs button');
+tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('#items .item').forEach(it=>{it.hidden=!(b.dataset.f==='all'||it.dataset.c===b.dataset.f)})}));
+
+// put-aside builder
+const rows=[...document.querySelectorAll('#basket .row')],hint=document.getElementById('hint');
+rows.forEach(r=>{const [minus,plus]=r.querySelectorAll('button'),o=r.querySelector('output');
+  minus.onclick=()=>{o.value=Math.max(0,+o.value-1);upd()};plus.onclick=()=>{o.value=Math.min(20,+o.value+1);upd()}});
+function list(){return rows.map(r=>[+r.querySelector('output').value,r.querySelector('label').textContent]).filter(x=>x[0]>0)}
+function upd(){const n=list().reduce((a,x)=>a+x[0],0);hint.textContent=n?n+' item'+(n>1?'s':'')+' ready to put aside.':'Add at least one item to send.'}
+document.getElementById('send').onclick=()=>{const l=list();if(!l.length){hint.textContent='Add at least one item first.';return}
+  const msg='Hi C\'est La Vie, please could you put aside for '+document.getElementById('day').value+':\n'+l.map(x=>'- '+x[0]+' x '+x[1]).join('\n')+'\nThank you!';
+  window.open('https://wa.me/27836767430?text='+encodeURIComponent(msg),'_blank','noopener')};
+</script>
+</body>
+</html>
