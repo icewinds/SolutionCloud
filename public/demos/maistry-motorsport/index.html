@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maistry Motorsport | Car Services and Repairs, Fish Eagle Park, Kommetjie</title>
+<meta name="description" content="Car services and repairs by Nivan and the team at Fish Eagle Park, next to Gas24, Kommetjie Road. Photo and video updates on WhatsApp all the way through. Rated 4.8 from 88 Google reviews. WhatsApp 072 721 4493.">
+<meta name="theme-color" content="#1e293b">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* UI/UX Pro Max design system. Product reasoning: Automotive/Car Dealership ("Hero-Centric + Feature-Rich",
+   style "Motion-Driven", colour mood "Brand colors + Metallic + Dark/Light", typography "Bold + Confident")
+   blended with Home Services ("Conversion-Optimized + Trust", key effects "Emergency contact highlight + Service menu animations",
+   anti-pattern "Hidden contact info + No certifications").
+   Palette from colors.csv Automotive: primary slate #1E293B, secondary #334155, accent red #DC2626, background #F8FAFC,
+   with a brushed concrete #E9ECEF band. Type pairing "Sports/Fitness": Barlow Condensed + Barlow.
+   Layout: workshop job card. Light split hero with an animated WhatsApp update feed in a phone frame,
+   a day-on-the-clock timeline (04:00 start), service bay cards with hover reveal, a "no surprises" invoice block,
+   review strip and a dark contact footer band. */
+:root{--slate:#1e293b;--slate2:#334155;--steel:#64748b;--red:#dc2626;--red2:#b91c1c;--bg:#f8fafc;--concrete:#e9ecef;--line:#d7dde3;--wa:#e7fbe6;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--slate);font:400 17px/1.6 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.demo{background:#0f172a;color:#94a3b8;font-size:12px;padding:6px 12px;text-align:center}.demo a{color:#fff}
+.wrap{max-width:78rem;margin:0 auto;padding:0 24px}
+.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.tag::before{content:"";width:22px;height:3px;background:var(--red)}
+h1,h2,h3{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;margin:0;line-height:.95;letter-spacing:.005em}
+h2{font-size:clamp(2.6rem,5.5vw,4.6rem);font-weight:800;margin-top:12px}
+
+header.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+header.top .bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:24px;text-transform:uppercase;letter-spacing:.02em}
+.logo i{width:34px;height:34px;border-radius:8px;background:var(--slate);display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px}
+.logo span{color:var(--red)}
+.navl{display:flex;gap:28px;font-weight:600;font-size:15px}
+.navl a{text-decoration:none;color:var(--steel);transition:color .2s}
+.navl a:hover{color:var(--slate)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:10px;background:var(--red);color:#fff;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background .2s,transform .2s}
+.btn:hover{background:var(--red2);transform:translateY(-2px)}
+.btn svg{width:20px;height:20px}
+.btn.dark{background:var(--slate)}
+.btn.dark:hover{background:#0f172a}
+
+/* hero */
+.hero{padding:60px 0 80px;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,8vw,7rem);font-weight:800;margin:16px 0 18px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:20px;color:var(--slate2);max-width:38ch;margin:0 0 28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+.kpis div{padding:18px 20px;border-right:1px solid var(--line)}
+.kpis div:last-child{border-right:0}
+.kpis b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:34px;font-weight:800;line-height:1}
+.kpis span{font-size:14px;color:var(--steel)}
+
+/* phone feed */
+.phone{justify-self:center;width:min(100%,340px);border-radius:38px;background:var(--slate);padding:12px;box-shadow:0 40px 80px -40px rgba(15,23,42,.7)}
+.screen{border-radius:28px;background:#efeae2;overflow:hidden;height:640px;display:flex;flex-direction:column}
+.chat-h{background:#075e54;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-h i{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--slate);display:grid;place-items:center;font-style:normal;font-weight:700;font-family:"Barlow Condensed",sans-serif}
+.chat-h b{display:block;font-weight:600;font-size:15px;line-height:1.2}
+.chat-h small{font-size:12px;opacity:.8}
+.feed{flex:1;padding:14px 12px;display:flex;flex-direction:column;gap:8px;overflow:hidden;justify-content:flex-end}
+.msg{max-width:84%;background:#fff;border-radius:10px;padding:8px 10px 6px;font-size:14px;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,.08);opacity:0;transform:translateY(10px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.msg.show{opacity:1;transform:none}
+.msg.me{align-self:flex-end;background:#d9fdd3}
+.msg time{display:block;text-align:right;font-size:11px;color:#667781;margin-top:2px}
+.msg .ph{border-radius:6px;overflow:hidden;margin:-2px -4px 6px;aspect-ratio:16/8;position:relative}
+.msg .ph img{width:100%;height:100%;object-fit:cover}
+.msg .ph.vid::after{content:"";position:absolute;left:50%;top:50%;width:0;height:0;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;transform:translate(-40%,-50%);filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
+.phone-cap{text-align:center;font-size:13px;color:var(--steel);margin-top:14px}
+
+/* day timeline */
+.day{background:var(--slate);color:#e2e8f0;padding:100px 0}
+.day .tag{color:#f87171}.day .tag::before{background:#f87171}
+.day h2{color:#fff}
+.day .intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.day .intro p{margin:0;color:#cbd5e1;font-size:18px}
+.clock{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.clock::before{content:"";position:absolute;left:0;right:0;top:27px;height:2px;background:#475569}
+.clock .bar{position:absolute;left:0;top:27px;height:2px;background:var(--red);width:0;transition:width 2.2s var(--ease)}
+.clock.in .bar{width:100%}
+.slot{position:relative;padding-top:56px;padding-right:18px}
+.slot::before{content:"";position:absolute;top:20px;left:0;width:16px;height:16px;border-radius:50%;background:var(--slate);border:2px solid #f87171}
+.slot b{font-family:"Barlow Condensed",sans-serif;font-size:34px;font-weight:800;color:#fff;display:block;line-height:1}
+.slot h3{font-size:20px;margin:8px 0 6px;color:#f1f5f9}
+.slot p{margin:0;font-size:15px;color:#94a3b8}
+
+/* services */
+.svc{padding:100px 0}
+.svc .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.svc .head p{max-width:40ch;color:var(--slate2);margin:0}
+.bays{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bay{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
+.bay:hover{border-color:var(--slate);transform:translateY(-4px);box-shadow:0 22px 40px -30px rgba(15,23,42,.6)}
+.bay em{position:absolute;right:20px;top:16px;font-style:normal;font-family:"Barlow Condensed",sans-serif;font-size:56px;font-weight:800;color:var(--concrete);line-height:1;transition:color .25s}
+.bay:hover em{color:#fecaca}
+.bay svg{width:34px;height:34px;stroke:var(--red);fill:none;stroke-width:1.8;margin-bottom:16px;position:relative}
+.bay h3{font-size:26px;font-weight:700;position:relative}
+.bay p{margin:8px 0 0;color:var(--slate2);font-size:16px;position:relative}
+.bays .wide{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;padding:0}
+.bays .wide .tx{padding:28px 26px}
+.bays .wide img{width:100%;height:100%;object-fit:cover;min-height:240px}
+
+/* invoice */
+.inv{background:var(--concrete);padding:100px 0}
+.inv .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.inv p.lead{color:var(--slate2);font-size:18px;max-width:42ch}
+.card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 30px 60px -40px rgba(15,23,42,.55);font-size:15px}
+.card .ch{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:2px solid var(--slate);margin-bottom:6px}
+.card .ch b{font-family:"Barlow Condensed",sans-serif;font-size:22px;text-transform:uppercase}
+.card .ch span{font-size:13px;color:var(--steel)}
+.line{display:grid;grid-template-columns:24px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);align-items:center}
+.line i{width:22px;height:22px;border-radius:6px;background:#dcfce7;color:#15803d;display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:700}
+.line i.w{background:#fef3c7;color:#b45309}
+.line small{color:var(--steel)}
+.card .ft{display:flex;justify-content:space-between;padding-top:14px;font-weight:600}
+.card .ft span{color:var(--steel);font-weight:400}
+
+/* reviews */
+.revs{padding:100px 0}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+.rev .stars{font-family:"Barlow Condensed",sans-serif;font-weight:800;color:var(--red);letter-spacing:.1em;font-size:14px}
+.rev p{margin:10px 0 14px;color:var(--slate2)}
+.rev b{font-weight:600;font-size:15px}
+
+/* contact */
+.contact{background:var(--slate);color:#e2e8f0;padding:90px 0}
+.contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px}
+.contact h2{color:#fff}
+.contact .tag{color:#f87171}.contact .tag::before{background:#f87171}
+.contact p{color:#cbd5e1}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:12px 0;border-bottom:1px solid #334155}
+.hrs td:last-child{text-align:right;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;color:#fff}
+.hrs tr.today td{color:#f87171}.hrs tr.today td:last-child{color:#f87171}
+.where{margin-top:26px;padding:20px;border-radius:12px;background:#0f172a}
+.where b{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:22px;color:#fff;display:block}
+footer{background:#0f172a;color:#94a3b8;font-size:14px;padding:24px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+html:not(.js) .rv,html:not(.js) .msg{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .navl{display:none}
+  .hero .grid,.day .intro,.inv .grid,.contact .grid{grid-template-columns:1fr}
+  .clock{grid-template-columns:1fr;gap:6px}
+  .clock::before,.clock .bar{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .clock .bar{height:0;transition:height 2.2s var(--ease)}.clock.in .bar{height:100%;width:2px}
+  .slot{padding:0 0 22px 40px}
+  .slot::before{top:6px}
+  .bays,.rgrid{grid-template-columns:1fr 1fr}
+  .bays .wide{grid-column:span 2}
+}
+@media (max-width:600px){
+  .bays,.rgrid{grid-template-columns:1fr}
+  .bays .wide{grid-column:auto;grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr}
+  .kpis div{border-right:0;border-bottom:1px solid var(--line)}
+  .kpis div:last-child{border-bottom:0}
+  header.top .btn span{display:none}
+  header.top .btn{padding:0 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.msg{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="demo">Demo website prepared for Maistry Motorsport by <a href="https://solutioncloud.tech/contact/">SolutionCloud</a>, not yet live</div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#top"><i>M</i>Maistry<span>Motorsport</span></a>
+    <nav class="navl" aria-label="Main"><a href="#day">How we work</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+    <a class="btn" href="https://wa.me/27727214493?text=Hi%20Nivan%2C%20I%27d%20like%20to%20book%20my%20car%20in." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.8.8 2.5.8 3.4.7a2.9 2.9 0 0 0 1.9-1.3 2.4 2.4 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.9 18l-1.7 6 6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg><span>Book a service</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <p class="tag">Car services and repairs &middot; Fish Eagle Park</p>
+        <h1>You'll see <em>every step</em> of your service</h1>
+        <p class="lead">Nivan and the team send photos, videos and updates on WhatsApp while they work. You know what was checked, what was fixed and why, before the invoice arrives.</p>
+        <div class="ctas">
+          <a class="btn" href="https://wa.me/27727214493?text=Hi%20Nivan%2C%20I%27d%20like%20to%20book%20my%20car%20in." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn dark" href="#services">Our services</a>
+        </div>
+        <div class="kpis">
+          <div><b>4.8</b><span>from 88 Google reviews</span></div>
+          <div><b>04:00</b><span>we start, Mon to Fri</span></div>
+          <div><b>0</b><span>hidden costs</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="phone" aria-label="Example of the WhatsApp updates you receive during a service">
+          <div class="screen">
+            <div class="chat-h"><i>M</i><div><b>Maistry Motorsport</b><small>online</small></div></div>
+            <div class="feed" id="feed">
+              <div class="msg">Morning! Your car is on the lift, starting the service now.<time>04:12</time></div>
+              <div class="msg"><div class="ph"><img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=500&q=60&auto=format&fit=crop" alt=""></div>Old oil out, new filter going in.<time>04:40</time></div>
+              <div class="msg"><div class="ph vid"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500&q=60&auto=format&fit=crop" alt=""></div>Video: radiator is leaking at the bottom seam. Quote attached, shall we replace it?<time>05:05</time></div>
+              <div class="msg me">Yes please, go ahead<time>06:31</time></div>
+              <div class="msg">All done and road tested. Ready when you are.<time>09:48</time></div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-cap">How a typical service day looks on your phone</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="day" id="day">
+    <div class="wrap">
+      <div class="intro rv">
+        <div><p class="tag">How we work</p><h2>Your car, on the clock</h2></div>
+        <p>We start before sunrise so your car is usually ready the same morning. Drop it off the evening before and we will be on it first thing.</p>
+      </div>
+      <div class="clock rv" id="clock"><span class="bar" aria-hidden="true"></span>
+        <div class="slot"><b>18:00</b><h3>Drop off</h3><p>Leave the car the evening before, keys handed over.</p></div>
+        <div class="slot"><b>04:00</b><h3>Work starts</h3><p>On the lift and checked over while the valley sleeps.</p></div>
+        <div class="slot"><b>05:00</b><h3>Updates</h3><p>Photos and videos on WhatsApp as we go.</p></div>
+        <div class="slot"><b>06:30</b><h3>You approve</h3><p>Nothing extra is done without your OK.</p></div>
+        <div class="slot"><b>10:00</b><h3>Ready</h3><p>Road tested, invoiced and ready to collect.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc" id="services">
+    <div class="wrap">
+      <div class="head rv"><div><p class="tag">Services</p><h2>What we fix</h2></div><p>From a standard service to a last-minute leak, done properly with no shortcuts and clear advice on what can wait.</p></div>
+      <div class="bays">
+        <div class="bay rv"><em>01</em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg><h3>Minor and major services</h3><p>Oil, filters, plugs and a full check, to your manufacturer's schedule.</p></div>
+        <div class="bay rv"><em>02</em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v6M8 5h8M5 13a7 7 0 0 0 14 0c0-3-3-5-7-5s-7 2-7 5z"/></svg><h3>Cooling and radiators</h3><p>Leaks, overheating, radiator and hose replacements.</p></div>
+        <div class="bay rv"><em>03</em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14M3 20h14M15 9h2a2 2 0 0 1 2 2v5a1.5 1.5 0 0 0 3 0V8l-3-3"/></svg><h3>Fuel systems</h3><p>Fuel filters, leaks and injector issues, often fixed within hours.</p></div>
+        <div class="bay wide rv"><div class="tx"><em>04</em><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v5M12 15v5M4 12h5M15 12h5"/></svg><h3>Brakes, suspension and diagnostics</h3><p>Pads, discs, shocks, warning lights and those noises you have been ignoring. We find the cause and show you on video.</p></div><img loading="lazy" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=900&q=70&auto=format&fit=crop" alt="Mechanic's hands working on an engine with a wrench"></div>
+        <div class="bay rv"><em>05</em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17h18M5 17l2-6h10l2 6M7 11l1.5-4h7L17 11"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg><h3>Pre-trip checks</h3><p>Heading up the N1 or N2? We make sure the car is ready for the road.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inv">
+    <div class="wrap grid">
+      <div class="rv">
+        <p class="tag">No surprises</p>
+        <h2>The invoice matches the videos</h2>
+        <p class="lead">Because you watched it happen, there is nothing on the bill you did not expect. Every item is something you have already seen and approved.</p>
+        <a class="btn dark" href="https://wa.me/27727214493?text=Hi%20Nivan%2C%20could%20I%20get%20a%20quote%3F" target="_blank" rel="noopener">Ask for a quote</a>
+      </div>
+      <div class="card rv" aria-label="Example job card">
+        <div class="ch"><b>Job card</b><span>Example</span></div>
+        <div class="line"><i aria-hidden="true"><svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.5l2.5 2.5L10 3"/></svg></i><div>Standard service<br><small>Photo sent 04:40</small></div><span>Done</span></div>
+        <div class="line"><i aria-hidden="true"><svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.5l2.5 2.5L10 3"/></svg></i><div>Radiator replaced<br><small>Video sent 05:05, approved 06:31</small></div><span>Done</span></div>
+        <div class="line"><i aria-hidden="true"><svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.5l2.5 2.5L10 3"/></svg></i><div>Brake pads checked<br><small>About 60% left, photo sent</small></div><span>OK</span></div>
+        <div class="line"><i class="w" aria-hidden="true">!</i><div>Front tyres<br><small>Replace within 3 months</small></div><span>Advice</span></div>
+        <div class="ft">Ready for collection<span>09:48</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="revs" id="reviews">
+    <div class="wrap">
+      <div class="rv"><p class="tag">4.8 from 88 Google reviews</p><h2>Service with a personal touch</h2></div>
+      <div class="rgrid">
+        <div class="rev rv"><span class="stars">5 / 5</span><p>"I woke at 6:30am to 32 WhatsApp messages keeping me updated with every step of the service. Thank you for your dedication."</p><b>Melanie L.</b></div>
+        <div class="rev rv"><span class="stars">5 / 5</span><p>"They send videos and pictures and updates throughout. When you get the invoice, you know exactly what they've checked and fixed. No hidden surprises."</p><b>Tahiyya H.</b></div>
+        <div class="rev rv"><span class="stars">5 / 5</span><p>"Had a fuel filter leak. Nivan's team got the part and fixed it within 2 hours. Superb service as always."</p><b>Rob P.</b></div>
+        <div class="rev rv"><span class="stars">5 / 5</span><p>"Professional, honest, and efficient. They really know their stuff and take the time to explain everything properly."</p><b>Robin A.</b></div>
+        <div class="rev rv"><span class="stars">5 / 5</span><p>"Replaced my worn radiator and a standard service, all without a hitch. Service with a personal touch is so rare these days."</p><b>Karen E.</b></div>
+        <div class="rev rv"><span class="stars">5 / 5</span><p>"Fast, efficient, friendly service, and some very helpful advice too."</p><b>Google review</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap grid">
+      <div class="rv">
+        <p class="tag">Book your car in</p>
+        <h2>Message Nivan</h2>
+        <p>Tell us the make, model and what it needs. We will reply with a time and, where we can, a quote.</p>
+        <a class="btn" href="https://wa.me/27727214493?text=Hi%20Nivan%2C%20I%27d%20like%20to%20book%20my%20car%20in." target="_blank" rel="noopener">WhatsApp 072 721 4493</a>
+        <div class="where"><b>Fish Eagle Park, Kommetjie</b>At the end of the road, next to Gas24, Fish Eagle Place. <a href="https://maps.google.com/?q=Maistry+Motorsport+Fish+Eagle+Park+Kommetjie" target="_blank" rel="noopener" style="color:#f87171">Open in Google Maps</a></div>
+      </div>
+      <div class="rv">
+        <table class="hrs" id="hrs">
+          <tr data-d="1"><td>Monday</td><td>04:00 to 14:00</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>04:00 to 14:00</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>04:00 to 14:00</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>04:00 to 14:00</td></tr>
+          <tr data-d="5"><td>Friday</td><td>04:00 to 10:00</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>Closed</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Maistry Motorsport, Fish Eagle Park, Kommetjie Road, Cape Town</span><span>072 721 4493</span></div></footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv,#clock').forEach(el=>io.observe(el));
+const msgs=[...document.querySelectorAll('#feed .msg')];
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)msgs.forEach(m=>m.classList.add('show'));
+else{let i=0;const step=()=>{if(i<msgs.length){msgs[i++].classList.add('show');setTimeout(step,1100)}else setTimeout(()=>{msgs.forEach(m=>m.classList.remove('show'));i=0;setTimeout(step,700)},5200)};setTimeout(step,500)}
+const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Johannesburg'})).getDay();
+const t=document.querySelector('#hrs tr[data-d="'+d+'"]');if(t)t.classList.add('today');
+</script>
+</body>
+</html>
