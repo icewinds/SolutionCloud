@@ -108,6 +108,8 @@ export interface Service {
   description: string
   businessBenefits: string[]
   capabilities: ServiceCapability[]
+  /** Optional link to a gallery of example work for this service. */
+  showcase?: CtaLink
 }
 
 export interface Project {
@@ -154,3 +156,34 @@ export interface ContactFormValues {
 }
 
 export type ContactFormErrors = Partial<Record<keyof ContactFormValues, string>>
+
+export interface DemoSite {
+  /** Folder name under public/demos/ (served at /demos/<slug>/). */
+  slug: string
+  name: string
+  category: string
+  location: string
+  style: string
+}
+
+export interface DemoGroup {
+  area: string
+  demos: DemoSite[]
+}
+
+export interface DemoShowcase {
+  seo: SeoMeta
+  page: {
+    eyebrow: string
+    heading: string
+    intro: string
+  }
+  notice: {
+    heading: string
+    text: string
+  }
+  cardLabel: string
+  openLabel: string
+  cta: FinalCta
+  groups: DemoGroup[]
+}

@@ -50,6 +50,10 @@
   color: var(--color-ink-soft);
 }
 
+.service-detail-showcase {
+  margin-top: 0.75rem;
+}
+
 .service-detail-header p {
   color: var(--color-ink-muted);
 }

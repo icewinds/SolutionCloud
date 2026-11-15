@@ -4,6 +4,10 @@
   gap: 1.25rem;
 }
 
+.service-list > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 800px) {
   .service-list {
     grid-template-columns: 1fr;

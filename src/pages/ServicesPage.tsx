@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import site from '../data/site.json'
 import services from '../data/services.json'
 import type { Service, SiteContent } from '../types/content'
@@ -52,6 +52,11 @@ export function ServicesPage() {
               <h2 id={`${service.id}-heading`}>{service.title}</h2>
               <p className="service-detail-lead">{service.shortDescription}</p>
               <p>{service.description}</p>
+              {service.showcase ? (
+                <Link to={service.showcase.path} className="button service-detail-showcase">
+                  {service.showcase.label}
+                </Link>
+              ) : null}
             </header>
 
             <div className="service-detail-grid">

@@ -17,6 +17,7 @@ Website for SolutionCloud: custom software, ERP (SYSPRO), banking and tax-system
 | `/services` | Services with benefits and capabilities |
 | `/projects` | All projects, filterable by category |
 | `/projects/:projectId` | Case study: challenge, solution, solution flow, outcome, capabilities, technology |
+| `/website-demos` | Public gallery of the concept demo websites, with a notice that they are demos made for presentation and not client sites |
 | `/contact` | Contact details and enquiry form |
 
 Unknown routes redirect to the home page.
@@ -25,16 +26,9 @@ Unknown routes redirect to the home page.
 
 `public/demos/<name>/index.html` holds standalone demo sites built for prospective clients. Vite copies `public/` as-is, so each one is served at `https://solutioncloud.tech/demos/<name>/`, outside the React app.
 
-| Demo | URL |
-| --- | --- |
-| Secret Forest Café | `/demos/secret-forest-cafe/` |
-| Trueman's Fish & Chips | `/demos/truemans-fish-and-chips/` |
-| Marco's Mancave | `/demos/marcos-mancave/` |
-| Motospot Services | `/demos/motospot/` |
-| Ward Electrical & Refrigeration | `/demos/ward-electrical/` |
-| Clippers Grooming Parlour | `/demos/clippers-grooming/` |
+All demos are listed in `src/data/demos.json`, which drives the public gallery at `/website-demos`. That page shows a screenshot of each demo (`public/showcase/<name>.webp`, 800x500) and states clearly that these are concept demos made for presentation, not live client websites. The private index at `/my-demos-8q3k/` still lists them too.
 
-Each page has `<meta name="robots" content="noindex, nofollow">`, is not in the sitemap and is not linked from the site, so the only way to reach it is to be sent the link. To add one, create a folder with a self-contained `index.html` that includes the same noindex tag. To remove one, delete its folder.
+Each demo page keeps `<meta name="robots" content="noindex, nofollow">` and stays out of the sitemap, so search engines do not list it as the business's website. To add one, create a folder with a self-contained `index.html` that includes the same noindex tag, add an entry to `src/data/demos.json`, and add a screenshot to `public/showcase/`. To remove one, delete its folder, its entry and its screenshot.
 
 ## Editing content
 

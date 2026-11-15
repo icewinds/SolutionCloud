@@ -1,0 +1,272 @@
+{
+  "seo": {
+    "title": "Website Demos | SolutionCloud",
+    "description": "Concept website demos SolutionCloud designed for local Cape Town businesses, made for presentation purposes only. They are not live client websites."
+  },
+  "page": {
+    "eyebrow": "Website Demos",
+    "heading": "Concept websites for local businesses",
+    "intro": "A gallery of one-page website concepts we designed to show local businesses what a modern, mobile-friendly website could look like for them. Each one has its own layout and visual style."
+  },
+  "notice": {
+    "heading": "These are concept demos, not client websites",
+    "text": "Every site on this page is a sample SolutionCloud created on its own initiative, for presentation purposes only. The businesses named have not commissioned, approved or endorsed these designs, and none of them is that business's official website. Opening hours, prices, menus, photos and contact details may be placeholders and should not be relied on."
+  },
+  "cardLabel": "Concept demo",
+  "openLabel": "Open demo",
+  "cta": {
+    "heading": "Want a website like these for your business?",
+    "text": "Tell us a little about your business and we will put together a concept for you to look at, before you commit to anything.",
+    "buttonLabel": "Ask About a Website",
+    "path": "/contact"
+  },
+  "groups": [
+    {
+      "area": "Tokai",
+      "demos": [
+        {
+          "slug": "secret-forest-cafe",
+          "name": "Secret Forest Café",
+          "category": "Cafe",
+          "location": "Tokai Forest",
+          "style": "Organic"
+        },
+        {
+          "slug": "marcos-mancave",
+          "name": "Marco's Mancave",
+          "category": "Barber shop",
+          "location": "Bergvliet",
+          "style": "Art deco"
+        },
+        {
+          "slug": "clippers-grooming",
+          "name": "Clippers Grooming Parlour",
+          "category": "Dog groomer",
+          "location": "Heathfield",
+          "style": "Kawaii"
+        },
+        {
+          "slug": "truemans-fish-and-chips",
+          "name": "Trueman's Fish & Chips",
+          "category": "Fish and chips takeaway",
+          "location": "Kirstenhof Centre",
+          "style": "Newspaper"
+        },
+        {
+          "slug": "motospot",
+          "name": "Motospot Services",
+          "category": "Car service and repairs",
+          "location": "Bergvliet",
+          "style": "Blueprint"
+        },
+        {
+          "slug": "ward-electrical",
+          "name": "Ward Electrical & Refrigeration",
+          "category": "Appliance repairs",
+          "location": "Retreat",
+          "style": "Skeuomorphic"
+        }
+      ]
+    },
+    {
+      "area": "Claremont",
+      "demos": [
+        {
+          "slug": "hair-bar",
+          "name": "Hair Bar",
+          "category": "Hair salon",
+          "location": "Kenilworth",
+          "style": "Luxury"
+        },
+        {
+          "slug": "come-brew",
+          "name": "Come Brew",
+          "category": "Coffee shop",
+          "location": "Kenilworth",
+          "style": "Groovy"
+        },
+        {
+          "slug": "jenis-pet-parlour",
+          "name": "Jeni's Pet Parlour",
+          "category": "Pet care",
+          "location": "Newlands",
+          "style": "Soft modern"
+        },
+        {
+          "slug": "mannys-fish-shop",
+          "name": "Manny's Fish Shop",
+          "category": "Fish & chips restaurant",
+          "location": "Claremont",
+          "style": "Neobrutalist"
+        },
+        {
+          "slug": "hamachi",
+          "name": "Hamachi",
+          "category": "Sushi restaurant",
+          "location": "Claremont",
+          "style": "Japanese"
+        }
+      ]
+    },
+    {
+      "area": "Newlands",
+      "demos": [
+        {
+          "slug": "ground-culture",
+          "name": "Ground Culture",
+          "category": "Restaurant",
+          "location": "Glenhof Manor",
+          "style": "Dark bold"
+        },
+        {
+          "slug": "hair-2-dye-4",
+          "name": "Hair 2 Dye 4",
+          "category": "Hair salon",
+          "location": "Main Road",
+          "style": "Soft gradient glass"
+        },
+        {
+          "slug": "fire-truck-coffee",
+          "name": "Fire Truck Coffee",
+          "category": "Coffee shop",
+          "location": "Newlands Forest",
+          "style": "Swiss"
+        },
+        {
+          "slug": "greenhouse-nursery",
+          "name": "The Greenhouse Nursery",
+          "category": "Farm",
+          "location": "Newlands Ave",
+          "style": "Scandinavian"
+        },
+        {
+          "slug": "nowbl-cafe",
+          "name": "Nowbl Café",
+          "category": "Cafe",
+          "location": "Dean Street Arcade",
+          "style": "Bento"
+        }
+      ]
+    },
+    {
+      "area": "Zwaanswyk area",
+      "demos": [
+        {
+          "slug": "mangiamo",
+          "name": "Mangiamo",
+          "category": "Italian restaurant",
+          "location": "Westlake",
+          "style": "Restaurant hero"
+        },
+        {
+          "slug": "mr-dees-driving-academy",
+          "name": "Mr Dee's Driving Academy",
+          "category": "Driving school",
+          "location": "Steenberg",
+          "style": "Trust timeline"
+        },
+        {
+          "slug": "style-by-naths",
+          "name": "Style by Nath's",
+          "category": "Hair salon",
+          "location": "Retreat",
+          "style": "Soft UI arches"
+        },
+        {
+          "slug": "blocks-boutique",
+          "name": "Blocks Boutique",
+          "category": "Barber shop",
+          "location": "Steenberg",
+          "style": "Dark kinetic type"
+        },
+        {
+          "slug": "kleen-sneekz",
+          "name": "Kleen Sneekz",
+          "category": "Sneaker cleaning",
+          "location": "Steenberg",
+          "style": "Kinetic brutalism"
+        }
+      ]
+    },
+    {
+      "area": "Constantia area",
+      "demos": [
+        {
+          "slug": "mr-foo",
+          "name": "Mr Foo",
+          "category": "Chinese and thai takeaway",
+          "location": "Bergvliet",
+          "style": "Bold poster"
+        },
+        {
+          "slug": "five-star-barber",
+          "name": "Five Star Mediterranean Barber Shop",
+          "category": "Barber shop",
+          "location": "Meadowridge",
+          "style": "Dark cinema"
+        },
+        {
+          "slug": "jenny-the-hairstylist",
+          "name": "JennyTheHairstylist",
+          "category": "Hair salon",
+          "location": "Meadowridge",
+          "style": "Editorial magazine"
+        },
+        {
+          "slug": "nails-by-jillian",
+          "name": "Nails by Jillian",
+          "category": "Nail salon",
+          "location": "Meadowridge",
+          "style": "Calm luxury"
+        },
+        {
+          "slug": "marks-electrical",
+          "name": "Marks Electrical",
+          "category": "Electrician",
+          "location": "Bergvliet",
+          "style": "Swiss grid"
+        }
+      ]
+    },
+    {
+      "area": "Fish Hoek",
+      "demos": [
+        {
+          "slug": "tattoos-by-steven",
+          "name": "Tattoos by Steven Martheze",
+          "category": "Tattoo studio",
+          "location": "Fish Hoek",
+          "style": "Gallery exhibition"
+        },
+        {
+          "slug": "cest-la-vie-bakery",
+          "name": "C'est La Vie Bakery",
+          "category": "Bakery and coffee",
+          "location": "Fish Hoek",
+          "style": "Warm shop window"
+        },
+        {
+          "slug": "imperial-restaurant",
+          "name": "Imperial Restaurant",
+          "category": "Durban curry house",
+          "location": "Fish Hoek",
+          "style": "Spice tin blocks"
+        },
+        {
+          "slug": "hair-she-goes",
+          "name": "Hair She Goes",
+          "category": "Hair salon",
+          "location": "Fish Hoek",
+          "style": "Calm sage postcard"
+        },
+        {
+          "slug": "maistry-motorsport",
+          "name": "Maistry Motorsport",
+          "category": "Car service and repairs",
+          "location": "Kommetjie Road",
+          "style": "Workshop job card"
+        }
+      ]
+    }
+  ]
+}

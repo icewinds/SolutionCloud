@@ -24,6 +24,7 @@
     { "label": "Home", "path": "/" },
     { "label": "Services", "path": "/services" },
     { "label": "Projects", "path": "/projects" },
+    { "label": "Demos", "path": "/website-demos" },
     { "label": "Contact", "path": "/contact" }
   ],
   "cta": {
@@ -44,8 +45,8 @@
   },
   "servicesOverview": {
     "eyebrow": "What we do",
-    "heading": "Four ways we help growing businesses",
-    "intro": "Whether you need a bespoke application, better connected systems, clearer reporting or practical technical advice, the focus stays on the business outcome."
+    "heading": "Five ways we help growing businesses",
+    "intro": "Whether you need a bespoke application, better connected systems, clearer reporting, practical technical advice or a website for your local business, the focus stays on the business outcome."
   },
   "projectsOverview": {
     "eyebrow": "Selected Projects",
