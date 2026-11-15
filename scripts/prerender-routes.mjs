@@ -10,11 +10,13 @@ const SITE_URL = 'https://solutioncloud.tech'
 const readJson = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'))
 const site = readJson('../src/data/site.json')
 const projects = readJson('../src/data/projects.json')
+const demos = readJson('../src/data/demos.json')
 
 const routes = [
   { path: '', ...site.seo.home },
   { path: 'services', ...site.seo.services },
   { path: 'projects', ...site.seo.projects },
+  { path: 'website-demos', ...demos.seo },
   { path: 'contact', ...site.seo.contact },
   ...projects.map((project) => ({
     path: `projects/${project.id}`,

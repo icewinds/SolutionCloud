@@ -174,5 +174,47 @@
         "description": "Define a practical approach before development begins."
       }
     ]
+  },
+  {
+    "id": "website-design",
+    "title": "Websites for Local Businesses",
+    "shortDescription": "A fast, mobile-friendly website that gets customers to call, book or visit.",
+    "description": "Many local businesses are found on Google Maps but have no website of their own. SolutionCloud designs and builds simple, modern one-page websites around how your customers actually reach you, whether that is WhatsApp, a phone call, a booking or a visit, and keeps them hosted and up to date for you.",
+    "showcase": {
+      "label": "See our website demos",
+      "path": "/website-demos"
+    },
+    "businessBenefits": [
+      "A professional first impression when customers search for you",
+      "One clear place for your hours, services, prices and location",
+      "Easy contact by WhatsApp, phone or booking from any phone",
+      "A design that fits your business, not a generic template"
+    ],
+    "capabilities": [
+      {
+        "title": "One-Page Business Websites",
+        "description": "A focused site with everything a customer needs to choose you and get in touch."
+      },
+      {
+        "title": "Mobile-First Design",
+        "description": "Built for the phones most of your customers will use to find you."
+      },
+      {
+        "title": "WhatsApp and Booking Buttons",
+        "description": "Let customers message, call or book in one tap."
+      },
+      {
+        "title": "Menus, Price Lists and Services",
+        "description": "Show what you offer in a format that is easy to read and update."
+      },
+      {
+        "title": "Google Maps and Reviews",
+        "description": "Point people to your location and highlight what customers already say about you."
+      },
+      {
+        "title": "Hosting and Updates",
+        "description": "Your site stays online, secure and current without you having to manage it."
+      }
+    ]
   }
 ]
