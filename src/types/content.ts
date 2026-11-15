@@ -31,6 +31,14 @@ export interface ProcessStep {
   description: string
 }
 
+export interface ProjectGroup {
+  id: string
+  heading: string
+  intro: string
+  /** Project ids from projects.json, in display order. */
+  projectIds: string[]
+}
+
 export interface SiteContent {
   companyName: string
   tagline: string
@@ -64,6 +72,7 @@ export interface SiteContent {
     heading: string
     lead?: string
     intro: string
+    groups: ProjectGroup[]
   }
   servicesPage: {
     eyebrow: string

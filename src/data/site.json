@@ -59,7 +59,39 @@
     "eyebrow": "Projects",
     "heading": "Projects & Solutions",
     "lead": "Real business problems. Practical software solutions.",
-    "intro": "A selection of business software, integration and automation solutions we've delivered across banking, tax compliance, ERP, warehouse and retail environments."
+    "intro": "A selection of business software, integration and automation solutions we've delivered across banking, tax compliance, ERP, warehouse and retail environments.",
+    "groups": [
+      {
+        "id": "banking-compliance",
+        "heading": "Banking, Payments & Tax Compliance",
+        "intro": "Connecting ERP to banks, payment providers and tax authorities, with the controls finance teams need around them.",
+        "projectIds": [
+          "bank-payment-integrations",
+          "tax-authority-e-invoicing",
+          "erp-bank-reconciliation",
+          "supplier-banking-authorisation"
+        ]
+      },
+      {
+        "id": "erp-warehouse",
+        "heading": "ERP Integration & Warehouse Automation",
+        "intro": "Extending an existing ERP with APIs, reporting and workstation tools instead of replacing it.",
+        "projectIds": [
+          "erp-api-gateway",
+          "dispatch-stock-label-printing",
+          "warehouse-inventory-transfer"
+        ]
+      },
+      {
+        "id": "cloud-retail",
+        "heading": "Cloud & Retail Technology",
+        "intro": "Customer-facing platforms running across stores in several countries.",
+        "projectIds": [
+          "cloud-digital-signage",
+          "fitness-hub-kiosks"
+        ]
+      }
+    ]
   },
   "servicesPage": {
     "eyebrow": "Services",
